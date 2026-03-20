@@ -74,23 +74,9 @@
         }
         
         .checkmark {
-            width: 40px;
-            height: 40px;
-            border: 4px solid #fff;
-            border-radius: 50%;
-            position: relative;
-        }
-        
-        .checkmark::after {
-            content: '';
-            position: absolute;
-            left: 8px;
-            top: 2px;
-            width: 12px;
-            height: 20px;
-            border: solid #fff;
-            border-width: 0 4px 4px 0;
-            transform: rotate(45deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         h1 {
@@ -152,9 +138,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 14px;
-            color: #D4762C;
         }
         
         .step-content {
@@ -282,7 +265,11 @@
     
     <div class="container">
         <div class="success-icon">
-            <div class="checkmark"></div>
+            <div class="checkmark">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+            </div>
         </div>
         
         <h1>You're in.</h1>
@@ -295,7 +282,12 @@
         
         <div class="timeline">
             <div class="timeline-step">
-                <div class="step-number">1</div>
+                <div class="step-number">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </div>
                 <div class="step-content">
                     <div class="step-title">Check your inbox</div>
                     <div class="step-description">You'll receive a Skool invitation email within 5 minutes</div>
@@ -303,7 +295,12 @@
             </div>
             
             <div class="timeline-step">
-                <div class="step-number">2</div>
+                <div class="step-number">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                    </svg>
+                </div>
                 <div class="step-content">
                     <div class="step-title">Accept the invite</div>
                     <div class="step-description">Click the link in the email to join the community</div>
@@ -311,10 +308,15 @@
             </div>
             
             <div class="timeline-step">
-                <div class="step-number">3</div>
+                <div class="step-number">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                    </svg>
+                </div>
                 <div class="step-content">
                     <div class="step-title">Start learning</div>
-                    <div class="step-description">Begin with Chapter 1 or jump straight to Chapter 3 (time management)</div>
+                    <div class="step-description">Start with Chapter 1 and work through at your own pace</div>
                 </div>
             </div>
         </div>
@@ -328,10 +330,18 @@
             <div class="social-heading">Follow @studwalldan for weekly architecture tips</div>
             <div class="social-buttons">
                 <a href="https://instagram.com/studwalldan" target="_blank" class="social-btn">
-                    <span>📷</span> Instagram
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                    Instagram
                 </a>
                 <a href="https://tiktok.com/@studwalldan" target="_blank" class="social-btn">
-                    <span>🎵</span> TikTok
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                    </svg>
+                    TikTok
                 </a>
             </div>
         </div>

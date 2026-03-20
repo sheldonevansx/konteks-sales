@@ -81,11 +81,9 @@
             margin-bottom: 0;
         }
         
-        .loss-item .x {
-            color: #D4762C;
-            font-weight: 600;
+        .loss-item svg {
+            flex-shrink: 0;
             margin-right: 12px;
-            font-size: 18px;
         }
         
         .offer-card {
@@ -152,6 +150,9 @@
             transition: all 0.2s;
             font-size: 16px;
             color: #333;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
         
         .feedback-option:hover {
@@ -214,25 +215,43 @@
         
         <div class="loss-card">
             <div class="loss-item">
-                <span class="x">×</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
                 <span>All 5 course chapters</span>
             </div>
             <div class="loss-item">
-                <span class="x">×</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
                 <span>The Konteks Kalendar (weekly planner)</span>
             </div>
             <div class="loss-item">
-                <span class="x">×</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
                 <span>Student community (326+ architecture students)</span>
             </div>
             <div class="loss-item">
-                <span class="x">×</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
                 <span>Future chapter updates</span>
             </div>
         </div>
         
         <div class="offer-card">
-            <h2>Stay for $19/mo instead?</h2>
+            <h2>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                    <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                Stay for $19/mo instead?
+            </h2>
             <p>We'd rather keep you at a discount than lose you. Get one more month at $19 - no strings attached. If it's still not for you after that, cancel anytime.</p>
             <a href="STRIPE_DISCOUNT_LINK_HERE" class="btn">Stay for $19/mo</a>
             <p class="small-text">This offer is only available right now.</p>
@@ -243,10 +262,35 @@
             <p>Quick question - what would have made it worth staying?</p>
             
             <div class="feedback-options">
-                <div class="feedback-option" data-reason="no-time">I didn't have enough time</div>
-                <div class="feedback-option" data-reason="content">The content wasn't what I expected</div>
-                <div class="feedback-option" data-reason="price">It's too expensive</div>
-                <div class="feedback-option" data-reason="other">I found what I needed somewhere else</div>
+                <div class="feedback-option" data-reason="no-time">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    I didn't have enough time
+                </div>
+                <div class="feedback-option" data-reason="content">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="6"/>
+                        <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                    The content wasn't what I expected
+                </div>
+                <div class="feedback-option" data-reason="price">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="1" x2="12" y2="23"/>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                    It's too expensive
+                </div>
+                <div class="feedback-option" data-reason="other">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7 7 17 7 17 17"/>
+                    </svg>
+                    I found what I needed somewhere else
+                </div>
             </div>
             
             <div style="margin-top: 24px;">

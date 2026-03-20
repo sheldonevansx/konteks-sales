@@ -198,10 +198,8 @@
             gap: 8px;
         }
         
-        .checklist-item::before {
-            content: "✓";
-            color: #D4762C;
-            font-weight: 700;
+        .checklist-item svg {
+            flex-shrink: 0;
         }
         
         /* Testimonial banner */
@@ -395,9 +393,6 @@
         .qualifier-list li:last-child { border-bottom: none; }
         
         .qualifier-check {
-            color: #D4762C;
-            font-weight: 700;
-            font-size: 18px;
             flex-shrink: 0;
             margin-top: 1px;
         }
@@ -598,9 +593,24 @@
             </div>
             
             <div class="checklist">
-                <div class="checklist-item">5 chapters</div>
-                <div class="checklist-item">Weekly planner included</div>
-                <div class="checklist-item">326+ students inside</div>
+                <div class="checklist-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    5 chapters
+                </div>
+                <div class="checklist-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    Weekly planner included
+                </div>
+                <div class="checklist-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    326+ students inside
+                </div>
             </div>
         </div>
     </section>
@@ -618,13 +628,43 @@
             <h2 style="margin-bottom: 32px;">You're not bad at architecture. You were never taught what actually matters.</h2>
             
             <div class="body-text">
-                <p><strong>Your site analysis is a sun path and some wind arrows.</strong> You know it's not enough, but nobody showed you what 'enough' looks like.</p>
+                <p>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <strong>Your site analysis is a sun path and some wind arrows.</strong> You know it's not enough, but nobody showed you what 'enough' looks like.
+                </p>
                 
-                <p><strong>Your concepts feel forced.</strong> You see other students pull ideas out of thin air and you wonder what you're missing. You're not missing talent. You're missing a framework.</p>
+                <p>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 16v-4"/>
+                        <path d="M12 8h.01"/>
+                    </svg>
+                    <strong>Your concepts feel forced.</strong> You see other students pull ideas out of thin air and you wonder what you're missing. You're not missing talent. You're missing a framework.
+                </p>
                 
-                <p><strong>You pull all-nighters but still get vague crit feedback.</strong> 'Push it further.' Push WHAT further? Nobody tells you.</p>
+                <p>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <strong>You pull all-nighters but still get vague crit feedback.</strong> 'Push it further.' Push WHAT further? Nobody tells you.
+                </p>
                 
-                <p><strong>Studio was designed to see who figures it out on their own.</strong> Not to teach you how. That filter is the entire system.</p>
+                <p>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/>
+                    </svg>
+                    <strong>Studio was designed to see who figures it out on their own.</strong> Not to teach you how. That filter is the entire system.
+                </p>
             </div>
             
             <div class="cta-group">
@@ -639,12 +679,54 @@
             <h2 style="margin-bottom: 8px;">This is for you if:</h2>
             
             <ul class="qualifier-list">
-                <li><span class="qualifier-check">✓</span> You're in year 2-5 of architecture school (undergrad or masters)</li>
-                <li><span class="qualifier-check">✓</span> You want to be the best in studio, not just pass</li>
-                <li><span class="qualifier-check">✓</span> You're tired of vague crit feedback with no actionable advice</li>
-                <li><span class="qualifier-check">✓</span> You've never been taught how to actually develop a concept</li>
-                <li><span class="qualifier-check">✓</span> You know your diagrams and representation could be better</li>
-                <li><span class="qualifier-check">✓</span> You want a system, not just motivation</li>
+                <li>
+                    <span class="qualifier-check">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </span>
+                    You're in year 2-5 of architecture school (undergrad or masters)
+                </li>
+                <li>
+                    <span class="qualifier-check">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </span>
+                    You want to be the best in studio, not just pass
+                </li>
+                <li>
+                    <span class="qualifier-check">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </span>
+                    You're tired of vague crit feedback with no actionable advice
+                </li>
+                <li>
+                    <span class="qualifier-check">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </span>
+                    You've never been taught how to actually develop a concept
+                </li>
+                <li>
+                    <span class="qualifier-check">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </span>
+                    You know your diagrams and representation could be better
+                </li>
+                <li>
+                    <span class="qualifier-check">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </span>
+                    You want a system, not just motivation
+                </li>
             </ul>
         </div>
     </section>
@@ -659,45 +741,192 @@
             
             <div class="card-grid" style="max-width: 960px; margin: 40px auto 0; padding: 0 24px;">
                 <div class="card">
-                    <div class="card-badge">Chapter 01</div>
+                    <div class="card-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                            <path d="M12 2l9 4.5v5c0 5.5-3.5 10.5-9 12-5.5-1.5-9-6.5-9-12v-5L12 2z"/>
+                            <path d="M12 7v5l3 3"/>
+                        </svg>
+                        Chapter 01
+                    </div>
                     <div class="card-title">So... Architecture</div>
                     <div class="card-description">What architecture school actually expects from you and how to read the room before you pick up a pen.</div>
+                    <ul style="margin: 12px 0 0 0; padding: 0; list-style: none; font-size: 14px; color: #666; line-height: 1.6;">
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            How the grading system really works
+                        </li>
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            What lecturers look for (and what they never tell you)
+                        </li>
+                        <li style="padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            Setting yourself up before the first project
+                        </li>
+                    </ul>
                 </div>
                 
                 <div class="card">
-                    <div class="card-badge">Chapter 02</div>
+                    <div class="card-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4"/>
+                            <path d="M12 8h.01"/>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+                        </svg>
+                        Chapter 02
+                    </div>
                     <div class="card-title">The Top Student Mindset</div>
                     <div class="card-description">Abstract thinking, creative risks, and how to stop killing your best ideas before they exist.</div>
+                    <ul style="margin: 12px 0 0 0; padding: 0; list-style: none; font-size: 14px; color: #666; line-height: 1.6;">
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            Why "being silly" is a serious design skill
+                        </li>
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            The iteration method top students use
+                        </li>
+                        <li style="padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            How to stop filtering ideas too early
+                        </li>
+                    </ul>
                 </div>
                 
                 <div class="card">
-                    <div class="card-badge">Chapter 03</div>
+                    <div class="card-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        Chapter 03
+                    </div>
                     <div class="card-title">Crits, Deadlines & Timing</div>
                     <div class="card-description">The time management system that got Dan top student in Theory AND Professional Practice in the same year.</div>
+                    <ul style="margin: 12px 0 0 0; padding: 0; list-style: none; font-size: 14px; color: #666; line-height: 1.6;">
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            The Deep Work / Steady Work / Easy Work framework
+                        </li>
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            How to structure your week around studio
+                        </li>
+                        <li style="padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            What to do when everything is due at once
+                        </li>
+                    </ul>
                 </div>
                 
                 <div class="card">
-                    <div class="card-badge">Chapter 04</div>
+                    <div class="card-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        Chapter 04
+                    </div>
                     <div class="card-title">From "Brief" to Concept</div>
                     <div class="card-description">How to develop concepts so specific your lecturer asks how you thought of it. No more 'light and shadow.'</div>
+                    <ul style="margin: 12px 0 0 0; padding: 0; list-style: none; font-size: 14px; color: #666; line-height: 1.6;">
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            Moving from generic to place-specific concepts
+                        </li>
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            The brief analysis method that reveals hidden angles
+                        </li>
+                        <li style="padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            How to present a concept that sticks
+                        </li>
+                    </ul>
                 </div>
                 
                 <div class="card">
-                    <div class="card-badge">Chapter 05</div>
+                    <div class="card-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        Chapter 05
+                    </div>
                     <div class="card-title">Site Analysis & Urban Design</div>
                     <div class="card-description">Beyond the sun path. How to understand a place so deeply your project can only belong there.</div>
+                    <ul style="margin: 12px 0 0 0; padding: 0; list-style: none; font-size: 14px; color: #666; line-height: 1.6;">
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            Layered analysis (history, movement, social, environmental)
+                        </li>
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            Diagramming techniques that show depth
+                        </li>
+                        <li style="padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            Turning analysis into design decisions
+                        </li>
+                    </ul>
                 </div>
                 
                 <div class="card">
-                    <div class="card-badge"><span class="card-badge-bonus">Bonus</span></div>
+                    <div class="card-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        <span class="card-badge-bonus">Bonus</span>
+                    </div>
                     <div class="card-title">The Konteks Kalendar</div>
                     <div class="card-description">A weekly planner built for architecture students. Structure your week around studio, not the other way around.</div>
+                    <ul style="margin: 12px 0 0 0; padding: 0; list-style: none; font-size: 14px; color: #666; line-height: 1.6;">
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            Weekly planning template
+                        </li>
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            Project timeline tracking
+                        </li>
+                        <li style="padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            Energy-based task scheduling
+                        </li>
+                    </ul>
                 </div>
                 
                 <div class="card card-full">
-                    <div class="card-badge"><span class="card-badge-bonus">Bonus</span></div>
+                    <div class="card-badge">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span class="card-badge-bonus">Bonus</span>
+                    </div>
                     <div class="card-title">Student Community</div>
                     <div class="card-description">326 architecture students who take this seriously. Feedback, shared work, accountability.</div>
+                    <ul style="margin: 12px 0 0 0; padding: 0; list-style: none; font-size: 14px; color: #666; line-height: 1.6;">
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            Share work and get real feedback
+                        </li>
+                        <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            Connect with students worldwide
+                        </li>
+                        <li style="padding-left: 16px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #D4762C;">·</span>
+                            Access to Dan for questions
+                        </li>
+                    </ul>
                 </div>
             </div>
             
@@ -711,7 +940,13 @@
     <section class="section section-alt fade-in">
         <div class="container-wide">
             <div style="max-width: 720px; margin: 0 auto; padding: 0 24px;">
-                <div class="eyebrow">A look inside</div>
+                <div class="eyebrow">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9296A4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 6px;">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                    A look inside
+                </div>
             </div>
             
             <div class="preview-grid" style="padding: 0 24px;">
@@ -727,7 +962,13 @@
     <!-- 7. CREDIBILITY -->
     <section class="section fade-in">
         <div class="container">
-            <h2 style="margin-bottom: 0;">Who made this and why should you care</h2>
+            <h2 style="margin-bottom: 0;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block; vertical-align: middle; margin-right: 8px;">
+                    <circle cx="12" cy="8" r="7"/>
+                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                </svg>
+                Who made this and why should you care
+            </h2>
             
             <div class="credibility-grid">
                 <div>
@@ -780,6 +1021,12 @@
             
             <div class="pricing-grid">
                 <div class="pricing-card">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 16px;">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                    </svg>
                     <div class="pricing-label">Monthly</div>
                     <div class="pricing-price">$29/mo</div>
                     <div class="pricing-sub">Start today</div>
@@ -788,6 +1035,9 @@
                 
                 <div class="pricing-card pricing-card-featured">
                     <div class="pricing-badge">Best Value</div>
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 16px;">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
                     <div class="pricing-label">Annual</div>
                     <div class="pricing-price">$249/yr</div>
                     <div class="pricing-sub">That's $20.75/mo. Less than one architecture textbook.</div>
@@ -808,7 +1058,12 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         Is this for my specific year or program?
-                        <span class="faq-toggle">+</span>
+                        <span class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </span>
                     </div>
                     <div class="faq-answer">The frameworks work across all architecture programs, second year through masters.</div>
                 </div>
@@ -816,7 +1071,12 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         Can I cancel?
-                        <span class="faq-toggle">+</span>
+                        <span class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </span>
                     </div>
                     <div class="faq-answer">Yes. Monthly, no contract. Cancel in two clicks.</div>
                 </div>
@@ -824,7 +1084,12 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         Is this just PDFs?
-                        <span class="faq-toggle">+</span>
+                        <span class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </span>
                     </div>
                     <div class="faq-answer">No. Video recordings, downloadable worksheets, and the Konteks Kalendar in every chapter.</div>
                 </div>
@@ -832,7 +1097,12 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         I barely have time already. Will this add to it?
-                        <span class="faq-toggle">+</span>
+                        <span class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </span>
                     </div>
                     <div class="faq-answer">Chapter 3 is a time management system. Students report saving 5-10 hours a week. Start there.</div>
                 </div>
@@ -840,7 +1110,12 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         I'm already doing well. Is this still useful?
-                        <span class="faq-toggle">+</span>
+                        <span class="faq-toggle">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4762C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </span>
                     </div>
                     <div class="faq-answer">Chapter 4 and 5 are built for students who are good but want to be the one people remember.</div>
                 </div>
