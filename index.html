@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Konteks Kourse — @studwalldan</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="The Konteks Kourse — @studwalldan">
+    <meta property="og:description" content="Everything your studio won't teach you about concepts, crits, site analysis, and time management — from the architect who won best thesis across all degrees.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://konteks.com">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- META PIXEL: Replace PIXEL_ID_HERE with your actual Meta Pixel ID -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PIXEL_ID_HERE');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg: #0a0a0a;
+            --text: #ffffff;
+            --accent: #d4a853;
+            --gray: #666666;
+            --border: #1a1a1a;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        section {
+            padding: 120px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
+        }
+        
+        .hero h1 {
+            font-size: clamp(40px, 8vw, 72px);
+            margin-bottom: 32px;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero p {
+            font-size: clamp(18px, 3vw, 24px);
+            color: var(--gray);
+            margin-bottom: 48px;
+            max-width: 700px;
+            line-height: 1.5;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--bg);
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(212, 168, 83, 0.3);
+        }
+        
+        .cta-button:active {
+            transform: translateY(0);
+        }
+        
+        .subtext {
+            display: block;
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--gray);
+        }
+        
+        /* Pain Points Section */
+        .pain-points h2 {
+            font-size: clamp(36px, 6vw, 56px);
+            margin-bottom: 64px;
+        }
+        
+        .pain-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .pain-item {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--accent);
+            padding: 32px;
+            font-size: 18px;
+            line-height: 1.6;
+            transition: background-color 0.3s ease;
+        }
+        
+        .pain-item:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+        
+        /* What You Get Section */
+        .what-you-get h2 {
+            font-size: clamp(36px, 6vw, 56px);
+            margin-bottom: 64px;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        
+        @media (min-width: 768px) {
+            .chapter-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .chapter-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border);
+            padding: 40px 32px;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .chapter-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+        
+        .chapter-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--accent);
+        }
+        
+        .chapter-card p {
+            color: var(--gray);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .bonus-card {
+            background-color: rgba(212, 168, 83, 0.05);
+            border: 1px solid var(--accent);
+        }
+        
+        /* Credibility Section */
+        .credibility {
+            text-align: center;
+        }
+        
+        .credibility h2 {
+            font-size: clamp(36px, 6vw, 56px);
+            margin-bottom: 64px;
+        }
+        
+        .photo-placeholder {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 0 auto 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        .credibility-list {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        
+        .credibility-list li {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .credibility-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            background-color: rgba(255, 255, 255, 0.02);
+            margin: 0 -24px;
+            padding: 120px 24px;
+        }
+        
+        .pricing h2 {
+            font-size: clamp(36px, 6vw, 56px);
+            margin-bottom: 64px;
+            text-align: center;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto 32px;
+        }
+        
+        @media (min-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .pricing-card {
+            background-color: var(--bg);
+            border: 2px solid var(--border);
+            padding: 48px 32px;
+            text-align: center;
+            position: relative;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+        
+        .best-value {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background-color: var(--accent);
+            color: var(--bg);
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 2px;
+            letter-spacing: 0.5px;
+        }
+        
+        .pricing-card h3 {
+            font-size: 48px;
+            margin-bottom: 8px;
+            color: var(--accent);
+        }
+        
+        .pricing-card .period {
+            font-size: 16px;
+            color: var(--gray);
+            margin-bottom: 24px;
+            display: block;
+        }
+        
+        .pricing-card p {
+            color: var(--gray);
+            margin-bottom: 32px;
+            font-size: 16px;
+        }
+        
+        .pricing-note {
+            text-align: center;
+            color: var(--gray);
+            font-size: 14px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* FAQ Section */
+        .faq h2 {
+            font-size: clamp(36px, 6vw, 56px);
+            margin-bottom: 64px;
+        }
+        
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 32px 0;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            color: var(--accent);
+        }
+        
+        .faq-icon {
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--gray);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            margin-top: 16px;
+        }
+        
+        /* Final CTA Section */
+        .final-cta {
+            text-align: center;
+        }
+        
+        .final-cta p {
+            font-size: clamp(20px, 4vw, 28px);
+            max-width: 700px;
+            margin: 0 auto 32px;
+            line-height: 1.5;
+            color: var(--gray);
+        }
+        
+        .final-cta p:last-of-type {
+            font-size: clamp(24px, 5vw, 36px);
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            color: var(--text);
+            margin-bottom: 48px;
+        }
+        
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 48px 24px;
+            text-align: center;
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        footer a {
+            color: var(--gray);
+            text-decoration: none;
+            margin: 0 12px;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-links {
+            margin-top: 16px;
+        }
+        
+        /* Mobile Adjustments */
+        @media (max-width: 375px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .pain-item {
+                padding: 24px;
+                font-size: 16px;
+            }
+            
+            .chapter-card {
+                padding: 32px 24px;
+            }
+            
+            .pricing-card {
+                padding: 40px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Hero Section -->
+    <section class="hero visible">
+        <div class="container">
+            <h1>The Top Student Mindset Is Taught, Not Born.</h1>
+            <p>Everything your studio won't teach you about concepts, crits, site analysis, and time management — from the architect who won best thesis across all degrees.</p>
+            <a href="#pricing" class="cta-button" onclick="trackCTA('hero')">Join the Kourse — $29/month</a>
+            <span class="subtext">Cancel anytime. No contract.</span>
+        </div>
+    </section>
+    
+    <!-- Pain Points Section -->
+    <section class="pain-points">
+        <div class="container">
+            <h2>Sound familiar?</h2>
+            <ul class="pain-list">
+                <li class="pain-item">Your site analysis is a sun path and some wind arrows — and you know it</li>
+                <li class="pain-item">Your concept always feels forced while theirs feels effortless</li>
+                <li class="pain-item">You're pulling all-nighters but still not getting the best crit feedback</li>
+                <li class="pain-item">You look at the top student's work and think: how do they do that?</li>
+                <li class="pain-item">You know you're capable of more but nobody is showing you HOW</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- What You Get Section -->
+    <section class="what-you-get">
+        <div class="container">
+            <h2>What's Inside</h2>
+            <div class="chapter-grid">
+                <div class="chapter-card">
+                    <h3>Chapter 1: So... Architecture</h3>
+                    <p>Understanding the course, how to think before you draw</p>
+                </div>
+                <div class="chapter-card">
+                    <h3>Chapter 2: The Top Student Mindset</h3>
+                    <p>Creative thinking, being silly, abstract thinking, iteration</p>
+                </div>
+                <div class="chapter-card">
+                    <h3>Chapter 3: Crits, Deadlines & Timing</h3>
+                    <p>The exact time management system that won me top student in Theory AND Professional Practice</p>
+                </div>
+                <div class="chapter-card">
+                    <h3>Chapter 4: From 'Brief' to Concept</h3>
+                    <p>Developing unique, place-driven, meaningful concepts</p>
+                </div>
+                <div class="chapter-card">
+                    <h3>Chapter 5: Site Analysis & Urban Design</h3>
+                    <p>Beyond the sun path. Understanding place deeply.</p>
+                </div>
+                <div class="chapter-card bonus-card">
+                    <h3>BONUS: The Konteks Kalendar</h3>
+                    <p>A weekly planner built specifically for architecture students</p>
+                </div>
+                <div class="chapter-card bonus-card">
+                    <h3>BONUS: Student Community</h3>
+                    <p>A community of architecture students who refuse to be average</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Credibility Section -->
+    <section class="credibility">
+        <div class="container">
+            <h2>Why Trust Dan?</h2>
+            <div class="photo-placeholder">Dan's Photo</div>
+            <ul class="credibility-list">
+                <li>Won best master's thesis design project in her year</li>
+                <li>Same thesis won best topic across engineering, science, and technology degrees</li>
+                <li>Topped Theory AND Professional Practice in the same year</li>
+                <li>Landed dream role at one of the biggest architecture firms</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Ready to level up?</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>$29</h3>
+                    <span class="period">/month</span>
+                    <p>Start learning today</p>
+                    <a href="https://www.skool.com/konteks-6655" class="cta-button" onclick="trackCTA('monthly')">Join Monthly</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="best-value">BEST VALUE</div>
+                    <h3>$249</h3>
+                    <span class="period">/year</span>
+                    <p>Save $99</p>
+                    <a href="https://www.skool.com/konteks-6655" class="cta-button" onclick="trackCTA('annual')">Join Annual</a>
+                </div>
+            </div>
+            <p class="pricing-note">Cancel anytime. All chapters included from day one.</p>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Questions?</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is this for my specific year or program?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">Yes. The frameworks apply to all architecture programs and all years — from second year undergrad to masters.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can I cancel anytime?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">Yes. Monthly subscription, no contract, no questions asked.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Is this just PDFs?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">No. Each chapter includes video recordings, downloadable worksheets, and the Konteks Kalendar — a planning tool built specifically for architecture students.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>I'm already struggling with time, will this take more time?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">Chapter 3 literally gives you a time management system. Most students say it saved them 5-10 hours a week. Start there.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What if I'm already doing well in studio?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">Chapter 4 (concepts) and Chapter 5 (site analysis) are specifically for students who are good but want to be unforgettable.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <p>Your studio is designed to filter out who 'gets it' and who doesn't — without ever teaching you what 'it' is.</p>
+            <p>This course teaches it.</p>
+            <a href="https://www.skool.com/konteks-6655" class="cta-button" onclick="trackCTA('final')">Join the Konteks Kourse</a>
+            <span class="subtext">$29/month · Cancel anytime</span>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 @studwalldan</p>
+            <div class="footer-links">
+                <a href="https://instagram.com/studwalldan" target="_blank">Instagram</a>
+                <a href="https://tiktok.com/@studwalldan" target="_blank">TikTok</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scroll to pricing
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+        
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const wasActive = item.classList.contains('active');
+                
+                // Close all FAQs
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // Open clicked FAQ if it wasn't active
+                if (!wasActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Meta Pixel tracking for CTA clicks
+        function trackCTA(location) {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'ViewContent', {
+                    content_name: 'Konteks Kourse CTA',
+                    content_category: location,
+                    value: 29.00,
+                    currency: 'USD'
+                });
+            }
+        }
+    </script>
+    
+</body>
+</html>
