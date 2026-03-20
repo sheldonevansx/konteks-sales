@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Konteks Kourse</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel -->
+    <!-- TODO: Replace Purchase value with dynamic amount via Stripe webhook or UTM parameter -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PIXEL_ID_HERE');
+    fbq('track', 'PageView');
+    fbq('track', 'Purchase', {value: 29.00, currency: 'USD'});
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"
+    /></noscript>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: auto; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            padding: 40px 24px 60px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 32px;
+            border-radius: 50%;
+            background: #D4762C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s forwards;
+            transform: scale(0);
+        }
+        
+        @keyframes scaleIn {
+            to { transform: scale(1); }
+        }
+        
+        .checkmark {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        .checkmark::after {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 2px;
+            width: 12px;
+            height: 20px;
+            border: solid #fff;
+            border-width: 0 4px 4px 0;
+            transform: rotate(45deg);
+        }
+        
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            color: #000;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        
+        @media (min-width: 768px) {
+            h1 { font-size: 48px; letter-spacing: -2px; }
+        }
+        
+        .subheading {
+            font-size: 20px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .instruction-card {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-left: 4px solid #D4762C;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .timeline {
+            margin-bottom: 40px;
+        }
+        
+        .timeline-step {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .timeline-step:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .step-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #F7F7F7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            color: #D4762C;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: #000;
+            margin-bottom: 4px;
+        }
+        
+        .step-description {
+            font-size: 15px;
+            color: #666;
+        }
+        
+        .help-section {
+            background: #F7F7F7;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 40px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .help-section strong {
+            color: #000;
+        }
+        
+        .help-section a {
+            color: #D4762C;
+            text-decoration: none;
+        }
+        
+        .help-section a:hover {
+            color: #B8631F;
+            text-decoration: underline;
+        }
+        
+        .social-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .social-heading {
+            font-size: 16px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 16px;
+        }
+        
+        .social-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border: 1.5px solid #ddd;
+            border-radius: 100px;
+            background: transparent;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .social-btn:hover {
+            border-color: #D4762C;
+            color: #D4762C;
+            transform: translateY(-1px);
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #999;
+            padding-top: 40px;
+            border-top: 1px solid #f0f0f0;
+        }
+        
+        /* Confetti animation */
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+        
+        .confetti-piece {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #D4762C;
+            opacity: 0;
+            animation: confetti-fall 3s ease-out forwards;
+        }
+        
+        @keyframes confetti-fall {
+            0% {
+                opacity: 1;
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100vh) rotate(720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="confetti" id="confetti"></div>
+    
+    <div class="container">
+        <div class="success-icon">
+            <div class="checkmark"></div>
+        </div>
+        
+        <h1>You're in.</h1>
+        
+        <p class="subheading">Welcome to the Konteks Kourse.</p>
+        
+        <div class="instruction-card">
+            Check your email for an invitation to join the Skool community. This is where all your chapters, the Konteks Kalendar, and the student community live.
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <div class="step-title">Check your inbox</div>
+                    <div class="step-description">You'll receive a Skool invitation email within 5 minutes</div>
+                </div>
+            </div>
+            
+            <div class="timeline-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <div class="step-title">Accept the invite</div>
+                    <div class="step-description">Click the link in the email to join the community</div>
+                </div>
+            </div>
+            
+            <div class="timeline-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <div class="step-title">Start learning</div>
+                    <div class="step-description">Begin with Chapter 1 or jump straight to Chapter 3 (time management)</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="help-section">
+            <strong>Didn't get the email?</strong><br>
+            If you don't see the email within 10 minutes, check your spam folder. Still nothing? Email <a href="mailto:studwalldan@gmail.com">studwalldan@gmail.com</a>
+        </div>
+        
+        <div class="social-section">
+            <div class="social-heading">Follow @studwalldan for weekly architecture tips</div>
+            <div class="social-buttons">
+                <a href="https://instagram.com/studwalldan" target="_blank" class="social-btn">
+                    <span>📷</span> Instagram
+                </a>
+                <a href="https://tiktok.com/@studwalldan" target="_blank" class="social-btn">
+                    <span>🎵</span> TikTok
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © 2026 @studwalldan
+        </div>
+    </div>
+    
+    <script>
+        // Prevent auto-scroll
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+        
+        // Create lightweight confetti
+        function createConfetti() {
+            const confettiContainer = document.getElementById('confetti');
+            const colors = ['#D4762C', '#B8631F', '#000', '#333'];
+            const pieces = 30; // Lightweight - just 30 pieces
+            
+            for (let i = 0; i < pieces; i++) {
+                const piece = document.createElement('div');
+                piece.className = 'confetti-piece';
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                piece.style.animationDelay = Math.random() * 0.5 + 's';
+                piece.style.animationDuration = (Math.random() * 1 + 2) + 's';
+                confettiContainer.appendChild(piece);
+            }
+            
+            // Clean up after animation
+            setTimeout(() => {
+                confettiContainer.innerHTML = '';
+            }, 4000);
+        }
+        
+        // Trigger confetti on load
+        window.addEventListener('load', () => {
+            setTimeout(createConfetti, 300);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konteks Kourse - The Top Student Mindset Is Taught, Not Born</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Konteks Kourse - The Top Student Mindset Is Taught, Not Born">
+    <meta property="og:description" content="Everything your studio won't teach you about concepts, crits, site analysis, and time management — from the architect who won best thesis across all degrees.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kontekskourse.com">
+    <meta property="og:image" content="https://kontekskourse.com/og-image.jpg">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PIXEL_ID_HERE');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-cream: #FEF7F0;
+            --bg-cream-light: #FFF5EB;
+            --bg-cream-dark: #F0E6DA;
+            --text-dark: #1a1a1a;
+            --text-mid: #4a4a4a;
+            --button-dark: #1a1a1a;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'DM Serif Display', serif;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .wide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 120px 0 100px;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 24px;
+            color: var(--text-dark);
+        }
+        
+        .hero .subheadline {
+            font-size: 20px;
+            color: var(--text-mid);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--button-dark);
+            color: white;
+            padding: 18px 48px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .sub-cta {
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--text-mid);
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--bg-cream-light);
+            padding: 60px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 48px;
+            text-align: center;
+        }
+        
+        .stat-item .number {
+            font-family: 'DM Serif Display', serif;
+            font-size: 48px;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        
+        .stat-item .label {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+        
+        .stat-item .description {
+            font-size: 14px;
+            color: var(--text-mid);
+        }
+        
+        /* Pain Points */
+        .pain-points {
+            background: var(--bg-cream);
+        }
+        
+        .pain-points h2 {
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .pain-list {
+            list-style: none;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .pain-list li {
+            padding: 24px 0;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+            font-size: 18px;
+            color: var(--text-mid);
+        }
+        
+        .pain-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* What's Inside */
+        .whats-inside {
+            background: var(--bg-cream-dark);
+        }
+        
+        .whats-inside h2 {
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        
+        .chapter-card {
+            background: var(--bg-cream-light);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .chapter-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+        
+        .chapter-card .icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+        
+        .chapter-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+        
+        .chapter-card p {
+            font-size: 15px;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+        
+        /* Credibility */
+        .credibility {
+            background: var(--bg-cream);
+            text-align: center;
+        }
+        
+        .credibility h2 {
+            font-size: 42px;
+            margin-bottom: 48px;
+        }
+        
+        .credibility-list {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto 48px;
+        }
+        
+        .credibility-list li {
+            padding: 16px 0;
+            font-size: 18px;
+            color: var(--text-mid);
+        }
+        
+        .photo-placeholder {
+            width: 200px;
+            height: 200px;
+            background: var(--bg-cream-dark);
+            border-radius: 50%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-mid);
+            font-size: 14px;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: var(--bg-cream-light);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        
+        .testimonial-card {
+            background: var(--bg-cream);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card .quote {
+            font-size: 16px;
+            font-style: italic;
+            color: var(--text-mid);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .testimonial-card .author {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 15px;
+        }
+        
+        .testimonial-card .title {
+            font-size: 14px;
+            color: var(--text-mid);
+        }
+        
+        /* Pricing */
+        .pricing {
+            background: var(--bg-cream-dark);
+        }
+        
+        .pricing h2 {
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            max-width: 800px;
+            margin: 0 auto 32px;
+        }
+        
+        .pricing-card {
+            background: var(--bg-cream-light);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            position: relative;
+        }
+        
+        .badge {
+            position: absolute;
+            top: -12px;
+            right: 24px;
+            background: var(--button-dark);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .pricing-card .price {
+            font-family: 'DM Serif Display', serif;
+            font-size: 48px;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+        }
+        
+        .pricing-card .description {
+            font-size: 16px;
+            color: var(--text-mid);
+            margin-bottom: 32px;
+        }
+        
+        .pricing-card .cta-button {
+            width: 100%;
+        }
+        
+        .pricing-note {
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-mid);
+        }
+        
+        /* FAQ */
+        .faq {
+            background: var(--bg-cream);
+        }
+        
+        .faq h2 {
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+            padding: 24px 0;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: var(--text-mid);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            margin-top: 16px;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: var(--bg-cream-light);
+            text-align: center;
+        }
+        
+        .final-cta .message {
+            font-size: 24px;
+            color: var(--text-mid);
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.5;
+        }
+        
+        .final-cta .tagline {
+            font-family: 'DM Serif Display', serif;
+            font-size: 32px;
+            color: var(--text-dark);
+            margin-bottom: 40px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--bg-cream-dark);
+            padding: 48px 0;
+            text-align: center;
+        }
+        
+        footer .copyright {
+            color: var(--text-mid);
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+        
+        footer .social-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+        }
+        
+        footer .social-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
+        }
+        
+        footer .social-links a:hover {
+            opacity: 0.7;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero .subheadline {
+                font-size: 18px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            h2 {
+                font-size: 32px !important;
+            }
+            
+            .chapters-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                gap: 32px;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .container, .wide-container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container fade-in">
+            <h1>The Top Student Mindset Is Taught, Not Born.</h1>
+            <p class="subheadline">Everything your studio won't teach you about concepts, crits, site analysis, and time management — from the architect who won best thesis across all degrees.</p>
+            <a href="#pricing" class="cta-button" onclick="fbq('track', 'ViewContent');">Join the Kourse — $29/month</a>
+            <p class="sub-cta">Cancel anytime. No contract.</p>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="wide-container fade-in">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="number">5</div>
+                    <div class="label">Chapters</div>
+                    <div class="description">Covering concepts, crits, site analysis, and more</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">326+</div>
+                    <div class="label">Students</div>
+                    <div class="description">Architecture students already inside</div>
+                </div>
+                <div class="stat-item">
+                    <div class="number">1</div>
+                    <div class="label">Planner</div>
+                    <div class="description">The Konteks Kalendar - built for architecture students</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="pain-points">
+        <div class="container fade-in">
+            <h2>Sound familiar?</h2>
+            <ul class="pain-list">
+                <li>Your site analysis is a sun path and some wind arrows — and you know it</li>
+                <li>Your concept always feels forced while theirs feels effortless</li>
+                <li>You're pulling all-nighters but still not getting the best crit feedback</li>
+                <li>You look at the top student's work and think: how do they do that?</li>
+                <li>You know you're capable of more but nobody is showing you HOW</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- What's Inside -->
+    <section class="whats-inside">
+        <div class="wide-container fade-in">
+            <h2>What's Inside</h2>
+            <div class="chapters-grid">
+                <div class="chapter-card">
+                    <div class="icon">📐</div>
+                    <h3>Chapter 1: So... Architecture</h3>
+                    <p>Understanding the course, how to think before you draw</p>
+                </div>
+                <div class="chapter-card">
+                    <div class="icon">🧠</div>
+                    <h3>Chapter 2: The Top Student Mindset</h3>
+                    <p>Creative thinking, being silly, abstract thinking, iteration</p>
+                </div>
+                <div class="chapter-card">
+                    <div class="icon">⏰</div>
+                    <h3>Chapter 3: Crits, Deadlines & Timing</h3>
+                    <p>The exact time management system that won me top student in Theory AND Professional Practice</p>
+                </div>
+                <div class="chapter-card">
+                    <div class="icon">💡</div>
+                    <h3>Chapter 4: From 'Brief' to Concept</h3>
+                    <p>Developing unique, place-driven, meaningful concepts</p>
+                </div>
+                <div class="chapter-card">
+                    <div class="icon">🗺️</div>
+                    <h3>Chapter 5: Site Analysis & Urban Design</h3>
+                    <p>Beyond the sun path. Understanding place deeply.</p>
+                </div>
+                <div class="chapter-card">
+                    <div class="icon">📅</div>
+                    <h3>BONUS: The Konteks Kalendar</h3>
+                    <p>A weekly planner built specifically for architecture students</p>
+                </div>
+                <div class="chapter-card">
+                    <div class="icon">👥</div>
+                    <h3>BONUS: Student Community</h3>
+                    <p>A community of architecture students who refuse to be average</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credibility -->
+    <section class="credibility">
+        <div class="container fade-in">
+            <h2>Why Trust Dan?</h2>
+            <ul class="credibility-list">
+                <li>Won best master's thesis design project in her year</li>
+                <li>Same thesis won best topic across engineering, science, and technology degrees</li>
+                <li>Topped Theory AND Professional Practice in the same year</li>
+                <li>Landed dream role at one of the biggest architecture firms</li>
+            </ul>
+            <div class="photo-placeholder">Dan's Photo</div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="wide-container fade-in">
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="quote">"Placeholder testimonial 1"</p>
+                    <p class="author">Student Name</p>
+                    <p class="title">University</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Placeholder testimonial 2"</p>
+                    <p class="author">Student Name</p>
+                    <p class="title">University</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Placeholder testimonial 3"</p>
+                    <p class="author">Student Name</p>
+                    <p class="title">University</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container fade-in">
+            <h2>Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="price">$29<span style="font-size: 20px; color: #4a4a4a;">/month</span></div>
+                    <p class="description">Start learning today</p>
+                    <a href="https://www.skool.com/konteks-6655" class="cta-button" onclick="fbq('track', 'ViewContent');">Join Monthly</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="badge">BEST VALUE</div>
+                    <div class="price">$249<span style="font-size: 20px; color: #4a4a4a;">/year</span></div>
+                    <p class="description">Save $99</p>
+                    <a href="https://www.skool.com/konteks-6655" class="cta-button" onclick="fbq('track', 'ViewContent');">Join Annual</a>
+                </div>
+            </div>
+            <p class="pricing-note">Cancel anytime. All chapters included from day one.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container fade-in">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Is this for my specific year or program?</div>
+                    <div class="faq-answer">Yes. The frameworks apply to all architecture programs and all years — from second year undergrad to masters.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Can I cancel anytime?</div>
+                    <div class="faq-answer">Yes. Monthly subscription, no contract, no questions asked.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is this just PDFs?</div>
+                    <div class="faq-answer">No. Each chapter includes video recordings, downloadable worksheets, and the Konteks Kalendar — a planning tool built specifically for architecture students.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">I'm already struggling with time, will this take more time?</div>
+                    <div class="faq-answer">Chapter 3 literally gives you a time management system. Most students say it saved them 5-10 hours a week. Start there.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What if I'm already doing well in studio?</div>
+                    <div class="faq-answer">Chapter 4 (concepts) and Chapter 5 (site analysis) are specifically for students who are good but want to be unforgettable.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container fade-in">
+            <p class="message">Your studio is designed to filter out who 'gets it' and who doesn't — without ever teaching you what 'it' is.</p>
+            <p class="tagline">This course teaches it.</p>
+            <a href="https://www.skool.com/konteks-6655" class="cta-button" onclick="fbq('track', 'ViewContent');">Join the Konteks Kourse</a>
+            <p class="sub-cta">$29/month · Cancel anytime</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="copyright">© 2026 @studwalldan</p>
+            <div class="social-links">
+                <a href="https://instagram.com/studwalldan" target="_blank">Instagram</a>
+                <a href="https://tiktok.com/@studwalldan" target="_blank">TikTok</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll with offset for fixed headers (if needed)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Konteks Kourse</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PIXEL_ID_HERE');
+    fbq('track', 'PageView');
+    fbq('track', 'InitiateCheckout');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"
+    /></noscript>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        
+        .checkout-container {
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #e5e5e5;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: #999;
+        }
+        
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 28px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            color: #000;
+            margin-bottom: 24px;
+        }
+        
+        .plan-card {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+        }
+        
+        .plan-price {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #000;
+            margin-bottom: 4px;
+        }
+        
+        .plan-detail {
+            font-size: 15px;
+            color: #999;
+        }
+        
+        .subtext {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 28px;
+        }
+        
+        .checklist {
+            text-align: left;
+            background: #F7F7F7;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 32px;
+        }
+        
+        .checklist-item {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .checklist-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .checklist-item::before {
+            content: "✓";
+            color: #D4762C;
+            font-weight: 600;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .loading {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+        
+        .spinner {
+            width: 16px;
+            height: 16px;
+            border: 2px solid #e5e5e5;
+            border-top-color: #D4762C;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .backup-link {
+            display: none;
+            font-size: 14px;
+            color: #D4762C;
+            text-decoration: none;
+            margin-top: 12px;
+        }
+        
+        .backup-link:hover {
+            color: #B8631F;
+        }
+        
+        .backup-link.show {
+            display: inline-block;
+        }
+        
+        .footer-text {
+            font-size: 13px;
+            color: #999;
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        
+        .stripe-logo {
+            font-weight: 600;
+            color: #635BFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-container">
+        <div class="avatar">👤</div>
+        
+        <h1>You're joining the Konteks Kourse</h1>
+        
+        <div class="plan-card">
+            <div class="plan-price" id="planPrice">$29/mo</div>
+            <div class="plan-detail" id="planDetail">Cancel anytime</div>
+        </div>
+        
+        <p class="subtext">
+            You'll be redirected to our secure checkout. After payment, check your email for instant access to the Skool community.
+        </p>
+        
+        <div class="checklist">
+            <div class="checklist-item">All 5 chapters from day one</div>
+            <div class="checklist-item">The Konteks Kalendar</div>
+            <div class="checklist-item">Student community access</div>
+            <div class="checklist-item">Cancel anytime</div>
+        </div>
+        
+        <div class="loading">
+            <div class="spinner"></div>
+            <span>Redirecting to secure checkout...</span>
+        </div>
+        
+        <a href="#" class="backup-link" id="backupLink">Click here if not redirected</a>
+        
+        <div class="footer-text">
+            Secure payment powered by <span class="stripe-logo">Stripe</span>
+        </div>
+    </div>
+    
+    <script>
+        // Get plan from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const plan = urlParams.get('plan') || 'monthly';
+        
+        // Stripe Payment Links (replace these with actual links from Stripe)
+        const stripeLinks = {
+            monthly: 'https://buy.stripe.com/5kQ5kDeQCgmPcILfa45Rm00',
+            annual: 'https://buy.stripe.com/3cI28r9wic6zdMP0fa5Rm01'
+        };
+        
+        // Update UI based on plan
+        const planPrice = document.getElementById('planPrice');
+        const planDetail = document.getElementById('planDetail');
+        const backupLink = document.getElementById('backupLink');
+        
+        if (plan === 'annual') {
+            planPrice.textContent = '$249/yr';
+            planDetail.textContent = 'Save $99';
+        }
+        
+        // Set backup link
+        backupLink.href = stripeLinks[plan];
+        
+        // Auto-redirect after 2.5 seconds
+        setTimeout(() => {
+            window.location.href = stripeLinks[plan];
+        }, 2500);
+        
+        // Show backup link after 3 seconds
+        setTimeout(() => {
+            backupLink.classList.add('show');
+        }, 3000);
+    </script>
+</body>
+</html>

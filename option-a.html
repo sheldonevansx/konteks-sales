@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konteks Kourse - The Top Student Mindset Is Taught, Not Born</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Konteks Kourse - The Top Student Mindset Is Taught, Not Born">
+    <meta property="og:description" content="Everything your studio won't teach you about concepts, crits, site analysis, and time management — from the architect who won best thesis across all degrees.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://konteks.com">
+    <meta property="og:image" content="https://konteks.com/og-image.jpg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PIXEL_ID_HERE');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=PIXEL_ID_HERE&ev=PageView&noscript=1"
+    /></noscript>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000000;
+            background: #ffffff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .container-wide {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .bg-grey {
+            background: #f5f5f5;
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 120px 0 100px;
+        }
+        
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 24px;
+            max-width: 720px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #333333;
+            margin-bottom: 40px;
+            max-width: 620px;
+        }
+        
+        .cta-primary {
+            display: inline-block;
+            background: #000000;
+            color: #ffffff;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.2s, opacity 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+        
+        .cta-secondary {
+            display: inline-block;
+            background: #00C2FF;
+            color: #000000;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.2s, opacity 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .cta-secondary:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+        
+        .sub-cta {
+            display: block;
+            margin-top: 12px;
+            font-size: 14px;
+            color: #666666;
+        }
+        
+        /* Pain Points */
+        .pain-points h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .pain-list {
+            list-style: none;
+        }
+        
+        .pain-list li {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            padding-left: 32px;
+            position: relative;
+        }
+        
+        .pain-list li:before {
+            content: "×";
+            position: absolute;
+            left: 0;
+            font-size: 24px;
+            color: #000000;
+            font-weight: 700;
+        }
+        
+        /* What's Inside */
+        .whats-inside h2 {
+            font-size: 40px;
+            margin-bottom: 48px;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            gap: 24px;
+        }
+        
+        .chapter-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 32px;
+            transition: border-color 0.2s;
+        }
+        
+        .chapter-card:hover {
+            border-color: #00C2FF;
+        }
+        
+        .chapter-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+        
+        .chapter-card p {
+            color: #666666;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .chapter-card.bonus h3 {
+            color: #00C2FF;
+        }
+        
+        /* Credibility */
+        .credibility h2 {
+            font-size: 40px;
+            margin-bottom: 48px;
+        }
+        
+        .credibility-content {
+            display: flex;
+            gap: 48px;
+            align-items: start;
+            flex-wrap: wrap;
+        }
+        
+        .photo-placeholder {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #666666;
+            flex-shrink: 0;
+        }
+        
+        .credibility-list {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .credibility-list ul {
+            list-style: none;
+        }
+        
+        .credibility-list li {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            padding-left: 32px;
+            position: relative;
+        }
+        
+        .credibility-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+            color: #00C2FF;
+            font-weight: 700;
+        }
+        
+        /* Pricing */
+        .pricing h2 {
+            font-size: 40px;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+            max-width: 800px;
+            margin: 0 auto 32px;
+        }
+        
+        .pricing-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 40px 32px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .pricing-card.best-value {
+            border-color: #00C2FF;
+            border-width: 2px;
+        }
+        
+        .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #00C2FF;
+            color: #000000;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .pricing-card h3 {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+        
+        .pricing-card .price {
+            font-size: 48px;
+            font-weight: 700;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-bottom: 8px;
+        }
+        
+        .pricing-card .period {
+            font-size: 18px;
+            color: #666666;
+            margin-bottom: 24px;
+        }
+        
+        .pricing-card .cta-primary,
+        .pricing-card .cta-secondary {
+            width: 100%;
+            text-align: center;
+        }
+        
+        .pricing-note {
+            text-align: center;
+            color: #666666;
+            font-size: 14px;
+        }
+        
+        /* FAQ */
+        .faq h2 {
+            font-size: 40px;
+            margin-bottom: 48px;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 24px 0;
+        }
+        
+        .faq-question {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.2s;
+        }
+        
+        .faq-question:hover {
+            color: #00C2FF;
+        }
+        
+        .faq-toggle {
+            font-size: 24px;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            color: #666666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            margin-top: 16px;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .final-cta p {
+            font-size: 20px;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .final-cta .lead {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+        
+        .final-cta .sub-text {
+            font-size: 16px;
+            color: #666666;
+            margin-top: 12px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000000;
+            color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 12px;
+            transition: color 0.2s;
+        }
+        
+        footer a:hover {
+            color: #00C2FF;
+        }
+        
+        .footer-links {
+            margin-top: 16px;
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero {
+                padding: 80px 0 60px;
+            }
+            
+            h2 {
+                font-size: 32px !important;
+            }
+            
+            .credibility-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .final-cta {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 375px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .container {
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="fade-in">
+                <h1>The Top Student Mindset Is Taught, Not Born.</h1>
+                <p>Everything your studio won't teach you about concepts, crits, site analysis, and time management — from the architect who won best thesis across all degrees.</p>
+                <a href="#pricing" class="cta-primary track-cta">Join the Kourse — $29/month</a>
+                <span class="sub-cta">Cancel anytime. No contract.</span>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pain Points -->
+    <section class="pain-points bg-grey">
+        <div class="container">
+            <div class="fade-in">
+                <h2>Sound familiar?</h2>
+                <ul class="pain-list">
+                    <li>Your site analysis is a sun path and some wind arrows — and you know it</li>
+                    <li>Your concept always feels forced while theirs feels effortless</li>
+                    <li>You're pulling all-nighters but still not getting the best crit feedback</li>
+                    <li>You look at the top student's work and think: how do they do that?</li>
+                    <li>You know you're capable of more but nobody is showing you HOW</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- What's Inside -->
+    <section class="whats-inside">
+        <div class="container">
+            <div class="fade-in">
+                <h2>What's Inside</h2>
+                <div class="chapter-grid">
+                    <div class="chapter-card">
+                        <h3>Chapter 1: So... Architecture</h3>
+                        <p>Understanding the course, how to think before you draw</p>
+                    </div>
+                    <div class="chapter-card">
+                        <h3>Chapter 2: The Top Student Mindset</h3>
+                        <p>Creative thinking, being silly, abstract thinking, iteration</p>
+                    </div>
+                    <div class="chapter-card">
+                        <h3>Chapter 3: Crits, Deadlines & Timing</h3>
+                        <p>The exact time management system that won me top student in Theory AND Professional Practice</p>
+                    </div>
+                    <div class="chapter-card">
+                        <h3>Chapter 4: From 'Brief' to Concept</h3>
+                        <p>Developing unique, place-driven, meaningful concepts</p>
+                    </div>
+                    <div class="chapter-card">
+                        <h3>Chapter 5: Site Analysis & Urban Design</h3>
+                        <p>Beyond the sun path. Understanding place deeply.</p>
+                    </div>
+                    <div class="chapter-card bonus">
+                        <h3>BONUS: The Konteks Kalendar</h3>
+                        <p>A weekly planner built specifically for architecture students</p>
+                    </div>
+                    <div class="chapter-card bonus">
+                        <h3>BONUS: Student Community</h3>
+                        <p>A community of architecture students who refuse to be average</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Credibility -->
+    <section class="credibility bg-grey">
+        <div class="container">
+            <div class="fade-in">
+                <h2>Why Trust Dan?</h2>
+                <div class="credibility-content">
+                    <div class="photo-placeholder">Dan's Photo</div>
+                    <div class="credibility-list">
+                        <ul>
+                            <li>Won best master's thesis design project in her year</li>
+                            <li>Same thesis won best topic across engineering, science, and technology degrees</li>
+                            <li>Topped Theory AND Professional Practice in the same year</li>
+                            <li>Landed dream role at one of the biggest architecture firms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container-wide">
+            <div class="fade-in">
+                <h2>Choose Your Plan</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Monthly</h3>
+                        <div class="price">$29</div>
+                        <div class="period">per month</div>
+                        <a href="https://www.skool.com/konteks-6655" class="cta-primary track-cta" target="_blank">Join Monthly</a>
+                    </div>
+                    <div class="pricing-card best-value">
+                        <span class="badge">BEST VALUE</span>
+                        <h3>Annual</h3>
+                        <div class="price">$249</div>
+                        <div class="period">per year — Save $99</div>
+                        <a href="https://www.skool.com/konteks-6655" class="cta-secondary track-cta" target="_blank">Join Annual</a>
+                    </div>
+                </div>
+                <p class="pricing-note">Cancel anytime. All chapters included from day one.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="faq bg-grey">
+        <div class="container">
+            <div class="fade-in">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is this for my specific year or program?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes. The frameworks apply to all architecture programs and all years — from second year undergrad to masters.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Can I cancel anytime?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes. Monthly subscription, no contract, no questions asked.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>Is this just PDFs?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No. Each chapter includes video recordings, downloadable worksheets, and the Konteks Kalendar — a planning tool built specifically for architecture students.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>I'm already struggling with time, will this take more time?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Chapter 3 literally gives you a time management system. Most students say it saved them 5-10 hours a week. Start there.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>What if I'm already doing well in studio?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Chapter 4 (concepts) and Chapter 5 (site analysis) are specifically for students who are good but want to be unforgettable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="fade-in">
+                <p>Your studio is designed to filter out who 'gets it' and who doesn't — without ever teaching you what 'it' is.</p>
+                <p class="lead">This course teaches it.</p>
+                <a href="https://www.skool.com/konteks-6655" class="cta-primary track-cta" target="_blank">Join the Konteks Kourse</a>
+                <p class="sub-text">$29/month · Cancel anytime</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 @studwalldan</p>
+            <div class="footer-links">
+                <a href="https://instagram.com/studwalldan" target="_blank">Instagram</a>
+                <a href="https://tiktok.com/@studwalldan" target="_blank">TikTok</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // FAQ accordion
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Intersection Observer for fade-in
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Track CTA clicks
+        document.querySelectorAll('.track-cta').forEach(button => {
+            button.addEventListener('click', () => {
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'ViewContent', {
+                        content_name: 'Konteks Kourse CTA',
+                        content_category: 'Education',
+                        value: 29.00,
+                        currency: 'USD'
+                    });
+                }
+            });
+        });
+        
+        // Track page ViewContent on load
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'ViewContent', {
+                content_name: 'Konteks Kourse Landing Page',
+                content_category: 'Education'
+            });
+        }
+    </script>
+</body>
+</html>
