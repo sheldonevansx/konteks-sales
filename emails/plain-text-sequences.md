@@ -228,10 +228,10 @@ Dan
 - Only applies to annual subscribers
 
 ### Placeholder links to replace:
-- [SKOOL_LINK] → https://www.skool.com/konteks-6655?utm_source=email&utm_medium=automation&utm_campaign=onboarding
+- [SKOOL_LINK] → https://www.skool.com/architecture?utm_source=email&utm_medium=automation&utm_campaign=onboarding
 - [CHAPTER_2_LINK] → Skool classroom direct link to Chapter 2
 - [CHAPTER_3_LINK] → Skool classroom direct link to Chapter 3
-- [COMMUNITY_LINK] → https://www.skool.com/konteks-6655?utm_source=email&utm_medium=automation&utm_campaign=community
+- [COMMUNITY_LINK] → https://www.skool.com/architecture?utm_source=email&utm_medium=automation&utm_campaign=community
 - [UPDATE_PAYMENT_LINK] → Stripe Customer Portal URL
 - [REJOIN_LINK] → https://kourse.konteks.co (or Stripe Payment Link)
 - [DISCOUNT_LINK] → Stripe Payment Link with coupon applied (or checkout page with promo code)
