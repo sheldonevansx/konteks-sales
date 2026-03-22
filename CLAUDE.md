@@ -46,7 +46,7 @@ META-ADS-GUIDE.md          - Step-by-step Meta/Facebook ads setup guide
 ## ActiveCampaign (Email Marketing)
 - **Account:** konteks.activehosted.com
 - **API base:** https://konteks.activehosted.com/api/3/
-- **API credentials:** Store at ~/.activecampaign_url and ~/.activecampaign_key
+- **API credentials:** macOS Keychain (service: activecampaign-url / activecampaign-key, account: konteks). Retrieve with: `security find-generic-password -a konteks -s activecampaign-url -w` and `security find-generic-password -a konteks -s activecampaign-key -w`
 - **Login email:** info@konteks.co (has 2FA)
 - **From:** Dan - info@konteks.co
 - **List:** "Konteks Kourse Subscribers" (ID: 4)
