@@ -19,7 +19,7 @@ META-ADS-GUIDE.md          - Step-by-step Meta/Facebook ads setup guide
 
 ## Design System
 - **Font:** Inter (Google Fonts) - 800 weight headlines, 400 body
-- **Accent color:** #D4762C (burnt orange), hover: #B8631F
+- **Accent color:** #E86A1C (burnt orange), hover: #C85A16
 - **Body text:** #333333, 16-18px body, 40-56px headlines
 - **Alt section bg:** #F7F7F7
 - **Card border:** rgba(227, 227, 229, 0.5), 12px border-radius
