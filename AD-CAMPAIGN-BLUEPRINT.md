@@ -1,350 +1,514 @@
-# Konteks Kourse - Meta Ad Campaign Blueprint
+# Konteks Kourse - Meta Ad Campaign Blueprint v2
 
-## The Reality First
-
-Architecture education is a paid ad **blue ocean**. From our research:
-- 30x40 Design Workshop and Show It Better (Dan's closest competitors) do NOT run paid Meta ads
-- The paid ad space for architecture digital products is almost empty
-- This means low CPMs, cheap clicks, and first-mover advantage
-
-Your budget: $15-20/day. That's ~$450-600/month. At a $29/mo product, you need ~16-21 conversions/month to break even. At a 2% landing page conversion rate with $1.50 CPC, that's realistic.
+*Updated: March 23, 2026*
+*Budget: $100/day ($1,500 test) | CBO | 15-day test window*
 
 ---
 
-## Campaign Architecture (ABO, not CBO)
+## The Competitive Landscape
 
-**Why ABO:** At $15-20/day, you don't have enough budget for Meta's algorithm to optimize across ad sets. ABO (Ad Set Budget Optimization) lets you control spend per audience. CBO needs $100+/day to work.
+**Archademia is the only competitor running Meta ads.** 50+ ads continuously since Sep 2025, estimated $5-15K/month. They target working architects and professionals - NOT students.
 
-### Structure:
-```
-Campaign: Konteks Kourse - Cold Traffic
-  Ad Set 1: Architecture Students - Interest ($5/day)
-  Ad Set 2: Architecture Students - Lookalike ($5/day)  
-  Ad Set 3: Architecture Professionals ($5/day)
+Everyone else (30x40, Show It Better, Archisoup, First In Architecture) runs zero paid ads.
 
-Campaign: Konteks Kourse - Retargeting ($5/day)
-  Ad Set 1: Website Visitors (pixel)
-  Ad Set 2: Video Viewers 50%+
-```
+**What this means:** The architecture *student* education space on Meta is completely empty. Zero competition. Archademia proved the market exists and will pay. They just left the student half untouched.
+
+**Your lane:** Anti-academic, personality-driven, community-first education for architecture students. Nobody is doing this.
 
 ---
 
-## Targeting
+## Campaign Structure ($100/day CBO)
 
-### Ad Set 1: Interest-Based (cold)
-- **Age:** 18-30
-- **Interests (layer these):**
-  - Architecture (academic discipline)
-  - Architectural design
-  - AND one of: University, Student life, Graduate school
-- **Exclude:** Existing customers (upload Skool email list)
-- **Placements:** Automatic (let Meta decide - they know where cheap impressions are)
-- **Location:** English-speaking countries (US, UK, AU, NZ, ZA, CA, IE, SG, HK, AE)
+At $100/day, use **CBO** (Campaign Budget Optimization). Meta's algorithm has enough data at this budget to shift money to winning ad sets automatically.
 
-### Ad Set 2: Lookalike (once you have 100+ pixel events)
-- Source: Purchase event or ViewContent event from pixel
-- 1% lookalike in top-performing countries
-- Skip this until you have data
+```
+CAMPAIGN 1: Konteks Kourse - Cold Traffic ($85/day CBO)
+  Ad Set 1: Email Lookalike (326-list, 1% LAL)
+  Ad Set 2: Architecture Students - Interest
+  Ad Set 3: Architecture Media Readers
+  Ad Set 4: Archademia Interest Overlap
+  Ad Set 5: Broad 18-28 (let Meta find them)
 
-### Ad Set 3: Broader Architecture
-- **Age:** 20-35
-- **Interests:** Architecture, Interior Design, Urban Planning
-- **No** student layering - catch working professionals who want to upskill
-- Lower priority, test after Ad Set 1 proves profitable
+CAMPAIGN 2: Konteks Kourse - Retargeting ($15/day CBO)
+  Ad Set 1: Video Viewers 50%+
+  Ad Set 2: Website Visitors (exclude purchasers)
+```
 
-### Retargeting (start after 7 days of cold traffic)
-- Website visitors last 14 days (exclude purchasers)
-- Video viewers 50%+ last 14 days
-- Different creative - address objections, show social proof
+**Why CBO works here:** At $100/day, Meta gets ~50+ link clicks daily. That's enough signal for the algorithm to learn which ad set converts best and shift budget there. You don't have to guess.
 
 ---
 
-## Creative Strategy
+## Targeting Details
 
-### The Framework (from Dara Denney's 5-step system)
-1. **Test the HOOK first** - same body, different first 3 seconds
-2. **One variable per test** - never change hook AND body simultaneously
-3. **3-5 hook variations per concept** - only change opening
-4. **Kill losers fast** - below 1% CTR after 1,000 impressions = dead
-5. **Scale winners slowly** - increase budget 20% every 3 days max
+### Ad Set 1: Email Lookalike (HIGHEST PRIORITY)
+- Upload 326 Skool member emails as Custom Audience
+- Create 1% Lookalike in US, UK, AU, CA, NZ, ZA
+- Age: 18-30
+- No interest layering (the lookalike IS the targeting)
+- This is your best audience because these are proven architecture students who already engaged with Dan
 
-### Ad Format Priority
-1. **Video (talking head)** - Dan speaking to camera, 15-30 seconds. This is the #1 format. Period.
-2. **Static image** - Dan's teaching screenshot + bold text overlay
-3. **Carousel** - chapter previews (each slide = one chapter benefit)
+### Ad Set 2: Architecture Students - Interest
+- Age: 18-28
+- Interests: Architecture (academic discipline) AND (University OR Student life OR Graduate school)
+- Exclude: Custom Audience (326 list) + purchasers
+- Locations: US, UK, AU, CA, NZ, ZA, IE, SG, HK, AE
+
+### Ad Set 3: Architecture Media Readers
+- Age: 18-35
+- Interests: ArchDaily OR Dezeen OR Archinect
+- These are architecture-obsessed people who consume architecture content
+- Broader but high-intent
+
+### Ad Set 4: Archademia Interest Overlap
+- People interested in Archademia + Architecture
+- You're riding their coattails - they spent 6 months building awareness, you benefit
+- If Archademia isn't available as an interest, use their Facebook page as a target
+
+### Ad Set 5: Broad 18-28
+- No interests. Just age 18-28, English-speaking countries
+- Let Meta's algorithm find architecture students based on pixel data
+- Start this AFTER you have 50+ pixel events from other ad sets
+- This often ends up being the cheapest ad set once Meta has enough data
+
+### Retargeting Ad Set 1: Video Viewers
+- Custom Audience: People who watched 50%+ of any video ad
+- Last 14 days
+- Show different creative (social proof, testimonial, urgency)
+
+### Retargeting Ad Set 2: Website Visitors
+- Custom Audience: kourse.konteks.co visitors last 14 days
+- Exclude: purchasers (thank-you page visitors)
+- Show objection-handling creative
 
 ---
 
-## 5 Ad Scripts for Dan to Film
+## Ad Angles (5 concepts, 3+ hooks each)
 
-All scripts follow PAS (Pain-Agitate-Solve) because pain-first hooks outperform aspirational hooks in education niches.
+### Angle A: Anti-Academic (Dan's natural voice)
+**Target emotion:** Frustration with architecture school
 
-### Script 1: "The Crit Problem" (15 sec)
+Hook variations:
+1. "Architecture school teaches you theory. Nobody teaches you how to actually design."
+2. "I got the best thesis in my entire faculty. Here's what they didn't teach me."
+3. "Your professors won't tell you this. The students who ace crits aren't more talented."
+
+Body: "I put everything I learned - time management, brief decoding, crit presentation, concept development - into 5 chapters. It's what I wish existed when I was in your seat."
+
+CTA: "Join 326 students. $29/month. Cancel anytime."
+
+### Angle B: Studio Survival
+**Target emotion:** Overwhelm and all-nighters
+
+Hook variations:
+1. "You're pulling all-nighters because nobody taught you this."
+2. "If you redesign your project 3 times before every crit, watch this."
+3. "Architecture school doesn't have to be this hard."
+
+Body: "I split every task into three modes - deep work, steady work, and easy work. You never mix them. This one system saved me 10 hours a week in studio. It's Chapter 3 of the Konteks Kourse."
+
+CTA: "Five chapters. Weekly planner. $29/month."
+
+### Angle C: Community-First (sell the Skool access)
+**Target emotion:** Isolation in architecture school
+
+Hook variations:
+1. "326 architecture students sharing their work, getting feedback, and actually helping each other."
+2. "What if you had a group of students going through the same thing you are?"
+3. "Architecture school is lonely. It doesn't have to be."
+
+Body: "Five chapters of real systems - from mindset to site analysis. A weekly planner built for studio schedules. And a community where you actually get honest feedback. Not from professors who grade you - from students who get it."
+
+CTA: "$29/month. Cancel anytime. Link in bio."
+
+### Angle D: Credential/Authority (for skeptics who don't know Dan)
+**Target emotion:** Trust/credibility seeking
+
+Hook variations:
+1. "Built by the architect who won best thesis across engineering, science, and technology."
+2. "I teach architecture differently. 326 students already noticed."
+3. "My students call Chapter 3 the one that saves them 10 hours a week."
+
+Body: "I'm Dan. I'm an architect and educator in Dubai. I built the Konteks Kourse because everything I learned about surviving architecture school - nobody taught me. I had to figure it out the hard way. You don't."
+
+CTA: "Five chapters. $29/month. See what's inside."
+
+### Angle E: Thesis/Capstone Rescue (seasonal - run during thesis season)
+**Target emotion:** Panic and procrastination
+
+Hook variations:
+1. "Stuck on your thesis? Watch this."
+2. "Your thesis brief isn't confusing. You just don't know how to read it yet."
+3. "Every thesis brief has a hidden structure. Once you see it, your concept writes itself."
+
+Body: "Chapter 4 shows you exactly how to go from a brief to a concept. Not randomly. Not by staring at Pinterest for 6 hours. A real system that works every time. Chapter 3 handles your timeline so you stop panicking."
+
+CTA: "Konteks Kourse. Link in bio."
+
+---
+
+## Video Scripts for Dan to Film
+
+Film on your phone, selfie mode, natural light. Don't memorize lines - know the point, say it naturally. Messy > polished. Real > produced.
+
+### Script 1: "The Crit Secret" (15-20 sec)
 ```
-HOOK (first 3 sec): "Nobody at your architecture school will tell you this."
+HOOK (first 3 sec - look directly at camera, pause, then):
+"Nobody at your architecture school will tell you this."
 
-BODY: "The students who ace crits aren't more talented. They just know 
-how to present their work in a way lecturers actually respond to. I 
-learned this the hard way - then I won best thesis across engineering, 
-science, and technology."
+BODY (casual, like you're telling a friend):
+"The students who ace crits aren't more talented than you. They 
+just learned how to present their work the way lecturers actually 
+respond to. I figured this out the hard way - and then I won best 
+thesis across my entire faculty."
 
-CTA: "Link in bio. $29 a month. Five chapters that change how you 
-work."
+CTA (slight smile):
+"I put it all in the Konteks Kourse. Link in bio."
 ```
 
-### Script 2: "The Time Trap" (15 sec)
+### Script 2: "The All-Nighter Fix" (15-20 sec)
 ```
 HOOK: "You're pulling all-nighters because nobody taught you this."
 
-BODY: "I split every task into three modes - deep work, steady work, 
-and easy work. You never mix them. Your week gets blocked by energy, 
-not by deadline panic. This one system saved me 10 hours a week in 
-studio."
+BODY: "I split every task into three modes. Deep work, steady work, 
+and easy work. You never mix them. You block your week by energy, 
+not by deadline panic. This one change saved me 10 hours a week 
+in studio."
 
-CTA: "The full system is in Chapter 3. Link in bio."
+CTA: "That's Chapter 3. Link in bio."
 ```
 
-### Script 3: "The Brief Decode" (20 sec)
+### Script 3: "The Brief Decoder" (20 sec)
 ```
-HOOK: "Your brief isn't confusing. You just don't know how to read it."
+HOOK: "Your brief isn't confusing. You just don't know how to 
+read it yet."
 
-BODY: "Every architecture brief has a hidden structure. Once you see 
-it, your concept isn't random anymore - it comes directly from the 
-brief. I show you exactly how to decode it in Chapter 4."
+BODY: "Every architecture brief has a hidden structure. When you 
+see it, your concept isn't random anymore - it comes straight 
+from the brief. I show you exactly how in Chapter 4."
 
 CTA: "Five chapters. $29 a month. Link in bio."
 ```
 
-### Script 4: "The Talent Lie" (15 sec)
+### Script 4: "The Honest Truth" (15 sec)
 ```
 HOOK: "Architecture school has a dirty secret."
 
 BODY: "The top students aren't more creative than you. They were 
-taught systems that your lecturers never share. How to think about 
-concepts. How to manage your time. How to present at crits. I put 
+taught systems - how to think about concepts, manage their time, 
+present at crits. Your lecturers never share this stuff. I put 
 all of it in one place."
 
 CTA: "Konteks Kourse. Link in bio."
 ```
 
-### Script 5: "Social Proof" (20 sec)
+### Script 5: "The Community" (15 sec)
 ```
 HOOK: "326 architecture students are already inside."
 
-BODY: "Five chapters covering everything from mindset to site 
-analysis. A weekly planner built for studio schedules. And a 
-community of students going through the same thing you are. This 
-is what I wish existed when I started."
+BODY: "Five chapters. A weekly planner. And a community of 
+students going through the same thing you are. This is what I 
+wish existed when I started."
 
 CTA: "$29 a month. Cancel anytime. Link in bio."
 ```
 
+### Script 6: "The Thesis Panic" (20 sec - run during thesis season)
+```
+HOOK: "If you're stuck on your thesis, stop scrolling."
+
+BODY: "I know the feeling. You've been staring at your brief for 
+two weeks and nothing clicks. Here's the thing - your brief has 
+a structure you're not seeing. Once you decode it, your concept 
+comes together fast. I show you exactly how."
+
+CTA: "Chapter 4 of the Konteks Kourse. Link in bio."
+```
+
 ---
 
-## Static Ad Creatives (NanoBanana prompts)
+## Static Creatives (NanoBanana prompts)
 
-### Creative 1: "Dan Teaching" (hero screenshot)
+### Creative 1: Pain List
 ```
-Take this screenshot of Dan teaching in the Konteks Kourse video 
-lesson. Add a bold white text overlay at the top that says:
+1080x1080 square. White background. Bold black Inter font (800 weight).
 
-"Nobody in studio will tell you this."
-
-And smaller text at the bottom: "5 chapters. $29/mo. Cancel anytime."
-
-The text should have a subtle dark shadow/outline for readability. 
-Keep the image exactly as-is underneath. Output at 1080x1080px 
-(square for feed).
-```
-
-### Creative 2: "Pain List"
-```
-Create a 1080x1080 square image with a clean white background. 
-In bold black Inter font (800 weight), center this text:
+Center this text:
 
 "Sound familiar?
 
-- You redesign your project 3 times
-  before every crit
-
+- You redesign your project 3 times before every crit
 - You have no system for time management
-
 - Your concepts feel random
-
 - You pull all-nighters every week"
 
-At the bottom in burnt orange (#E86A1C), add: 
+Bottom center in burnt orange (#E86A1C): 
 "There's a better way. konteks.co"
 
-Minimal design. No gradients. No icons. Just text.
+No gradients. No icons. No images. Just text on white.
 ```
 
-### Creative 3: "Results"
+### Creative 2: Chapter Grid
 ```
-Create a 1080x1080 square image. White background. 
+1080x1080 square. White background.
 
-Top: "What 326 students learned:" in bold black Inter font.
+Top: "5 chapters. Everything your lecturers skip." in bold black.
 
-Then three bullet points with orange check marks:
-"How to decode any brief in 30 minutes"
-"A time system that eliminates all-nighters"
-"How to present at crits with confidence"
+Then a 2-column grid with 5 rows:
+Ch 1: "So... Architecture" 
+Ch 2: "The Top Student Mindset"
+Ch 3: "Crits, Deadlines & Timing"
+Ch 4: "From Brief to Concept"
+Ch 5: "Site Analysis & Urban Design"
++ Bonus: "Konteks Kalendar (weekly planner)"
 
-Bottom: "Konteks Kourse - $29/mo" in orange.
+Each chapter name in black, small description in gray below.
+
+Bottom: "$29/mo - Cancel anytime" in orange.
+```
+
+### Creative 3: Dan Teaching Screenshot
+```
+Use the screenshot of Dan teaching in the Konteks Kourse video. 
+Add bold white text overlay with dark shadow at the top:
+
+"Your professors won't teach you this."
+
+Bottom overlay: "5 chapters. 326 students. $29/mo."
+
+1080x1080 crop. Keep Dan visible and the teaching content in frame.
+```
+
+### Creative 4: Social Proof Numbers
+```
+1080x1080 square. Black background. White text.
+
+Large number in center: "326"
+Below: "architecture students learning systems 
+that actually work in studio"
+
+Bottom in orange: "Join them. $29/month."
 ```
 
 ---
 
-## The Funnel Flow
+## Retargeting Creatives (different from cold traffic)
 
+### Retarget Creative 1: Objection Handler
 ```
-Ad (Meta) 
-  ↓
-Sales Page (kourse.konteks.co) - PageView + ViewContent pixels fire
-  ↓
-Checkout Bridge (checkout.html) - InitiateCheckout pixel fires
-  ↓
-Stripe Payment Link - payment happens
-  ↓
-Thank You Page (thank-you.html) - Purchase pixel fires
-  ↓
-Zapier: Stripe → Skool invite + AC onboarding tag
-  ↓
-Email 1: "you're in" (immediate)
-Email 2: "try this before your next crit" (day 2)
-Email 3: "the chapter students say saves them 10 hours a week" (day 5)
-Email 4: "quick question" (day 8)
+Video - Dan to camera, 10 seconds:
+
+"Still thinking about it? Here's the deal. $29. Cancel anytime. 
+If Chapter 3 doesn't save you 10 hours in your first week, 
+cancel and you've lost nothing. The students who joined say 
+it's the best $29 they've spent in architecture school."
+```
+
+### Retarget Creative 2: Static Testimonial
+```
+1080x1080. White background.
+
+Quote: "Chapter 3 literally changed how I approach every 
+project. I went from all-nighters twice a week to finishing 
+on time. Every time."
+
+Below: "- Architecture student, 3rd year"
+
+Bottom: "konteks.co | $29/month"
 ```
 
 ---
 
-## Ads Manager Setup (click-by-click)
+## Ads Manager Setup (step by step)
 
-### Step 1: Create Ad Account
-1. Go to business.facebook.com
-2. Business Settings (gear icon) → Ad Accounts → Add
-3. Create new ad account → name it "Konteks Kourse"
-4. Set currency to USD, timezone to Dubai (GMT+4)
+### Step 1: Upload Custom Audience
+1. Go to Ads Manager -> Audiences
+2. Create Audience -> Custom Audience -> Customer List
+3. Upload CSV with 326 Skool member emails (just email column)
+4. Name it "Konteks - Skool Members"
+5. Wait for it to process (can take up to 48 hours)
 
-### Step 2: Connect Pixel
-1. Events Manager → Data Sources → your pixel should already show
-2. If not: Add → Web → name "Konteks Kourse" → install manually (already done in code)
-3. Verify events: open kourse.konteks.co in another tab → Events Manager should show PageView
+### Step 2: Create Lookalike
+1. Audiences -> Create Audience -> Lookalike Audience
+2. Source: "Konteks - Skool Members"
+3. Location: US, UK, AU, CA
+4. Size: 1%
+5. Name it "Konteks - 1% Lookalike (Skool)"
 
 ### Step 3: Set Up Custom Conversions
-1. Events Manager → Custom Conversions → Create
-2. Name: "Konteks - View Content" → Event: ViewContent → Done
-3. Name: "Konteks - Initiate Checkout" → Event: InitiateCheckout → Done
-4. Name: "Konteks - Purchase" → Event: Purchase → Done
+1. Events Manager -> Custom Conversions -> Create
+2. Create one for each: ViewContent, InitiateCheckout, Purchase
+3. These should already be firing from the pixel on kourse.konteks.co
 
-### Step 4: Create Campaign
-1. Ads Manager → Create
-2. Objective: **Sales** (not traffic, not engagement)
-3. Campaign name: "Konteks Kourse - Cold Traffic"
-4. **Turn OFF** Campaign Budget Optimization (this gives you ABO)
-5. Continue
+### Step 4: Create Campaign 1 (Cold Traffic)
+1. Ads Manager -> Create -> Sales objective
+2. Campaign name: "Konteks Kourse - Cold Traffic"
+3. **Turn ON** Campaign Budget Optimization
+4. Daily budget: $85
+5. Campaign bid strategy: Lowest cost (default)
+6. Continue
 
-### Step 5: Create Ad Set
-1. Name: "Architecture Students - Interest"
-2. Pixel: Select your pixel
-3. Conversion event: **Purchase** (optimize for the end goal)
-4. Budget: $5/day
-5. Start date: immediately
-6. Audience:
-   - Locations: US, UK, AU, NZ, ZA, CA
-   - Age: 18-30
-   - Detailed Targeting: Architecture (academic discipline) AND University
-7. Placements: Advantage+ (automatic)
-8. Continue
+### Step 5: Create Ad Sets (all 5)
 
-### Step 6: Create Ad
-1. Format: Single image or video
-2. Upload Dan's video (or static creative)
-3. Primary text (the caption):
+**Ad Set 1: Lookalike**
+- Name: "LAL - Skool 1%"
+- Conversion event: Purchase
+- Audience: "Konteks - 1% Lookalike (Skool)"
+- Age: 18-30
+- Placements: Advantage+ (automatic)
+- No minimum spend per ad set (CBO allocates)
+
+**Ad Set 2: Interest - Students**
+- Name: "Interest - Arch Students"
+- Audience: Interest = Architecture (academic discipline) AND University
+- Age: 18-28
+- Exclude: Skool members custom audience
+
+**Ad Set 3: Architecture Media**
+- Name: "Interest - Arch Media"
+- Audience: Interest = ArchDaily OR Dezeen OR Archinect
+- Age: 18-35
+- Exclude: Skool members custom audience
+
+**Ad Set 4: Archademia Overlap**
+- Name: "Interest - Archademia"
+- Audience: Interest = Archademia (or their Facebook page)
+- Age: 18-35
+
+**Ad Set 5: Broad**
+- Name: "Broad 18-28"
+- No interests. Age 18-28 only.
+- Locations: US, UK, AU, CA
+- Note: Start this paused. Enable after 50+ pixel events.
+
+### Step 6: Create Ads (per ad set)
+
+Each ad set gets at minimum:
+- 1 video ad (Dan talking head)
+- 1 static image ad
+- 1 alternate hook (same body, different opening)
+
+Ad copy (use for all cold traffic ads):
 ```
+Primary Text:
 The students who ace crits aren't more talented.
 
 They just learned what nobody in studio teaches:
 - How to decode any brief in 30 minutes
-- A time system that eliminates all-nighters  
+- A time system that eliminates all-nighters
 - How to present at crits with confidence
 
 5 chapters. Weekly planner included. 326+ students inside.
 
-Built by the architect who won best thesis across engineering, science, and technology.
-```
-4. Headline: "The top student mindset is taught"
-5. Description: "$29/month - Cancel anytime"
-6. CTA button: "Learn More"
-7. URL: https://kourse.konteks.co
-8. URL parameters: `utm_source=meta&utm_medium=paid&utm_campaign=cold_traffic&utm_content={{ad.name}}`
-9. Publish
+Built by the architect who won best thesis across 
+engineering, science, and technology.
 
-### Step 7: Duplicate for variations
-- Duplicate the ad set 2 more times
-- Change targeting per the structure above
-- Duplicate ads within each ad set, changing only the hook/creative
+Headline: The top student mindset is taught
+Description: $29/month - Cancel anytime
+CTA Button: Learn More
+URL: https://kourse.konteks.co
+URL Parameters: utm_source=meta&utm_medium=paid&utm_campaign=cold_traffic&utm_content={{ad.name}}
+```
+
+### Step 7: Create Campaign 2 (Retargeting)
+1. New campaign -> Sales objective
+2. Name: "Konteks Kourse - Retargeting"
+3. CBO ON, $15/day
+4. Ad Set 1: Custom Audience = Video viewers 50%+ last 14 days
+5. Ad Set 2: Custom Audience = Website visitors last 14 days, exclude purchasers
+6. Use retargeting creatives (different from cold traffic)
+
+---
+
+## Post-ID Reuse (important hack)
+
+When you find a winning ad:
+1. Note the Post ID (in ad details)
+2. When creating the same ad in other ad sets, use "Use existing post" and enter the Post ID
+3. This stacks all likes, comments, and shares on ONE post instead of splitting engagement across duplicates
+4. More social proof = higher CTR = lower CPM
 
 ---
 
 ## Daily Management SOP
 
-### First 3 Days: Don't touch anything
-Let Meta's algorithm learn. Resist the urge to change things.
+### Days 1-3: Don't touch anything
+Let Meta learn. Seriously. Don't change budgets, don't pause ads, don't panic.
 
-### Day 4+: Check these metrics daily
-| Metric | Good | Kill It |
-|--------|------|---------|
-| CTR (link click-through) | >1.5% | <1% after 1K impressions |
-| CPC (cost per click) | <$2.00 | >$3.00 |
-| CPM (cost per 1K views) | <$15 | >$30 |
-| Landing page conversion | >2% | <1% |
-| Cost per purchase | <$29 | >$50 |
+### Day 4: First review
+| Metric | Keep Running | Kill It |
+|--------|-------------|---------|
+| CTR (link clicks) | >1.5% | <1% after 1K impressions |
+| CPC | <$2.50 | >$4.00 |
+| CPM | <$20 | >$35 |
+| Hook rate (video) | >25% watched 3s | <15% |
+| Cost per purchase | <$40 | >$60 |
 
-### Weekly Actions
-- Kill underperforming ads (below 1% CTR after 1K impressions)
-- Create 2-3 new hook variations of winning ads
-- Check frequency - if >2.5, audience is seeing ads too often
-- Move budget from losers to winners (max 20% increase per change)
+### Day 7: Optimization
+- Kill any ad below 1% CTR
+- Kill any ad set with 0 conversions and $50+ spent
+- Note which ad set CBO is favoring (that's your winner)
+- Create 2-3 new hook variations of best-performing ad
 
-### Scaling Rules
-- Never increase budget more than 20% at a time
-- Wait 3 days between budget changes
-- If ROAS drops after scaling, reduce back immediately
-- At $50+/day, consider switching to CBO
+### Day 10: Scale decision
+- If ROAS > 1.5x: increase daily budget by 20%
+- If ROAS 1-1.5x: keep running, test new creatives
+- If ROAS < 1x: pause everything, rethink creative/angle/landing page
 
----
-
-## Budget Breakdown
-
-**Month 1 (testing):** $15/day = ~$450
-- 3 ad sets x $5/day
-- Goal: Find 1-2 winning creatives and 1 winning audience
-- Expected: 5-15 purchases (depending on CPL)
-
-**Month 2 (optimizing):** $20/day = ~$600
-- Kill losers, double down on winners
-- Add retargeting campaign ($5/day)
-- Goal: 15-25 purchases
-
-**Month 3+ (scaling):** $30-50/day
-- Only if ROAS > 1.5x
-- Add lookalike audiences
-- Test new creative concepts monthly
+### Day 15: Full audit
+- Total spend vs total revenue
+- Cost per acquisition
+- Best performing audience
+- Best performing creative
+- Decision: continue, pivot, or kill
 
 ---
 
-## What to Do Right Now
+## First-Comment Strategy
 
-1. Dan films Scripts 1-4 (15-20 seconds each, talking to camera, natural lighting, casual setting)
-2. Create the static creatives in NanoBanana using the prompts above
-3. Create the Meta Ad Account (business.facebook.com)
-4. Set up Custom Conversions in Events Manager
-5. Build Campaign 1 following the click-by-click guide
-6. Wait 3 days, check metrics, iterate
+Immediately after each ad publishes, Dan posts a comment on her own ad:
 
-**Do NOT launch ads until:**
-- The funnel test passes (Stripe → Zapier → Skool → AC)
-- Dan has filmed at least 2 video creatives
-- You have at least 2 static creatives ready
-- The AC onboarding automation is confirmed working
+"Ask me anything about the kourse - I answer everyone."
+
+This does two things:
+1. Boosts engagement signal (Meta rewards ads with comments)
+2. Creates a conversation that cold viewers see and trust
+
+Reply to EVERY comment on ads. Even the haters. Engagement = cheaper reach.
+
+---
+
+## Budget Math
+
+**Break-even:** $29/mo subscription. If cost per acquisition (CPA) is under $29, you're profitable from month 1.
+
+**With $100/day for 15 days ($1,500 total):**
+- At $30 CPA: 50 new subscribers = $1,450/mo recurring
+- At $20 CPA: 75 new subscribers = $2,175/mo recurring
+- At $40 CPA: 37 new subscribers = $1,073/mo recurring
+
+**Key insight:** Even at $40 CPA (expensive), each subscriber who stays 2+ months is profitable. Subscription LTV > CPA is the goal, not month-1 ROAS.
+
+**Annual plan bonus:** If some buy the $249/yr plan, your effective CPA drops significantly. One annual purchase = 8.5 monthly equivalents.
+
+---
+
+## What to Do Right Now (ordered)
+
+1. **Upload 326 email CSV to Meta** as Custom Audience (takes up to 48 hours to process)
+2. **Dan films Scripts 1-4** (15-20 sec each, phone selfie, natural light, casual)
+3. **Create 3-4 static creatives** in NanoBanana using prompts above
+4. **Create Meta Ad Account** in business.facebook.com
+5. **Verify pixel events** are firing (visit kourse.konteks.co, check Events Manager)
+6. **Build Campaign 1** following the step-by-step guide
+7. **Build Campaign 2** (retargeting) - can be done same day, it'll be paused until you have audience data
+8. **Wait 3 full days** before looking at metrics
+9. **Day 4: first review** using the metrics table above
+10. **Day 7: optimize** - kill losers, note winners
+11. **Day 15: full audit** - decide to scale, pivot, or kill
+
+**Do NOT launch until:**
+- Custom audience is processed (48 hours)
+- At least 2 video creatives are ready
+- At least 2 static creatives are ready
+- Funnel is confirmed working (Stripe -> Zapier -> Skool -> AC)
+- AC onboarding automation is active and tested
