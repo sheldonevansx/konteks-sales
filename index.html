@@ -305,21 +305,18 @@
         }
         
         .preview-box {
-            background: #E5E5E5;
+            background: #F7F7F7;
             width: 100%;
-            height: 260px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-            font-size: 14px;
             border-radius: 12px;
-            text-align: center;
-            padding: 20px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         }
         
-        @media (min-width: 768px) {
-            .preview-box { height: 320px; }
+        .preview-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
         }
         
         .preview-caption {
@@ -685,7 +682,7 @@
                             <polyline points="20 6 9 17 4 12"/>
                         </svg>
                     </span>
-                    You're in year 2-5 of architecture school (undergrad or masters)
+                    You're studying architecture at any level (undergrad or masters)
                 </li>
                 <li>
                     <span class="qualifier-check">
@@ -950,9 +947,9 @@
             </div>
             
             <div class="preview-grid" style="padding: 0 24px;">
-                <div class="preview-box" style="background: url('images/lesson-view.png') center/cover no-repeat;"></div>
-                <div class="preview-box" style="background: url('images/kalendar.png') center/cover no-repeat;"></div>
-                <div class="preview-box" style="background: url('images/classroom.png') center/cover no-repeat;"></div>
+                <div class="preview-box"><img src="images/lesson-view.png" alt="Chapter lesson view"></div>
+                <div class="preview-box"><img src="images/kalendar.png" alt="Konteks Kalendar weekly planner"></div>
+                <div class="preview-box"><img src="images/classroom.png" alt="Student community on Skool"></div>
             </div>
             
             <p class="preview-caption">Video recordings, worksheets, and practical exercises in every chapter.</p>
