@@ -62,7 +62,7 @@
 ### 2.2 Get Pixel ID
 1. After creation, you'll see a Pixel ID (16-digit number like `1234567890123456`)
 2. Copy this ID
-3. **Send to Shel** - he needs to replace `PIXEL_ID_HERE` in index.html (line 23 and line 30)
+3. **Send to Shel** - he needs to replace `962791462941600` in index.html (line 23 and line 30)
 
 ### 2.3 Verify Pixel Installation
 1. Install **Meta Pixel Helper** Chrome extension

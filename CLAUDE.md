@@ -74,14 +74,13 @@ All email copy is in `emails/plain-text-sequences.md`.
 2. Stripe Canceled Subscription → Email notification to Shel
 
 ## Meta Pixel
-- Base code is in all pages with placeholder `PIXEL_ID_HERE`
+- **Pixel ID:** 962791462941600 (Dataset: "Konteks Kourse", owned by Shel)
+- Base code installed in all HTML pages
 - ViewContent fires on CTA clicks
 - InitiateCheckout fires on checkout.html
 - Purchase fires on thank-you.html
-- Need actual Pixel ID from Dan
 
 ## Remaining Placeholders
-- `PIXEL_ID_HERE` - Meta Pixel ID
 - `STRIPE_DISCOUNT_LINK_HERE` - $19/mo win-back payment link
 - `STRIPE_PORTAL_URL_HERE` - Stripe Customer Portal URL
 - `[UPDATE_PAYMENT_LINK]` - Link for updating payment method

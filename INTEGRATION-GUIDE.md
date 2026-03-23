@@ -169,23 +169,23 @@ const stripeLinks = {
 6. Copy your **Pixel ID** (16-digit number like `123456789012345`)
 
 ### Step 2: Add Pixel ID to All Files
-Replace `PIXEL_ID_HERE` in these three files:
+Replace `962791462941600` in these three files:
 
 **File 1: option-a-v4.html**
 - Open the file
-- Search for `PIXEL_ID_HERE` (appears 2 times)
+- Search for `962791462941600` (appears 2 times)
 - Replace both with your actual Pixel ID
 - Save
 
 **File 2: checkout.html**
 - Open the file
-- Search for `PIXEL_ID_HERE` (appears 2 times)
+- Search for `962791462941600` (appears 2 times)
 - Replace both with your actual Pixel ID
 - Save
 
 **File 3: thank-you.html**
 - Open the file
-- Search for `PIXEL_ID_HERE` (appears 2 times)
+- Search for `962791462941600` (appears 2 times)
 - Replace both with your actual Pixel ID
 - Save
 
@@ -306,7 +306,7 @@ You can use either:
 Before going live, verify:
 
 **Files:**
-- [ ] All `PIXEL_ID_HERE` replaced with real Pixel ID
+- [ ] All `962791462941600` replaced with real Pixel ID
 - [ ] All `STRIPE_MONTHLY_LINK_HERE` / `STRIPE_ANNUAL_LINK_HERE` replaced
 - [ ] CTAs in option-a-v4.html point to checkout.html
 - [ ] All files committed to GitHub and deployed to Cloudflare
