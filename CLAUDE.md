@@ -102,6 +102,12 @@ All email copy is in `emails/plain-text-sequences.md`.
 - **Collaborator:** Gamblegrift (Jinx's GitHub)
 - Always push to both remotes: `git push origin main && git push gamblegrift main`
 
+## Security
+- NEVER store credentials as plain text files. Use macOS Keychain: `security add-generic-password -a <account> -s <service> -w <value>`
+- NEVER output secrets/tokens/keys in chat or terminal output
+- Read credentials inline in scripts: `$(security find-generic-password -a konteks -s activecampaign-key -w)`
+- Pre-commit hook is installed to block commits containing secrets
+
 ## Rules
 - No em-dashes - use hyphens
 - No AI slop words (crucial/delve/landscape/pivotal/showcase/tapestry/vibrant/comprehensive/cutting-edge/game-changing/unlock/unleash/empower/supercharge/leverage/utilize)
