@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    width: 1080px;
+    height: 1080px;
+    font-family: 'Inter', sans-serif;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .top-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 72px 80px;
+    padding-bottom: 40px;
+  }
+  
+  .hook {
+    font-size: 46px;
+    font-weight: 900;
+    color: #111111;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin-bottom: 28px;
+  }
+  
+  .body-text {
+    font-size: 26px;
+    font-weight: 500;
+    color: #555555;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+  }
+  
+  .bottom-section {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 80px;
+  }
+  
+  .dan-info {
+    flex: 1;
+    padding-bottom: 40px;
+  }
+  
+  .dan-name {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+  
+  .dan-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #888888;
+  }
+  
+  .dan-photo {
+    width: 280px;
+    height: 280px;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center top;
+  }
+  
+  .cta-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #E86A1C;
+    padding: 32px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cta-text {
+    font-size: 26px;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -0.5px;
+  }
+  
+  .cta-url {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+  }
+</style>
+</head>
+<body>
+  <div class="top-section">
+    <div class="hook">Your professors won't teach you this.</div>
+    <div class="body-text">The systems that top students use - time management, brief decoding, crit presentation - aren't in any curriculum. I put them in one place.</div>
+  </div>
+  
+  <div class="bottom-section">
+    <div class="dan-info">
+      <div class="dan-name">Dan Fouche</div>
+      <div class="dan-title">Architect & Educator, Dubai</div>
+    </div>
+    <img class="dan-photo" src="dan-profile.jpg" alt="Dan">
+  </div>
+  
+  <div class="cta-bar">
+    <div class="cta-text">5 chapters. $29/month.</div>
+    <div class="cta-url">kourse.konteks.co</div>
+  </div>
+</body>
+</html>
