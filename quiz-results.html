@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Results - Konteks Quiz</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '26300556566305220');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=26300556566305220&ev=PageView&noscript=1" /></noscript>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #1A1A1A;
+            background: #F9F7F4;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        header {
+            padding: 32px 0;
+            text-align: center;
+            background: #fff;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        
+        .logo {
+            font-weight: 800;
+            font-size: 24px;
+            color: #1A1A1A;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        
+        main {
+            padding: 60px 0 80px;
+        }
+        
+        @media (min-width: 768px) {
+            main { padding: 80px 0 120px; }
+        }
+        
+        .result-box {
+            background: #fff;
+            border-radius: 16px;
+            padding: 48px 32px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            margin-bottom: 32px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: #FFF5F0;
+            color: #E86A1C;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+        
+        h1 {
+            font-weight: 800;
+            font-size: 32px;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            color: #1A1A1A;
+            margin-bottom: 24px;
+        }
+        
+        @media (min-width: 768px) {
+            h1 { font-size: 40px; letter-spacing: -1.5px; }
+        }
+        
+        .result-text {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        
+        .fix-box {
+            background: #F9F7F4;
+            padding: 24px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+        }
+        
+        .fix-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #E86A1C;
+            margin-bottom: 8px;
+        }
+        
+        .fix-text {
+            font-size: 16px;
+            color: #1A1A1A;
+            line-height: 1.5;
+        }
+        
+        .social-proof {
+            font-size: 15px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+        
+        h2 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            color: #1A1A1A;
+            margin-bottom: 24px;
+        }
+        
+        .chapters {
+            display: grid;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        
+        .chapter-card {
+            background: #fff;
+            border: 1px solid #E5E5E5;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .chapter-number {
+            font-size: 13px;
+            font-weight: 600;
+            color: #E86A1C;
+            margin-bottom: 6px;
+        }
+        
+        .chapter-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 6px;
+        }
+        
+        .chapter-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .pricing-box {
+            background: #F9F7F4;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+        }
+        
+        .price-label {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        
+        .price-row {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+        
+        .price-option {
+            flex: 1;
+            min-width: 200px;
+            max-width: 280px;
+        }
+        
+        .price-amount {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1A1A1A;
+            margin-bottom: 4px;
+        }
+        
+        .price-period {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 16px;
+        }
+        
+        .cta-btn {
+            display: block;
+            width: 100%;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+            background: #E86A1C;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .cta-btn:hover {
+            background: #C85A16;
+        }
+        
+        .cta-btn-primary {
+            padding: 16px 32px;
+            font-size: 17px;
+        }
+        
+        .result-type {
+            display: none;
+        }
+        
+        .result-type.active {
+            display: block;
+        }
+        
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Konteks</a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <!-- Result Type A: Concept Seeker -->
+            <div id="concept-seeker" class="result-type">
+                <div class="result-box">
+                    <span class="badge">Your Result</span>
+                    <h1>The Concept Seeker</h1>
+                    <p class="result-text">Your #1 gap: concept development. You have ideas but struggle to turn them into strong, defensible design concepts.</p>
+                    
+                    <div class="fix-box">
+                        <div class="fix-label">Your fix</div>
+                        <div class="fix-text">Chapter 4 - From Brief to Concept. Learn the brief analysis method that reveals angles your classmates miss.</div>
+                    </div>
+                    
+                    <a href="/checkout.html?plan=monthly&utm_source=quiz&utm_medium=results&utm_campaign=concept-seeker" class="cta-btn cta-btn-primary">Start with Chapter 4 - Join the Kourse</a>
+                </div>
+            </div>
+            
+            <!-- Result Type B: Time Bomber -->
+            <div id="time-bomber" class="result-type">
+                <div class="result-box">
+                    <span class="badge">Your Result</span>
+                    <h1>The Time Bomber</h1>
+                    <p class="result-text">Your #1 gap: time management. You know what to do but can't get it done without pulling all-nighters.</p>
+                    
+                    <div class="fix-box">
+                        <div class="fix-label">Your fix</div>
+                        <div class="fix-text">Chapter 3 - Crits, Deadlines & Timing. The Deep Work / Steady Work / Easy Work framework that eliminates all-nighters.</div>
+                    </div>
+                    
+                    <a href="/checkout.html?plan=monthly&utm_source=quiz&utm_medium=results&utm_campaign=time-bomber" class="cta-btn cta-btn-primary">Start with Chapter 3 - Join the Kourse</a>
+                </div>
+            </div>
+            
+            <!-- Result Type C: Surface Skimmer -->
+            <div id="surface-skimmer" class="result-type">
+                <div class="result-box">
+                    <span class="badge">Your Result</span>
+                    <h1>The Surface Skimmer</h1>
+                    <p class="result-text">Your #1 gap: depth. Your site analysis and concept development lack the layers that impress lecturers.</p>
+                    
+                    <div class="fix-box">
+                        <div class="fix-label">Your fix</div>
+                        <div class="fix-text">Chapter 5 - Site Analysis & Urban Design. Go beyond the sun path and wind arrows. Add the layers lecturers look for.</div>
+                    </div>
+                    
+                    <a href="/checkout.html?plan=monthly&utm_source=quiz&utm_medium=results&utm_campaign=surface-skimmer" class="cta-btn cta-btn-primary">Start with Chapter 5 - Join the Kourse</a>
+                </div>
+            </div>
+            
+            <!-- Result Type D: Crit Survivor -->
+            <div id="crit-survivor" class="result-type">
+                <div class="result-box">
+                    <span class="badge">Your Result</span>
+                    <h1>The Crit Survivor</h1>
+                    <p class="result-text">Your #1 gap: presentation and confidence. Your work might be good but you can't show it under pressure.</p>
+                    
+                    <div class="fix-box">
+                        <div class="fix-label">Your fix</div>
+                        <div class="fix-text">Chapter 3 includes crit preparation strategies that turn nerves into clarity. Chapter 1 shows you what lecturers actually grade on so you know what to defend.</div>
+                    </div>
+                    
+                    <a href="/checkout.html?plan=monthly&utm_source=quiz&utm_medium=results&utm_campaign=crit-survivor" class="cta-btn cta-btn-primary">Start with Chapter 1 - Join the Kourse</a>
+                </div>
+            </div>
+            
+            <!-- Result Type E: Full Reset -->
+            <div id="full-reset" class="result-type">
+                <div class="result-box">
+                    <span class="badge">Your Result</span>
+                    <h1>The Full Reset</h1>
+                    <p class="result-text">You need the whole system. Good news - that's exactly what the Konteks Kourse is.</p>
+                </div>
+            </div>
+            
+            <!-- Common section for all results -->
+            <div id="commonSection">
+                <p class="social-proof">363 students took this quiz and joined the kourse</p>
+                
+                <h2>What You Get</h2>
+                
+                <div class="chapters">
+                    <div class="chapter-card">
+                        <div class="chapter-number">Chapter 1</div>
+                        <div class="chapter-title">What Your Lecturers Actually Want</div>
+                        <div class="chapter-desc">The hidden grading criteria and how top students reverse-engineer the brief.</div>
+                    </div>
+                    
+                    <div class="chapter-card">
+                        <div class="chapter-number">Chapter 2</div>
+                        <div class="chapter-title">Studio Culture & Mindset</div>
+                        <div class="chapter-desc">How to think like an architect, not just act like one.</div>
+                    </div>
+                    
+                    <div class="chapter-card">
+                        <div class="chapter-number">Chapter 3</div>
+                        <div class="chapter-title">Crits, Deadlines & Timing</div>
+                        <div class="chapter-desc">The Deep Work / Steady Work / Easy Work framework that eliminates all-nighters.</div>
+                    </div>
+                    
+                    <div class="chapter-card">
+                        <div class="chapter-number">Chapter 4</div>
+                        <div class="chapter-title">From Brief to Concept</div>
+                        <div class="chapter-desc">The brief analysis method that reveals angles your classmates miss.</div>
+                    </div>
+                    
+                    <div class="chapter-card">
+                        <div class="chapter-number">Chapter 5</div>
+                        <div class="chapter-title">Site Analysis & Urban Design</div>
+                        <div class="chapter-desc">Go beyond sun path and wind arrows. Add the layers that impress.</div>
+                    </div>
+                </div>
+                
+                <div class="pricing-box">
+                    <p class="price-label">Choose your plan</p>
+                    
+                    <div class="price-row">
+                        <div class="price-option">
+                            <div class="price-amount">$29</div>
+                            <div class="price-period">per month</div>
+                            <a href="/checkout.html?plan=monthly&utm_source=quiz&utm_medium=results" class="cta-btn">Monthly</a>
+                        </div>
+                        
+                        <div class="price-option">
+                            <div class="price-amount">$249</div>
+                            <div class="price-period">per year</div>
+                            <a href="/checkout.html?plan=annual&utm_source=quiz&utm_medium=results" class="cta-btn">Annual (save $99)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            © 2026 Konteks. All rights reserved.
+        </div>
+    </footer>
+    
+    <script>
+        // Get result type from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const resultType = urlParams.get('type') || 'full-reset';
+        
+        // Show the appropriate result
+        const resultElement = document.getElementById(resultType);
+        if (resultElement) {
+            resultElement.classList.add('active');
+        } else {
+            // Fallback to full-reset if invalid type
+            document.getElementById('full-reset').classList.add('active');
+        }
+        
+        // Update page title
+        const titles = {
+            'concept-seeker': 'Your Result: The Concept Seeker',
+            'time-bomber': 'Your Result: The Time Bomber',
+            'surface-skimmer': 'Your Result: The Surface Skimmer',
+            'crit-survivor': 'Your Result: The Crit Survivor',
+            'full-reset': 'Your Result: The Full Reset'
+        };
+        
+        document.title = titles[resultType] || 'Your Results - Konteks Quiz';
+    </script>
+</body>
+</html>
