@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konteks Kourse - From Studio All-Nighters to Best-in-Year</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Konteks Kourse - @studwalldan">
+    <meta property="og:description" content="Master the frameworks your lecturers use but never teach. 5 chapters. Concept development. Time management. Site analysis.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://konteks.co">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '26300556566305220');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=26300556566305220&ev=PageView&noscript=1"
+    /></noscript>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #F0F0F0;
+            background: #0F1115;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Typography */
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 42px;
+            line-height: 1.1;
+            letter-spacing: -1.8px;
+            color: #F0F0F0;
+        }
+        
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            color: #F0F0F0;
+        }
+        
+        @media (min-width: 768px) {
+            h1 { font-size: 56px; letter-spacing: -2.5px; }
+            h2 { font-size: 44px; letter-spacing: -2px; }
+        }
+        
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        /* Layout */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .container-wide {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        @media (min-width: 768px) {
+            .section { padding: 120px 0; }
+        }
+        
+        /* Glass cards */
+        .glass-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(46,91,255,0.4);
+            box-shadow: 0 8px 32px rgba(46,91,255,0.15);
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            border-radius: 100px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            min-height: 52px;
+        }
+        
+        .btn-primary {
+            background: #E86A1C;
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            background: #C85A16;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(232,106,28,0.3);
+        }
+        
+        .btn-ghost {
+            background: transparent;
+            color: #2E5BFF;
+            border: 1.5px solid rgba(46,91,255,0.3);
+        }
+        
+        .btn-ghost:hover {
+            border-color: #2E5BFF;
+            background: rgba(46,91,255,0.1);
+        }
+        
+        .btn-full { width: 100%; }
+        
+        /* Social proof pills */
+        .school-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 24px;
+            font-size: 13px;
+        }
+        
+        .school-pill {
+            background: rgba(46,91,255,0.12);
+            border: 1px solid rgba(46,91,255,0.2);
+            padding: 6px 14px;
+            border-radius: 20px;
+            color: #8B8E99;
+            font-weight: 500;
+        }
+        
+        /* Proof metrics */
+        .proof-metrics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 28px;
+            font-size: 14px;
+            color: #8B8E99;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .proof-metric {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .proof-metric::before {
+            content: '·';
+            color: #2E5BFF;
+            font-size: 20px;
+        }
+        
+        /* Before/After Grid */
+        .compare-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 48px;
+        }
+        
+        @media (min-width: 768px) {
+            .compare-grid { grid-template-columns: 1fr 1fr; }
+        }
+        
+        .compare-card {
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+        
+        .compare-before {
+            background: linear-gradient(135deg, rgba(232,106,28,0.08) 0%, rgba(232,106,28,0.02) 100%);
+            border-color: rgba(232,106,28,0.2);
+        }
+        
+        .compare-after {
+            background: linear-gradient(135deg, rgba(46,91,255,0.12) 0%, rgba(46,91,255,0.03) 100%);
+            border-color: rgba(46,91,255,0.3);
+        }
+        
+        .compare-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .compare-before .compare-label { color: #E86A1C; }
+        .compare-after .compare-label { color: #2E5BFF; }
+        
+        .compare-list {
+            list-style: none;
+        }
+        
+        .compare-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #F0F0F0;
+        }
+        
+        .compare-icon {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        /* Chapter accordion */
+        .chapter-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 48px;
+        }
+        
+        .chapter-item {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .chapter-item:hover {
+            border-color: rgba(46,91,255,0.3);
+        }
+        
+        .chapter-item.active {
+            border-color: rgba(46,91,255,0.5);
+            box-shadow: 0 8px 32px rgba(46,91,255,0.12);
+        }
+        
+        .chapter-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 28px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .chapter-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            font-weight: 600;
+            color: #2E5BFF;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        
+        .chapter-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #F0F0F0;
+            margin-bottom: 4px;
+        }
+        
+        .chapter-oneline {
+            font-size: 15px;
+            color: #8B8E99;
+        }
+        
+        .chapter-toggle {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(46,91,255,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .chapter-item.active .chapter-toggle {
+            background: rgba(46,91,255,0.2);
+            transform: rotate(45deg);
+        }
+        
+        .chapter-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        
+        .chapter-item.active .chapter-content {
+            max-height: 1000px;
+        }
+        
+        .chapter-body {
+            padding: 0 28px 28px 28px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        
+        .chapter-description {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #8B8E99;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .chapter-bullets {
+            list-style: none;
+            margin-top: 16px;
+        }
+        
+        .chapter-bullets li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #8B8E99;
+            line-height: 1.5;
+        }
+        
+        .chapter-bullets li::before {
+            content: '→';
+            color: #00D68F;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        
+        .chapter-learn-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #F0F0F0;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+        
+        /* Who this is NOT for */
+        .not-for-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 48px;
+        }
+        
+        @media (min-width: 768px) {
+            .not-for-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+        
+        .not-for-list {
+            list-style: none;
+        }
+        
+        .not-for-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #F0F0F0;
+        }
+        
+        .not-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 2px;
+        }
+        
+        .not-icon.x {
+            background: rgba(232,106,28,0.15);
+            color: #E86A1C;
+        }
+        
+        .not-icon.check {
+            background: rgba(0,214,143,0.15);
+            color: #00D68F;
+        }
+        
+        /* Testimonial cards */
+        .testimonial-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 48px;
+        }
+        
+        @media (min-width: 768px) {
+            .testimonial-grid { grid-template-columns: 1fr 1fr; }
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            padding: 24px;
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2E5BFF 0%, #00D68F 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+        }
+        
+        .testimonial-meta {
+            flex: 1;
+        }
+        
+        .testimonial-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #F0F0F0;
+        }
+        
+        .testimonial-school {
+            font-size: 13px;
+            color: #5A5D68;
+        }
+        
+        .testimonial-quote {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #8B8E99;
+            font-style: italic;
+        }
+        
+        /* Authority section */
+        .authority-grid {
+            display: grid;
+            gap: 32px;
+            margin-top: 48px;
+        }
+        
+        @media (min-width: 768px) {
+            .authority-grid {
+                grid-template-columns: 240px 1fr;
+                gap: 48px;
+                align-items: start;
+            }
+        }
+        
+        .authority-photo {
+            width: 100%;
+            max-width: 240px;
+            border-radius: 12px;
+            border: 2px solid rgba(46,91,255,0.2);
+        }
+        
+        .authority-stats {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: #2E5BFF;
+            background: rgba(46,91,255,0.1);
+            border: 1px solid rgba(46,91,255,0.2);
+            padding: 8px 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .authority-text {
+            font-size: 17px;
+            line-height: 1.65;
+            color: #8B8E99;
+        }
+        
+        .authority-text p {
+            margin-bottom: 16px;
+        }
+        
+        .authority-sig {
+            font-size: 15px;
+            font-weight: 600;
+            color: #F0F0F0;
+            margin-top: 24px;
+        }
+        
+        .social-link {
+            color: #2E5BFF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .social-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Pricing cards */
+        .pricing-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 48px;
+        }
+        
+        @media (min-width: 768px) {
+            .pricing-grid { grid-template-columns: 1fr 1fr; }
+        }
+        
+        .pricing-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 40px 32px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            border-color: rgba(46,91,255,0.4);
+            transform: translateY(-4px);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2E5BFF;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 100px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .pricing-label {
+            font-size: 14px;
+            color: #5A5D68;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        
+        .pricing-price {
+            font-size: 40px;
+            font-weight: 800;
+            color: #F0F0F0;
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 12px;
+            letter-spacing: -2px;
+        }
+        
+        .pricing-sub {
+            font-size: 14px;
+            color: #8B8E99;
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+        
+        .pricing-note {
+            font-size: 14px;
+            color: #5A5D68;
+            text-align: center;
+            margin-top: 24px;
+            line-height: 1.6;
+        }
+        
+        /* FAQ accordion */
+        .faq-container {
+            margin-top: 48px;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 24px 0;
+        }
+        
+        .faq-question {
+            font-size: 17px;
+            font-weight: 600;
+            color: #F0F0F0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            gap: 16px;
+        }
+        
+        .faq-toggle {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(46,91,255,0.1);
+            color: #2E5BFF;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-toggle.active {
+            transform: rotate(45deg);
+            background: rgba(46,91,255,0.2);
+        }
+        
+        .faq-answer {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #8B8E99;
+            margin-top: 16px;
+            display: none;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        
+        .footer-text {
+            font-size: 14px;
+            color: #5A5D68;
+            margin-bottom: 16px;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .footer-link {
+            color: #8B8E99;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .footer-link:hover {
+            color: #2E5BFF;
+        }
+        
+        .footer-skool {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        
+        .footer-skool a {
+            color: #2E5BFF;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .footer-skool a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Student counter */
+        .student-counter {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            padding: 32px;
+            background: rgba(0,214,143,0.08);
+            border: 1px solid rgba(0,214,143,0.15);
+            border-radius: 16px;
+            margin: 80px 0;
+        }
+        
+        .counter-text {
+            font-size: 15px;
+            color: #8B8E99;
+        }
+        
+        .counter-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: #00D68F;
+            font-family: 'JetBrains Mono', monospace;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .counter-avatars {
+            display: flex;
+            gap: -8px;
+        }
+        
+        .counter-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid #0F1115;
+            margin-left: -8px;
+        }
+        
+        .counter-avatar:first-child { margin-left: 0; }
+        
+        .counter-avatar:nth-child(1) { background: linear-gradient(135deg, #2E5BFF, #00D68F); }
+        .counter-avatar:nth-child(2) { background: linear-gradient(135deg, #E86A1C, #2E5BFF); }
+        .counter-avatar:nth-child(3) { background: linear-gradient(135deg, #00D68F, #E86A1C); }
+        .counter-avatar:nth-child(4) { background: linear-gradient(135deg, #2E5BFF, #E86A1C); }
+        .counter-avatar:nth-child(5) { background: linear-gradient(135deg, #00D68F, #2E5BFF); }
+        
+        /* Sticky mobile CTA */
+        .mobile-cta-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15,17,21,0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 12px 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            box-shadow: 0 -4px 16px rgba(0,0,0,0.3);
+        }
+        
+        .mobile-cta-bar.visible { display: flex; }
+        
+        @media (min-width: 768px) {
+            .mobile-cta-bar { display: none !important; }
+        }
+        
+        .mobile-cta-text {
+            font-size: 15px;
+            font-weight: 600;
+            color: #F0F0F0;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .mobile-cta-btn {
+            padding: 12px 24px;
+            font-size: 14px;
+            min-height: 44px;
+        }
+        
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Hero gradient */
+        .hero-gradient {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(46,91,255,0.15) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        /* CTA group */
+        .cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 36px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HERO -->
+    <section class="section" style="min-height: 90vh; display: flex; align-items: center; position: relative;">
+        <div class="hero-gradient"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h1 style="margin-bottom: 24px;">From Studio All-Nighters to Best-in-Year.</h1>
+            <p style="font-size: 19px; line-height: 1.5; color: #8B8E99; margin-bottom: 32px; max-width: 680px;">
+                Master the frameworks your lecturers use but never teach. 5 chapters. Concept development. Time management. Site analysis. Crit preparation.
+            </p>
+            
+            <!-- Social proof bar -->
+            <div style="background: rgba(46,91,255,0.08); border: 1px solid rgba(46,91,255,0.15); padding: 16px 20px; border-radius: 12px; margin-bottom: 32px;">
+                <p style="font-size: 14px; color: #8B8E99; margin-bottom: 12px;">
+                    <strong style="color: #F0F0F0;">363 students</strong> from Bartlett, UCT, UNSW, Wits, UJ, and 40+ architecture schools worldwide
+                </p>
+                <div class="school-pills">
+                    <span class="school-pill">Bartlett</span>
+                    <span class="school-pill">UCT</span>
+                    <span class="school-pill">UNSW</span>
+                    <span class="school-pill">Wits</span>
+                    <span class="school-pill">UJ</span>
+                    <span class="school-pill">Melbourne</span>
+                    <span class="school-pill">Politecnico</span>
+                    <span class="school-pill">+40 more</span>
+                </div>
+            </div>
+            
+            <div class="cta-group">
+                <a href="checkout.html?plan=monthly" class="btn btn-primary" onclick="fbq('track','ViewContent')">Get Instant Access - $29/mo</a>
+                <a href="#chapters" class="btn btn-ghost">View chapters</a>
+            </div>
+            
+            <div class="proof-metrics">
+                <span class="proof-metric">5 Chapters</span>
+                <span class="proof-metric">363 Students</span>
+                <span class="proof-metric">Cancel Anytime</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PROBLEM SECTION - Before/After -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 style="margin-bottom: 16px;">You're not bad at architecture.</h2>
+            <p style="font-size: 19px; color: #8B8E99; margin-bottom: 0;">You were never taught what actually matters.</p>
+            
+            <div class="compare-grid">
+                <div class="compare-card compare-before">
+                    <div class="compare-label">Before</div>
+                    <ul class="compare-list">
+                        <li>
+                            <span class="compare-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                            </span>
+                            "Push it further" (no idea what that means)
+                        </li>
+                        <li>
+                            <span class="compare-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                            </span>
+                            3 AM energy drinks, crit in 6 hours
+                        </li>
+                        <li>
+                            <span class="compare-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                            </span>
+                            Sun-path diagram that drives nothing
+                        </li>
+                        <li>
+                            <span class="compare-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                            </span>
+                            Panic-Googling "how to develop a concept"
+                        </li>
+                        <li>
+                            <span class="compare-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"/>
+                                    <line x1="6" y1="6" x2="18" y2="18"/>
+                                </svg>
+                            </span>
+                            Getting destroyed in crit
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="compare-card compare-after">
+                    <div class="compare-label">After</div>
+                    <ul class="compare-list">
+                        <li>
+                            <span class="compare-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D68F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            Understanding exactly what lecturers grade on
+                        </li>
+                        <li>
+                            <span class="compare-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D68F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            Done by 8 PM, sleeping before crits
+                        </li>
+                        <li>
+                            <span class="compare-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D68F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            Site analysis that actually drives design decisions
+                        </li>
+                        <li>
+                            <span class="compare-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D68F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            Brief-to-concept in 48 hours with a method
+                        </li>
+                        <li>
+                            <span class="compare-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00D68F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            Walking into crit with a presentation strategy
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CHAPTERS ACCORDION -->
+    <section id="chapters" class="section fade-in" style="scroll-margin-top: 40px;">
+        <div class="container">
+            <h2 style="margin-bottom: 16px;">Five chapters. Each one solves a specific problem.</h2>
+            <p style="font-size: 18px; color: #8B8E99;">Click to expand and see what you'll learn.</p>
+            
+            <div class="chapter-accordion">
+                <!-- Chapter 1 -->
+                <div class="chapter-item active">
+                    <div class="chapter-header" onclick="toggleChapter(this)">
+                        <div>
+                            <div class="chapter-number">CHAPTER 01</div>
+                            <div class="chapter-title">So... Architecture</div>
+                            <div class="chapter-oneline">What architecture school actually expects from you</div>
+                        </div>
+                        <div class="chapter-toggle">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2E5BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-body">
+                            <div class="chapter-description">
+                                What architecture school actually expects from you and how to read the room before you pick up a pen.
+                            </div>
+                            <div class="chapter-learn-title">What you'll learn:</div>
+                            <ul class="chapter-bullets">
+                                <li>How the grading system really works</li>
+                                <li>What lecturers look for (and what they never tell you)</li>
+                                <li>Setting yourself up before the first project</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chapter 2 -->
+                <div class="chapter-item">
+                    <div class="chapter-header" onclick="toggleChapter(this)">
+                        <div>
+                            <div class="chapter-number">CHAPTER 02</div>
+                            <div class="chapter-title">The Top Student Mindset</div>
+                            <div class="chapter-oneline">Abstract thinking, creative risks, and killing ideas too early</div>
+                        </div>
+                        <div class="chapter-toggle">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2E5BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-body">
+                            <div class="chapter-description">
+                                Abstract thinking, creative risks, and how to stop killing your best ideas before they exist.
+                            </div>
+                            <div class="chapter-learn-title">What you'll learn:</div>
+                            <ul class="chapter-bullets">
+                                <li>Why "being silly" is a serious design skill</li>
+                                <li>The iteration method top students use</li>
+                                <li>How to stop filtering ideas too early</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chapter 3 -->
+                <div class="chapter-item">
+                    <div class="chapter-header" onclick="toggleChapter(this)">
+                        <div>
+                            <div class="chapter-number">CHAPTER 03</div>
+                            <div class="chapter-title">Crits, Deadlines & Timing</div>
+                            <div class="chapter-oneline">The time management system that got Dan top student</div>
+                        </div>
+                        <div class="chapter-toggle">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2E5BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-body">
+                            <div class="chapter-description">
+                                The time management system that got Dan top student in Theory AND Professional Practice in the same year.
+                            </div>
+                            <div class="chapter-learn-title">What you'll learn:</div>
+                            <ul class="chapter-bullets">
+                                <li>The Deep Work / Steady Work / Easy Work framework</li>
+                                <li>How to structure your week around studio</li>
+                                <li>What to do when everything is due at once</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chapter 4 -->
+                <div class="chapter-item">
+                    <div class="chapter-header" onclick="toggleChapter(this)">
+                        <div>
+                            <div class="chapter-number">CHAPTER 04</div>
+                            <div class="chapter-title">From "Brief" to Concept</div>
+                            <div class="chapter-oneline">How to develop concepts so specific your lecturer asks how</div>
+                        </div>
+                        <div class="chapter-toggle">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2E5BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-body">
+                            <div class="chapter-description">
+                                How to develop concepts so specific your lecturer asks how you thought of it. No more 'light and shadow.'
+                            </div>
+                            <div class="chapter-learn-title">What you'll learn:</div>
+                            <ul class="chapter-bullets">
+                                <li>Moving from generic to place-specific concepts</li>
+                                <li>The brief analysis method that reveals hidden angles</li>
+                                <li>How to present a concept that sticks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chapter 5 -->
+                <div class="chapter-item">
+                    <div class="chapter-header" onclick="toggleChapter(this)">
+                        <div>
+                            <div class="chapter-number">CHAPTER 05</div>
+                            <div class="chapter-title">Site Analysis & Urban Design</div>
+                            <div class="chapter-oneline">Beyond the sun path - understanding a place deeply</div>
+                        </div>
+                        <div class="chapter-toggle">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2E5BFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-body">
+                            <div class="chapter-description">
+                                Beyond the sun path. How to understand a place so deeply your project can only belong there.
+                            </div>
+                            <div class="chapter-learn-title">What you'll learn:</div>
+                            <ul class="chapter-bullets">
+                                <li>Layered analysis (history, movement, social, environmental)</li>
+                                <li>Diagramming techniques that show depth</li>
+                                <li>Turning analysis into design decisions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bonus: Konteks Kalendar -->
+                <div class="chapter-item" style="border-color: rgba(232,106,28,0.3);">
+                    <div class="chapter-header" onclick="toggleChapter(this)">
+                        <div>
+                            <div class="chapter-number" style="color: #E86A1C;">BONUS</div>
+                            <div class="chapter-title">The Konteks Kalendar</div>
+                            <div class="chapter-oneline">A weekly planner built for architecture students</div>
+                        </div>
+                        <div class="chapter-toggle" style="background: rgba(232,106,28,0.1);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-body">
+                            <div class="chapter-description">
+                                A weekly planner built for architecture students. Structure your week around studio, not the other way around.
+                            </div>
+                            <div class="chapter-learn-title">Includes:</div>
+                            <ul class="chapter-bullets">
+                                <li>Weekly planning template</li>
+                                <li>Project timeline tracking</li>
+                                <li>Energy-based task scheduling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bonus: Community -->
+                <div class="chapter-item" style="border-color: rgba(0,214,143,0.3);">
+                    <div class="chapter-header" onclick="toggleChapter(this)">
+                        <div>
+                            <div class="chapter-number" style="color: #00D68F;">BONUS</div>
+                            <div class="chapter-title">Student Community</div>
+                            <div class="chapter-oneline">363 architecture students who take this seriously</div>
+                        </div>
+                        <div class="chapter-toggle" style="background: rgba(0,214,143,0.1);">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00D68F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                <line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="chapter-content">
+                        <div class="chapter-body">
+                            <div class="chapter-description">
+                                363 architecture students who take this seriously. Feedback, shared work, accountability.
+                            </div>
+                            <div class="chapter-learn-title">Access to:</div>
+                            <ul class="chapter-bullets">
+                                <li>Share work and get real feedback</li>
+                                <li>Connect with students worldwide</li>
+                                <li>Access to Dan for questions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-group" style="margin-top: 48px;">
+                <a href="checkout.html?plan=monthly" class="btn btn-primary" onclick="fbq('track','ViewContent')">Start learning today - $29/mo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WHO THIS IS NOT FOR -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 style="margin-bottom: 8px;">This is not for everyone.</h2>
+            
+            <div class="not-for-grid">
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; color: #E86A1C; margin-bottom: 24px;">NOT for you if:</h3>
+                    <ul class="not-for-list">
+                        <li>
+                            <span class="not-icon x">✕</span>
+                            You want easy grades without putting in the work
+                        </li>
+                        <li>
+                            <span class="not-icon x">✕</span>
+                            You think pulling all-nighters is a badge of honor
+                        </li>
+                        <li>
+                            <span class="not-icon x">✕</span>
+                            You're not willing to change how you approach design
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 18px; font-weight: 600; color: #00D68F; margin-bottom: 24px;">Built for the student who:</h3>
+                    <ul class="not-for-list">
+                        <li>
+                            <span class="not-icon check">✓</span>
+                            Wants to understand what lecturers actually look for
+                        </li>
+                        <li>
+                            <span class="not-icon check">✓</span>
+                            Is tired of vague feedback and wasted time
+                        </li>
+                        <li>
+                            <span class="not-icon check">✓</span>
+                            Wants a system, not just inspiration
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TESTIMONIALS -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 style="margin-bottom: 8px;">What students say</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">PN</div>
+                        <div class="testimonial-meta">
+                            <div class="testimonial-name">Priya Naidoo</div>
+                            <div class="testimonial-school">UCT · 3rd Year</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-quote">
+                        "I went from dreading crits to actually looking forward to them. The mindset chapter alone changed how I approach every project. I wish I had this in first year."
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">JW</div>
+                        <div class="testimonial-meta">
+                            <div class="testimonial-name">James Whitfield</div>
+                            <div class="testimonial-school">Melbourne · 4th Year</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-quote">
+                        "The time management chapter saved my final year. I was pulling all-nighters every week before this. My grades went up and I actually started sleeping again."
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AO</div>
+                        <div class="testimonial-meta">
+                            <div class="testimonial-name">Amara Osei</div>
+                            <div class="testimonial-school">Bartlett · 2nd Year</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-quote">
+                        "The brief-to-concept chapter is worth the entire course. I used to panic when I got a brief because I had no process. Now I have a system."
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">MB</div>
+                        <div class="testimonial-meta">
+                            <div class="testimonial-name">Marco Bianchi</div>
+                            <div class="testimonial-school">Politecnico · 3rd Year</div>
+                        </div>
+                    </div>
+                    <div class="testimonial-quote">
+                        "Dan actually explains the thinking behind what top students do differently. The crit preparation section alone changed how my lecturers respond to my work."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ABOUT DAN -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 style="margin-bottom: 8px;">Who made this and why should you care</h2>
+            
+            <div class="authority-grid">
+                <div>
+                    <img src="images/dan-profile.jpg" alt="Dan Fouché" class="authority-photo">
+                </div>
+                
+                <div>
+                    <div class="authority-stats">Best Thesis · Engineering, Science & Technology</div>
+                    
+                    <div class="authority-text">
+                        <p>I won best master's thesis design project in my year. That same project won best topic across engineering, science, and technology. Not just architecture.</p>
+                        
+                        <p>I topped Theory AND Professional Practice in the same year using a time management system I built myself. Then I landed my dream role at a major firm.</p>
+                        
+                        <p>None of this happened because I was the most talented person in the room. It happened because I figured out what nobody teaches you. This course is everything I figured out.</p>
+                    </div>
+                    
+                    <div class="authority-sig">
+                        Dan Fouché, Architect<br>
+                        <a href="https://instagram.com/studwalldan" class="social-link">@studwalldan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PRICING -->
+    <section id="pricing" class="section fade-in" style="scroll-margin-top: 40px;">
+        <div class="container">
+            <h2 style="margin-bottom: 8px;">Simple pricing</h2>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-label">Monthly</div>
+                    <div class="pricing-price">$29<span style="font-size: 20px; color: #5A5D68;">/mo</span></div>
+                    <div class="pricing-sub">Start today</div>
+                    <a href="checkout.html?plan=monthly" class="btn btn-primary btn-full" onclick="fbq('track','ViewContent')">Get Instant Access</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-badge">Best Value</div>
+                    <div class="pricing-label">Annual</div>
+                    <div class="pricing-price">$249<span style="font-size: 20px; color: #5A5D68;">/yr</span></div>
+                    <div class="pricing-sub">That's $20.75/mo. Less than one architecture textbook.</div>
+                    <a href="checkout.html?plan=annual" class="btn btn-primary btn-full" onclick="fbq('track','ViewContent')">Get Instant Access</a>
+                </div>
+            </div>
+            
+            <p class="pricing-note">30-day money-back guarantee · Cancel anytime · Instant access<br>All chapters from day one.</p>
+        </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section class="section fade-in">
+        <div class="container">
+            <h2 style="margin-bottom: 8px;">Questions</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Is this for my specific year or program?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">The frameworks work across all architecture programs, second year through masters.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Can I cancel?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">Yes. Monthly, no contract. Cancel in two clicks.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Is this just PDFs?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">No. Video recordings, downloadable worksheets, and the Konteks Kalendar in every chapter.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        I barely have time already. Will this add to it?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">Chapter 3 is a time management system. Students report saving 5-10 hours a week. Start there.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        I'm already doing well. Is this still useful?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">Chapter 4 and 5 are built for students who are good but want to be the one people remember.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. STUDENT COUNTER -->
+    <section class="fade-in">
+        <div class="container">
+            <div class="student-counter">
+                <div class="counter-text">Currently inside:</div>
+                <div class="counter-number">363+</div>
+                <div class="counter-text" style="font-weight: 600; color: #F0F0F0;">students worldwide</div>
+                <div style="display: flex; gap: 0;">
+                    <div class="counter-avatar"></div>
+                    <div class="counter-avatar"></div>
+                    <div class="counter-avatar"></div>
+                    <div class="counter-avatar"></div>
+                    <div class="counter-avatar"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FINAL CTA -->
+    <section class="section fade-in">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 16px;">Studio filters. It doesn't teach.<br>This course teaches.</h2>
+            
+            <div class="cta-group" style="justify-content: center; margin-top: 36px;">
+                <a href="checkout.html?plan=monthly" class="btn btn-primary" onclick="fbq('track','ViewContent')">Get the Kourse - $29/mo</a>
+            </div>
+            
+            <p class="pricing-note" style="margin-top: 20px;">Cancel anytime. 363+ students inside.</p>
+        </div>
+    </section>
+
+    <!-- 11. FOOTER -->
+    <footer>
+        <div class="footer-text">&copy; 2026 @studwalldan · A course for architecture students</div>
+        <div class="footer-links">
+            <a href="mailto:info@konteks.co" class="footer-link">info@konteks.co</a>
+            <a href="#" class="footer-link">Terms</a>
+            <a href="#" class="footer-link">Privacy</a>
+        </div>
+        <div class="footer-skool">
+            <a href="https://www.skool.com/architecture?utm_source=landing&utm_medium=web&utm_campaign=konteks" target="_blank" rel="noopener">Join the community on Skool →</a>
+        </div>
+    </footer>
+
+    <!-- STICKY MOBILE CTA BAR -->
+    <div class="mobile-cta-bar" id="mobileCTA">
+        <div class="mobile-cta-text">$29/mo</div>
+        <a href="checkout.html?plan=monthly" class="btn btn-primary mobile-cta-btn" onclick="fbq('track','ViewContent')">Get Instant Access</a>
+    </div>
+
+    <script>
+        // Chapter accordion toggle
+        function toggleChapter(header) {
+            const item = header.parentElement;
+            const wasActive = item.classList.contains('active');
+            
+            // Close all chapters
+            document.querySelectorAll('.chapter-item').forEach(ch => {
+                ch.classList.remove('active');
+            });
+            
+            // Open clicked chapter if it wasn't already open
+            if (!wasActive) {
+                item.classList.add('active');
+            }
+        }
+        
+        // FAQ toggle
+        function toggleFAQ(question) {
+            const answer = question.nextElementSibling;
+            const toggle = question.querySelector('.faq-toggle');
+            
+            answer.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.textContent = toggle.classList.contains('active') ? '×' : '+';
+        }
+        
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('visible');
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        
+        // Sticky mobile CTA - show after hero, hide when pricing is visible
+        const bar = document.getElementById('mobileCTA');
+        const hero = document.querySelector('.section');
+        const pricing = document.getElementById('pricing');
+        
+        let heroOut = false;
+        let pricingVisible = false;
+        
+        new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                heroOut = !e.isIntersecting;
+                updateCTABar();
+            });
+        }).observe(hero);
+        
+        new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                pricingVisible = e.isIntersecting;
+                updateCTABar();
+            });
+        }, { threshold: 0.3 }).observe(pricing);
+        
+        function updateCTABar() {
+            if (heroOut && !pricingVisible) {
+                bar.classList.add('visible');
+            } else {
+                bar.classList.remove('visible');
+            }
+        }
+        
+        // ViewContent pixel fire on chapter section scroll
+        let viewContentFired = false;
+        const chaptersSection = document.getElementById('chapters');
+        
+        new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting && !viewContentFired) {
+                    fbq('track', 'ViewContent');
+                    viewContentFired = true;
+                }
+            });
+        }, { threshold: 0.3 }).observe(chaptersSection);
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
