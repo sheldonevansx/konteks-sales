@@ -906,6 +906,46 @@
         .chapter-header, .faq-question { min-height: 48px; }
         .btn { min-height: 52px; }
         
+        /* Extra mobile fixes: bottom padding for sticky bar, hero height */
+        @media (max-width: 767px) {
+            body { padding-bottom: 72px; }
+            
+            /* Don't force 90vh hero on mobile - let content dictate height */
+            section[style*="min-height: 90vh"] {
+                min-height: auto !important;
+                padding-top: 48px !important;
+                padding-bottom: 48px !important;
+            }
+            
+            /* Authority grid: center photo above text */
+            .authority-grid {
+                text-align: center;
+            }
+            
+            /* Pricing grid: ensure single column */
+            .pricing-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Not-for grid: single column */
+            .not-for-grid {
+                grid-template-columns: 1fr !important;
+            }
+            
+            /* Testimonial grid: single column */
+            .testimonial-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        
+        /* Small phones (320px) */
+        @media (max-width: 374px) {
+            h1 { font-size: 28px !important; letter-spacing: -1px; }
+            h2 { font-size: 24px !important; }
+            .container { padding: 0 16px; }
+            .school-pill { font-size: 10px; padding: 4px 8px; }
+        }
+        
         /* Hero image container */
         .hero-image-slot {
             margin-top: 40px;
