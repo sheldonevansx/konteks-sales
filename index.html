@@ -550,6 +550,21 @@
             .mobile-cta-bar { display: none !important; }
         }
         
+        /* Avatar strip mobile optimization */
+        .avatar-strip { display: flex; align-items: center; }
+        .avatar-strip img, .avatar-strip .avatar-counter { width: 36px; height: 36px; border-radius: 50%; }
+        .avatar-strip img { object-fit: cover; border: 2px solid #fff; }
+        .avatar-strip img + img, .avatar-strip img + .avatar-counter { margin-left: -10px; }
+        .avatar-strip .avatar-hide-mobile { display: none; }
+        @media (min-width: 480px) {
+            .avatar-strip .avatar-hide-mobile { display: block; }
+        }
+        @media (max-width: 479px) {
+            .avatar-strip img, .avatar-strip .avatar-counter { width: 30px; height: 30px; }
+            .avatar-strip img + img, .avatar-strip img + .avatar-counter { margin-left: -8px; }
+            .avatar-strip .avatar-counter { font-size: 9px !important; }
+        }
+        
         .mobile-cta-text {
             font-size: 15px;
             font-weight: 600;
@@ -559,6 +574,11 @@
         .mobile-cta-btn {
             padding: 10px 20px;
             font-size: 14px;
+        }
+        
+        /* Body padding for sticky mobile CTA */
+        @media (max-width: 767px) {
+            body { padding-bottom: 72px; }
         }
         
         /* Animations */
@@ -580,13 +600,16 @@
     <section class="section" style="min-height: 85vh; display: flex; align-items: center;">
         <div class="container">
             <div class="eyebrow">For architecture students</div>
-            <h1 style="margin-bottom: 20px;">The top student mindset is taught. Nobody in studio will tell you that.</h1>
-            <p class="subheadline">Five chapters covering concepts, crits, site analysis, and time management. Built by the architect who won best thesis across engineering, science, and technology.</p>
+            <h1 style="margin-bottom: 20px;">The system behind the best architecture thesis - in 5 short chapters.</h1>
+            <p class="subheadline">Concepts that stick. Crits you're ready for. Site analysis that actually drives your design.<br><span style="position: relative; display: inline;">Built by the architect who won best thesis across all faculties<svg style="position: absolute; bottom: -6px; left: 0; width: 100%; height: 12px; overflow: visible;" viewBox="0 0 400 12" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 8 C30 2, 60 10, 90 6 C120 2, 150 10, 180 5 C210 1, 240 10, 270 6 C300 2, 330 10, 360 5 C375 3, 390 8, 398 6" stroke="#E86A1C" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg></span></p>
             
             <div class="cta-group">
-                <a href="checkout.html?plan=monthly" class="btn btn-primary" onclick="fbq('track','ViewContent')">Get the Kourse - $29/mo</a>
-                <span class="price-strike">$97</span>
+                <a href="checkout.html?plan=monthly" class="btn btn-primary" onclick="fbq('track','ViewContent')">Join 363+ students - $29/mo</a>
                 <a href="#whats-inside" class="text-link">See what's inside ↓</a>
+            </div>
+            <div style="margin-top: 12px; font-size: 13px; color: #999; display: flex; align-items: center; gap: 6px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                7-day money-back guarantee · Cancel anytime · 363+ students inside
             </div>
             
             <div class="checklist">
@@ -606,7 +629,7 @@
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="20 6 9 17 4 12"/>
                     </svg>
-                    326+ students inside
+                    363+ students inside
                 </div>
             </div>
             
@@ -619,29 +642,29 @@
 
     <!-- 2. MEMBER AVATAR STRIP + SOCIAL PROOF -->
     <div class="testimonial-banner fade-in">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap;">
-            <div style="display: flex; align-items: center;">
-                <img src="images/members/thumb-member-01.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff;">
-                <img src="images/members/thumb-member-02.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-03.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-04.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-05.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-06.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-07.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-08.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-09.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-10.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-11.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-12.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-13.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-14.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-15.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-16.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-17.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-18.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-19.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <img src="images/members/thumb-member-20.jpg" alt="" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; margin-left: -10px;">
-                <div style="width: 36px; height: 36px; border-radius: 50%; background: #E86A1C; border: 2px solid #fff; margin-left: -10px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #fff;">+343</div>
+        <div style="display: flex; justify-content: center; margin-bottom: 20px;">
+            <div class="avatar-strip">
+                <img src="images/members/thumb-member-01.jpg" alt="">
+                <img src="images/members/thumb-member-02.jpg" alt="">
+                <img src="images/members/thumb-member-03.jpg" alt="">
+                <img src="images/members/thumb-member-04.jpg" alt="">
+                <img src="images/members/thumb-member-05.jpg" alt="">
+                <img src="images/members/thumb-member-06.jpg" alt="">
+                <img src="images/members/thumb-member-07.jpg" alt="">
+                <img src="images/members/thumb-member-08.jpg" alt="">
+                <img src="images/members/thumb-member-09.jpg" alt="">
+                <img src="images/members/thumb-member-10.jpg" alt="">
+                <img src="images/members/thumb-member-11.jpg" alt="" class="avatar-hide-mobile">
+                <img src="images/members/thumb-member-12.jpg" alt="" class="avatar-hide-mobile">
+                <img src="images/members/thumb-member-13.jpg" alt="" class="avatar-hide-mobile">
+                <img src="images/members/thumb-member-14.jpg" alt="" class="avatar-hide-mobile">
+                <img src="images/members/thumb-member-15.jpg" alt="" class="avatar-hide-mobile">
+                <img src="images/members/thumb-member-16.jpg" alt="" class="avatar-hide-mobile">
+                <img src="images/members/thumb-member-17.jpg" alt="" class="avatar-hide-mobile">
+                <img src="images/members/thumb-member-18.jpg" alt="" class="avatar-hide-mobile">
+                <img src="images/members/thumb-member-19.jpg" alt="" class="avatar-hide-mobile">
+                <img src="images/members/thumb-member-20.jpg" alt="" class="avatar-hide-mobile">
+                <div class="avatar-counter" style="background: #E86A1C; border: 2px solid #fff; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; color: #fff;">+343</div>
             </div>
         </div>
         <div style="font-size: 15px; font-weight: 600; color: #333; margin-bottom: 20px;">363 architecture students from 40+ universities</div>
@@ -708,7 +731,7 @@
             </div>
             
             <div class="cta-group">
-                <a href="checkout.html?plan=monthly" class="btn btn-primary" onclick="fbq('track','ViewContent')">Get the frameworks</a>
+                <a href="checkout.html?plan=monthly" class="btn btn-primary" onclick="fbq('track','ViewContent')">Start for $29/mo</a>
             </div>
         </div>
     </section>
@@ -952,7 +975,7 @@
                         <span class="card-badge-bonus">Bonus</span>
                     </div>
                     <div class="card-title">Student Community</div>
-                    <div class="card-description">326 architecture students who take this seriously. Feedback, shared work, accountability.</div>
+                    <div class="card-description">363+ architecture students who take this seriously. Feedback, shared work, accountability.</div>
                     <ul style="margin: 12px 0 0 0; padding: 0; list-style: none; font-size: 14px; color: #666; line-height: 1.6;">
                         <li style="margin-bottom: 6px; padding-left: 16px; position: relative;">
                             <span style="position: absolute; left: 0; color: #E86A1C;">·</span>
@@ -971,7 +994,7 @@
             </div>
             
             <div style="max-width: 720px; margin: 40px auto 0; padding: 0 24px;">
-                <a href="checkout.html?plan=monthly" class="btn btn-primary" onclick="fbq('track','ViewContent')">Start learning today</a>
+                <a href="checkout.html?plan=monthly" class="btn btn-primary" onclick="fbq('track','ViewContent')">Start for $29/mo</a>
             </div>
         </div>
     </section>
@@ -1116,7 +1139,7 @@
                             </svg>
                         </span>
                     </div>
-                    <div class="faq-answer">The frameworks work across all architecture programs, second year through masters.</div>
+                    <div class="faq-answer">The frameworks work across all architecture programs, from first year through masters.</div>
                 </div>
                 
                 <div class="faq-item">
@@ -1180,10 +1203,10 @@
             <h2>Studio filters. It doesn't teach.<br>This course teaches.</h2>
             
             <div class="cta-group" style="justify-content: center; margin-top: 36px;">
-                <a href="checkout.html?plan=monthly" class="btn btn-primary" onclick="fbq('track','ViewContent')">Get the Kourse - $29/mo</a>
+                <a href="checkout.html?plan=monthly" class="btn btn-primary" onclick="fbq('track','ViewContent')">Join 363+ students - $29/mo</a>
             </div>
             
-            <p class="pricing-note" style="margin-top: 20px;">Cancel anytime. 326+ students inside.</p>
+            <p class="pricing-note" style="margin-top: 20px;">7-day money-back guarantee · Cancel anytime · 363+ students inside.</p>
         </div>
     </section>
 
