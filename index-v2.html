@@ -842,12 +842,116 @@
             gap: 16px;
             margin-top: 36px;
         }
+
+        /* === MOBILE OPTIMIZATIONS === */
+        
+        @media (max-width: 480px) {
+            /* Hero: reduce height, tighten spacing */
+            h1 { font-size: 32px; letter-spacing: -1.2px; }
+            h2 { font-size: 28px; letter-spacing: -1px; }
+            
+            .section { padding: 56px 0; }
+            .container { padding: 0 20px; }
+            
+            /* Hero full-width buttons on small screens */
+            .cta-group {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .cta-group .btn { width: 100%; text-align: center; }
+            
+            /* School pills: smaller, tighter */
+            .school-pills { gap: 6px; }
+            .school-pill { font-size: 11px; padding: 5px 10px; }
+            
+            /* Proof metrics wrap better */
+            .proof-metrics { gap: 12px; font-size: 12px; }
+            
+            /* Compare cards: tighter padding */
+            .compare-card { padding: 24px 20px; }
+            .compare-list li { font-size: 14px; gap: 10px; }
+            
+            /* Chapter accordion: tighter */
+            .chapter-header { padding: 20px; }
+            .chapter-title { font-size: 17px; }
+            .chapter-oneline { font-size: 13px; }
+            .chapter-body { padding: 0 20px 20px; }
+            .chapter-bullets li { font-size: 13px; }
+            
+            /* Not-for section: tighter */
+            .not-for-list li { font-size: 14px; }
+            
+            /* Testimonial cards */
+            .testimonial-card { padding: 20px; }
+            .testimonial-quote { font-size: 14px; }
+            
+            /* Authority: photo smaller on mobile */
+            .authority-photo { max-width: 180px; margin: 0 auto; display: block; }
+            .authority-text { font-size: 15px; }
+            
+            /* Pricing cards: tighter */
+            .pricing-card { padding: 32px 24px; }
+            .pricing-price { font-size: 36px; }
+            
+            /* FAQ: tighter */
+            .faq-question { font-size: 15px; }
+            .faq-answer { font-size: 14px; }
+            
+            /* Student counter */
+            .student-counter { padding: 24px 20px; }
+            .counter-number { font-size: 28px; }
+        }
+        
+        /* Ensure all touch targets are 48px+ */
+        .chapter-header, .faq-question { min-height: 48px; }
+        .btn { min-height: 52px; }
+        
+        /* Hero image container */
+        .hero-image-slot {
+            margin-top: 40px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .hero-image-slot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Course preview image slots */
+        .preview-image-slot {
+            margin: 32px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.03);
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5A5D68;
+            font-size: 14px;
+        }
+        .preview-image-slot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Prevent horizontal overflow on mobile */
+        body { overflow-x: hidden; }
+        img { max-width: 100%; height: auto; }
+        
+        /* Safe area for mobile sticky bar */
+        body { padding-bottom: 80px; }
+        @media (min-width: 769px) { body { padding-bottom: 0; } }
     </style>
 </head>
 <body>
 
     <!-- 1. HERO -->
-    <section class="section" style="min-height: 90vh; display: flex; align-items: center; position: relative;">
+    <section class="section" style="min-height: 80vh; display: flex; align-items: center; position: relative; padding-top: 60px;">
         <div class="hero-gradient"></div>
         <div class="container" style="position: relative; z-index: 1;">
             <h1 style="margin-bottom: 24px;">From Studio All-Nighters to Best-in-Year.</h1>
@@ -881,6 +985,24 @@
                 <span class="proof-metric">5 Chapters</span>
                 <span class="proof-metric">363 Students</span>
                 <span class="proof-metric">Cancel Anytime</span>
+            </div>
+
+            <!-- IMAGE SLOT 1: Hero visual
+                 RECOMMENDATION: 15-second "Vibe Loop" video or a lifestyle photo of Dan
+                 teaching / sketching / at her desk with architecture models.
+                 Dimensions: 16:9, at least 1280x720px.
+                 Replace the placeholder below with:
+                 <img src="images/hero-visual.jpg" alt="Dan teaching architecture students"> 
+                 OR for video:
+                 <video autoplay muted loop playsinline poster="images/hero-poster.jpg">
+                   <source src="images/hero-loop.mp4" type="video/mp4">
+                 </video>
+            -->
+            <div class="hero-image-slot">
+                <div style="aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.03); color: #5A5D68; font-size: 14px; text-align: center; padding: 20px;">
+                    IMAGE SLOT: Dan teaching, sketching, or studio shot (16:9)<br>
+                    <span style="font-size: 12px; margin-top: 4px; display: block;">or 15-sec autoplay video loop of course content</span>
+                </div>
             </div>
         </div>
     </section>
@@ -1216,6 +1338,20 @@
         </div>
     </section>
 
+    <!-- IMAGE SLOT 2: Course content preview
+         RECOMMENDATION: Screenshot of the Skool course dashboard showing
+         chapter thumbnails, OR a mockup of the Konteks Kalendar in use.
+         This builds trust - people can see what they're buying.
+         Dimensions: max-width 720px, any aspect ratio.
+    -->
+    <section class="fade-in" style="padding: 0 0 40px;">
+        <div class="container">
+            <div class="preview-image-slot">
+                IMAGE SLOT: Course dashboard screenshot or Kalendar preview
+            </div>
+        </div>
+    </section>
+
     <!-- 4. WHO THIS IS NOT FOR -->
     <section class="section fade-in">
         <div class="container">
@@ -1318,6 +1454,21 @@
                         "Dan actually explains the thinking behind what top students do differently. The crit preparation section alone changed how my lecturers respond to my work."
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMAGE SLOT 3: UGC social proof
+         RECOMMENDATION: iPhone-screenshot style image of real DMs or comments
+         from students praising the course. Screenshot Dan's Instagram comments
+         or Skool community posts. The more "raw" and unpolished, the better.
+         Stack 2-3 screenshots vertically.
+         Dimensions: max-width 480px, centered.
+    -->
+    <section class="fade-in" style="padding: 0 0 40px;">
+        <div class="container" style="max-width: 520px;">
+            <div class="preview-image-slot" style="aspect-ratio: auto; min-height: 200px;">
+                IMAGE SLOT: Screenshot of real student DMs/comments/Skool posts
             </div>
         </div>
     </section>
