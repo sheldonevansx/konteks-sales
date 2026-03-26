@@ -70,7 +70,7 @@
 
 ### By Cowork - later session:
 - Changed headline to "The fastest way to become a top 1% architecture student..."
-- Center-aligned hero section, added Dan photo with hand-drawn arrow
+- Center-aligned hero section with Dan photo (clean stacked layout)
 - Upgraded guarantee from 7-day to 30-day money-back
 - Switched ALL CTAs to "Try free for 7 days" (free trial is now the default funnel)
 - Created Stripe trial payment link with 7-day free trial
@@ -143,7 +143,7 @@ Both OpenClaw (Jinx) and Cowork read this repo. Rules:
 ## KEY CONTEXT
 
 - **Dan Fouche** is female. Architect educator in Dubai. @studwalldan
-- Won best thesis across engineering, science, and technology (not just architecture)
+- Won best thesis across engineering, science, and architecture
 - Course: 5 chapters (4 completed) + Konteks Kalendar bonus. 363 members on Skool.
 - **Archademia** is the only competitor running Meta ads (targets professionals, not students)
 - Tone: casual, anti-academic, student language ("studio" not "design studio", "crit" not "critique")
