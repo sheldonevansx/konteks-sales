@@ -36,8 +36,8 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
-        html { scroll-behavior: smooth; }
-        
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 17px;
@@ -207,6 +207,7 @@
             background: rgba(212, 118, 44, 0.06);
             padding: 60px 24px;
             text-align: center;
+            overflow: hidden;
         }
         
         .testimonial-quote {
@@ -551,7 +552,7 @@
         }
         
         /* Avatar strip mobile optimization */
-        .avatar-strip { display: flex; align-items: center; }
+        .avatar-strip { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; }
         .avatar-strip img, .avatar-strip .avatar-counter { width: 36px; height: 36px; border-radius: 50%; }
         .avatar-strip img { object-fit: cover; border: 2px solid #fff; }
         .avatar-strip img + img, .avatar-strip img + .avatar-counter { margin-left: -10px; }
@@ -560,7 +561,8 @@
             .avatar-strip .avatar-hide-mobile { display: block; }
         }
         @media (max-width: 479px) {
-            .avatar-strip img, .avatar-strip .avatar-counter { width: 30px; height: 30px; }
+            .avatar-strip { max-width: 100%; overflow: hidden; flex-wrap: nowrap; }
+            .avatar-strip img, .avatar-strip .avatar-counter { width: 28px; height: 28px; }
             .avatar-strip img + img, .avatar-strip img + .avatar-counter { margin-left: -8px; }
             .avatar-strip .avatar-counter { font-size: 9px !important; }
         }
@@ -607,7 +609,7 @@
                 <a href="checkout.html?plan=trial" class="btn btn-primary" onclick="fbq('track','ViewContent')">Try free for 7 days</a>
                 <div style="font-size: 13px; color: #999; display: flex; align-items: center; gap: 6px;">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    7-day money-back guarantee · Cancel anytime
+                    7-day free trial · 30-day money-back guarantee
                 </div>
                 <a href="#whats-inside" class="text-link">See what's inside ↓</a>
             </div>
@@ -1196,7 +1198,7 @@
                 <a href="checkout.html?plan=trial" class="btn btn-primary" onclick="fbq('track','ViewContent')">Try free for 7 days</a>
             </div>
             
-            <p class="pricing-note" style="margin-top: 20px;">7-day money-back guarantee · Cancel anytime · 363+ students inside.</p>
+            <p class="pricing-note" style="margin-top: 20px;">7-day free trial · 30-day money-back guarantee · 363+ students inside.</p>
         </div>
     </section>
 
