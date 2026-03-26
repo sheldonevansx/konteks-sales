@@ -39,22 +39,13 @@
                 <button id="closePopup" style="position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 28px; color: #999; cursor: pointer; padding: 8px; line-height: 1; transition: color 0.2s;" aria-label="Close">&times;</button>
                 
                 <h2 style="font-family: 'Inter', sans-serif; font-weight: 800; font-size: 28px; line-height: 1.2; color: #1A1A1A; margin-bottom: 16px; letter-spacing: -0.5px;">Wait - before you go</h2>
-                
-                <p style="font-family: 'Inter', sans-serif; font-size: 16px; color: #666; margin-bottom: 24px; line-height: 1.5;">Get the free guide: <strong style="color: #1A1A1A;">5 Things Your Lecturers Grade On (But Never Tell You)</strong></p>
-                
-                <form id="exitPopupForm" style="margin-bottom: 16px;">
-                    <input type="email" id="popupEmail" placeholder="Your email address" required style="width: 100%; padding: 14px 16px; font-size: 16px; font-family: 'Inter', sans-serif; border: 2px solid #E5E5E5; border-radius: 10px; margin-bottom: 12px; transition: border-color 0.2s;">
-                    
-                    <button type="submit" id="popupSubmitBtn" style="width: 100%; padding: 14px 24px; font-size: 16px; font-weight: 600; font-family: 'Inter', sans-serif; color: #fff; background: #E86A1C; border: none; border-radius: 10px; cursor: pointer; transition: background 0.2s;">Send Me The Guide</button>
-                </form>
-                
-                <button id="dismissPopup" style="background: none; border: none; color: #999; font-size: 14px; cursor: pointer; text-decoration: underline; font-family: 'Inter', sans-serif;">No thanks, I'll figure it out myself</button>
-                
-                <div id="popupSuccess" style="display: none; text-align: center; padding: 20px 0;">
-                    <div style="font-size: 48px; margin-bottom: 12px;">✓</div>
-                    <p style="font-size: 18px; font-weight: 600; color: #1A1A1A; margin-bottom: 8px;">Check your email!</p>
-                    <p style="font-size: 14px; color: #666;">Your guide is on its way.</p>
-                </div>
+
+                <p style="font-family: 'Inter', sans-serif; font-size: 16px; color: #666; margin-bottom: 8px; line-height: 1.5;">Not sure yet? <strong style="color: #1A1A1A;">Try the full Konteks Kourse free for 7 days.</strong></p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #999; margin-bottom: 24px; line-height: 1.5;">All 5 chapters. The Konteks Kalendar. The student community. No charge until day 8.</p>
+
+                <a href="checkout.html?plan=trial" id="popupTrialBtn" style="display: block; width: 100%; padding: 16px 24px; font-size: 16px; font-weight: 700; font-family: 'Inter', sans-serif; color: #fff; background: #E86A1C; border: none; border-radius: 10px; cursor: pointer; transition: background 0.2s; text-align: center; text-decoration: none; margin-bottom: 16px;">Try free for 7 days</a>
+
+                <button id="dismissPopup" style="background: none; border: none; color: #999; font-size: 14px; cursor: pointer; text-decoration: underline; font-family: 'Inter', sans-serif;">No thanks, I'm not ready</button>
             </div>
         </div>
         
@@ -92,19 +83,14 @@
         const popup = document.getElementById('konteksExitPopup');
         const closeBtn = document.getElementById('closePopup');
         const dismissBtn = document.getElementById('dismissPopup');
-        const form = document.getElementById('exitPopupForm');
-        const emailInput = document.getElementById('popupEmail');
-        const submitBtn = document.getElementById('popupSubmitBtn');
-        const successDiv = document.getElementById('popupSuccess');
-        
+
         // Show popup function
         function showPopup() {
             if (popupShown) return;
-            
+
             popupShown = true;
             popup.style.display = 'flex';
             sessionStorage.setItem('konteks_exit_popup_shown', 'true');
-            emailInput.focus();
         }
         
         // Hide popup function
@@ -165,49 +151,14 @@
             }
         });
         
-        // Form submission
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const email = emailInput.value.trim();
-            
-            if (!email || !email.includes('@')) {
-                emailInput.style.borderColor = '#d32f2f';
-                return;
-            }
-            
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-            
-            // Track lead conversion
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead');
-            }
-            
-            // Store in sessionStorage
-            sessionStorage.setItem('konteks_lead_email', email);
-            sessionStorage.setItem('konteks_lead_captured', 'true');
-            
-            // Fallback API call
-            try {
-                await fetch('https://kourse.konteks.co/api/subscribe', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, source: 'exit-popup' })
-                });
-            } catch (err) {
-                console.log('Fallback API not yet configured');
-            }
-            
-            // Show success state
-            form.style.display = 'none';
-            dismissBtn.style.display = 'none';
-            successDiv.style.display = 'block';
-            
-            // Auto-close after 3 seconds
-            setTimeout(() => {
-                hidePopup();
-            }, 3000);
-        });
+        // Track trial CTA click
+        const trialBtn = document.getElementById('popupTrialBtn');
+        if (trialBtn) {
+            trialBtn.addEventListener('click', function() {
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'ViewContent');
+                }
+            });
+        }
     });
 })();
