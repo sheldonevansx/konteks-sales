@@ -161,6 +161,21 @@
             letter-spacing: 0.3px;
         }
 
+        .plan-option .trial-badge {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2D6A2E;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
+
         /* What's included */
         .included {
             margin-bottom: 24px;
@@ -295,7 +310,11 @@
         @media (max-width: 480px) {
             body { padding: 16px; }
             .checkout-card { padding: 24px 20px; }
-            .plan-option .plan-price { font-size: 20px; }
+            .plan-selector { gap: 6px; }
+            .plan-option { padding: 12px 8px; }
+            .plan-option .plan-price { font-size: 18px; }
+            .plan-option .plan-name { font-size: 11px; }
+            .plan-option .plan-note { font-size: 11px; }
             .reassurance h1 { font-size: 22px; }
         }
     </style>
@@ -305,13 +324,19 @@
         <div class="reassurance">
             <img src="images/dan-profile.jpg" alt="Dan Fouche" class="dan-photo">
             <h1>You're almost in</h1>
-            <p>Choose your plan and you'll get instant access.</p>
+            <p>Try it free for 7 days. Cancel anytime.</p>
         </div>
 
         <div class="checkout-card">
             <!-- Plan selector -->
             <div class="plan-selector">
-                <div class="plan-option selected" id="monthlyPlan" onclick="selectPlan('monthly')">
+                <div class="plan-option selected" id="trialPlan" onclick="selectPlan('trial')">
+                    <span class="trial-badge">RECOMMENDED</span>
+                    <div class="plan-name">Free Trial</div>
+                    <div class="plan-price">$0<span> for 7 days</span></div>
+                    <div class="plan-note">Then $29/mo</div>
+                </div>
+                <div class="plan-option" id="monthlyPlan" onclick="selectPlan('monthly')">
                     <div class="plan-name">Monthly</div>
                     <div class="plan-price">$29<span>/mo</span></div>
                     <div class="plan-note">Cancel anytime</div>
@@ -369,7 +394,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D6A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 </svg>
-                <p>7-day money-back guarantee. Not for you? Get a full refund, no questions.</p>
+                <p>7-day free trial - cancel before it ends and you won't be charged at all.</p>
             </div>
 
             <!-- Social proof -->
@@ -392,23 +417,28 @@
 
     <script>
         const stripeLinks = {
+            trial: 'STRIPE_TRIAL_LINK_HERE',
             monthly: 'https://buy.stripe.com/cNi7sLfUG9YrcIL4vq5Rm02',
             annual: 'https://buy.stripe.com/fZubJ1bEq3A3fUX2ni5Rm03'
         };
 
-        // Get plan from URL param, default to monthly
-        let selectedPlan = new URLSearchParams(window.location.search).get('plan') || 'monthly';
-        if (selectedPlan === 'annual') selectPlan('annual');
+        const btnLabels = {
+            trial: 'Start your free trial',
+            monthly: 'Continue to secure payment - $29/mo',
+            annual: 'Continue to secure payment - $249/yr'
+        };
+
+        // Get plan from URL param, default to trial
+        let selectedPlan = new URLSearchParams(window.location.search).get('plan') || 'trial';
+        if (['monthly', 'annual', 'trial'].includes(selectedPlan)) selectPlan(selectedPlan);
 
         function selectPlan(plan) {
             selectedPlan = plan;
+            document.getElementById('trialPlan').classList.toggle('selected', plan === 'trial');
             document.getElementById('monthlyPlan').classList.toggle('selected', plan === 'monthly');
             document.getElementById('annualPlan').classList.toggle('selected', plan === 'annual');
 
-            const btn = document.getElementById('ctaBtn');
-            btn.textContent = plan === 'annual'
-                ? 'Continue to secure payment - $249/yr'
-                : 'Continue to secure payment - $29/mo';
+            document.getElementById('ctaBtn').textContent = btnLabels[plan];
         }
 
         function handleCheckout(e) {
