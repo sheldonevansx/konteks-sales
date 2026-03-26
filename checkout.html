@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Konteks Kourse</title>
-    
+    <title>Join the Konteks Kourse - Secure Checkout</title>
+
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Meta Pixel -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -27,16 +27,16 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=26300556566305220&ev=PageView&noscript=1"
     /></noscript>
-    
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 17px;
             line-height: 1.6;
             color: #333;
-            background: #fff;
+            background: #F7F7F7;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             min-height: 100vh;
@@ -45,244 +45,387 @@
             justify-content: center;
             padding: 24px;
         }
-        
+
         .checkout-container {
-            max-width: 520px;
+            max-width: 480px;
             width: 100%;
-            text-align: center;
             opacity: 0;
-            animation: fadeIn 0.6s ease forwards;
+            animation: fadeIn 0.5s ease forwards;
         }
-        
+
         @keyframes fadeIn {
             to { opacity: 1; }
         }
-        
-        .avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: #e5e5e5;
-            margin: 0 auto 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
-        }
-        
-        h1 {
-            font-family: 'Inter', sans-serif;
-            font-weight: 800;
-            font-size: 28px;
-            line-height: 1.2;
-            letter-spacing: -1px;
-            color: #000;
+
+        /* Dan's reassurance */
+        .reassurance {
+            text-align: center;
             margin-bottom: 24px;
         }
-        
-        .plan-card {
-            background: #fff;
-            border: 1px solid #e5e5e5;
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin-bottom: 20px;
+
+        .dan-photo {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 12px;
         }
-        
-        .plan-price {
-            font-family: 'Inter', sans-serif;
-            font-weight: 700;
+
+        .reassurance h1 {
+            font-weight: 800;
             font-size: 24px;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
             color: #000;
+            margin-bottom: 6px;
+        }
+
+        .reassurance p {
+            font-size: 15px;
+            color: #666;
+        }
+
+        /* Main card */
+        .checkout-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
+        }
+
+        /* Plan selector */
+        .plan-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .plan-option {
+            flex: 1;
+            border: 2px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 16px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .plan-option:hover {
+            border-color: #ccc;
+        }
+
+        .plan-option.selected {
+            border-color: #E86A1C;
+            background: #FFF8F5;
+        }
+
+        .plan-option .plan-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             margin-bottom: 4px;
         }
-        
-        .plan-detail {
+
+        .plan-option .plan-price {
+            font-weight: 800;
+            font-size: 24px;
+            color: #000;
+            line-height: 1.2;
+        }
+
+        .plan-option .plan-price span {
             font-size: 15px;
+            font-weight: 500;
+            color: #666;
+        }
+
+        .plan-option .plan-note {
+            font-size: 13px;
             color: #999;
+            margin-top: 2px;
         }
-        
-        .subtext {
-            font-size: 15px;
-            color: #555;
-            line-height: 1.5;
-            margin-bottom: 28px;
+
+        .plan-option .save-badge {
+            position: absolute;
+            top: -10px;
+            right: -6px;
+            background: #E86A1C;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 20px;
+            letter-spacing: 0.3px;
         }
-        
-        .checklist {
-            text-align: left;
-            background: #F7F7F7;
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin-bottom: 32px;
+
+        /* What's included */
+        .included {
+            margin-bottom: 24px;
         }
-        
-        .checklist-item {
+
+        .included-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .included-item {
             font-size: 14px;
             color: #333;
             margin-bottom: 8px;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
+            gap: 10px;
         }
-        
-        .checklist-item:last-child {
+
+        .included-item:last-child {
             margin-bottom: 0;
         }
-        
-        .checklist-item svg {
-            flex-shrink: 0;
-            margin-right: 10px;
-        }
-        
-        .loading {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 15px;
-            color: #999;
-            margin-bottom: 20px;
-        }
-        
-        .spinner {
-            width: 16px;
-            height: 16px;
-            border: 2px solid #e5e5e5;
-            border-top-color: #E86A1C;
+
+        .check-icon {
+            width: 18px;
+            height: 18px;
+            background: #FFF0E8;
             border-radius: 50%;
-            animation: spin 0.8s linear infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
-        
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+
+        .check-icon svg {
+            width: 10px;
+            height: 10px;
         }
-        
-        .backup-link {
-            display: none;
-            font-size: 14px;
-            color: #E86A1C;
+
+        /* CTA button */
+        .cta-btn {
+            display: block;
+            width: 100%;
+            padding: 16px 24px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            background: #E86A1C;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            text-align: center;
             text-decoration: none;
-            margin-top: 12px;
+            transition: background 0.2s;
+            margin-bottom: 16px;
         }
-        
-        .backup-link:hover {
-            color: #C85A16;
+
+        .cta-btn:hover {
+            background: #C85A16;
         }
-        
-        .backup-link.show {
-            display: inline-block;
+
+        /* Guarantee */
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px;
+            background: #F0FAF0;
+            border-radius: 10px;
+            margin-bottom: 16px;
         }
-        
-        .footer-text {
+
+        .guarantee svg {
+            flex-shrink: 0;
+        }
+
+        .guarantee p {
+            font-size: 13px;
+            color: #2D6A2E;
+            font-weight: 500;
+        }
+
+        /* Social proof */
+        .social-proof {
+            text-align: center;
             font-size: 13px;
             color: #999;
-            margin-top: 32px;
+        }
+
+        .social-proof strong {
+            color: #666;
+        }
+
+        /* Footer */
+        .footer-trust {
+            text-align: center;
+            margin-top: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 6px;
+            font-size: 13px;
+            color: #999;
         }
-        
-        .stripe-logo {
+
+        .footer-trust .stripe-logo {
             font-weight: 600;
             color: #635BFF;
+        }
+
+        /* Back link */
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 16px;
+            font-size: 13px;
+            color: #999;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: #666;
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+            body { padding: 16px; }
+            .checkout-card { padding: 24px 20px; }
+            .plan-option .plan-price { font-size: 20px; }
+            .reassurance h1 { font-size: 22px; }
         }
     </style>
 </head>
 <body>
     <div class="checkout-container">
-        <div class="avatar">
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                <circle cx="12" cy="7" r="4"/>
-            </svg>
+        <div class="reassurance">
+            <img src="images/dan-profile.jpg" alt="Dan Fouche" class="dan-photo">
+            <h1>You're almost in</h1>
+            <p>Choose your plan and you'll get instant access.</p>
         </div>
-        
-        <h1>You're joining the Konteks Kourse</h1>
-        
-        <div class="plan-card">
-            <div class="plan-price" id="planPrice">$29/mo</div>
-            <div class="plan-detail" id="planDetail">Cancel anytime</div>
+
+        <div class="checkout-card">
+            <!-- Plan selector -->
+            <div class="plan-selector">
+                <div class="plan-option selected" id="monthlyPlan" onclick="selectPlan('monthly')">
+                    <div class="plan-name">Monthly</div>
+                    <div class="plan-price">$29<span>/mo</span></div>
+                    <div class="plan-note">Cancel anytime</div>
+                </div>
+                <div class="plan-option" id="annualPlan" onclick="selectPlan('annual')">
+                    <span class="save-badge">SAVE $99</span>
+                    <div class="plan-name">Annual</div>
+                    <div class="plan-price">$249<span>/yr</span></div>
+                    <div class="plan-note">$20.75/mo</div>
+                </div>
+            </div>
+
+            <!-- What's included -->
+            <div class="included">
+                <div class="included-label">Included from day one</div>
+                <div class="included-item">
+                    <div class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    All 5 chapters - concept, crits, time management, site analysis
+                </div>
+                <div class="included-item">
+                    <div class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    The Konteks Kalendar (weekly planner)
+                </div>
+                <div class="included-item">
+                    <div class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    Private student community (363+ members)
+                </div>
+                <div class="included-item">
+                    <div class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                    </div>
+                    Direct access to Dan for feedback
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <a href="#" class="cta-btn" id="ctaBtn" onclick="handleCheckout(event)">Continue to secure payment</a>
+
+            <!-- Guarantee -->
+            <div class="guarantee">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D6A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <p>7-day money-back guarantee. Not for you? Get a full refund, no questions.</p>
+            </div>
+
+            <!-- Social proof -->
+            <div class="social-proof">
+                <strong>363+ architecture students</strong> already inside
+            </div>
         </div>
-        
-        <p class="subtext">
-            You'll be redirected to our secure checkout. After payment, check your email for instant access to the Skool community.
-        </p>
-        
-        <div class="checklist">
-            <div class="checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                All 5 chapters from day one
-            </div>
-            <div class="checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                The Konteks Kalendar
-            </div>
-            <div class="checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                Student community access
-            </div>
-            <div class="checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                Cancel anytime
-            </div>
-        </div>
-        
-        <div class="loading">
-            <div class="spinner"></div>
-            <span>Redirecting to secure checkout...</span>
-        </div>
-        
-        <a href="#" class="backup-link" id="backupLink">Click here if not redirected</a>
-        
-        <div class="footer-text">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px;">
+
+        <!-- Footer trust -->
+        <div class="footer-trust">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
                 <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
             </svg>
-            Secure payment powered by <span class="stripe-logo">Stripe</span>
+            Secure payment via <span class="stripe-logo">Stripe</span>
         </div>
+
+        <a href="/" class="back-link">Back to the sales page</a>
     </div>
-    
+
     <script>
-        // Get plan from URL parameter
-        const urlParams = new URLSearchParams(window.location.search);
-        const plan = urlParams.get('plan') || 'monthly';
-        
-        // Stripe Payment Links (replace these with actual links from Stripe)
         const stripeLinks = {
             monthly: 'https://buy.stripe.com/cNi7sLfUG9YrcIL4vq5Rm02',
             annual: 'https://buy.stripe.com/fZubJ1bEq3A3fUX2ni5Rm03'
         };
-        
-        // Update UI based on plan
-        const planPrice = document.getElementById('planPrice');
-        const planDetail = document.getElementById('planDetail');
-        const backupLink = document.getElementById('backupLink');
-        
-        if (plan === 'annual') {
-            planPrice.textContent = '$249/yr';
-            planDetail.textContent = 'Save $99';
+
+        // Get plan from URL param, default to monthly
+        let selectedPlan = new URLSearchParams(window.location.search).get('plan') || 'monthly';
+        if (selectedPlan === 'annual') selectPlan('annual');
+
+        function selectPlan(plan) {
+            selectedPlan = plan;
+            document.getElementById('monthlyPlan').classList.toggle('selected', plan === 'monthly');
+            document.getElementById('annualPlan').classList.toggle('selected', plan === 'annual');
+
+            const btn = document.getElementById('ctaBtn');
+            btn.textContent = plan === 'annual'
+                ? 'Continue to secure payment - $249/yr'
+                : 'Continue to secure payment - $29/mo';
         }
-        
-        // Set backup link
-        backupLink.href = stripeLinks[plan];
-        
-        // Auto-redirect after 2.5 seconds
-        setTimeout(() => {
-            window.location.href = stripeLinks[plan];
-        }, 2500);
-        
-        // Show backup link after 3 seconds
-        setTimeout(() => {
-            backupLink.classList.add('show');
-        }, 3000);
+
+        function handleCheckout(e) {
+            e.preventDefault();
+            const btn = document.getElementById('ctaBtn');
+            btn.textContent = 'Redirecting to Stripe...';
+            btn.style.opacity = '0.7';
+            btn.style.pointerEvents = 'none';
+
+            // Small delay so user sees the state change
+            setTimeout(() => {
+                window.location.href = stripeLinks[selectedPlan];
+            }, 400);
+        }
+
+        // Initialize button text
+        selectPlan(selectedPlan);
     </script>
 </body>
 </html>
