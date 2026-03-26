@@ -68,7 +68,7 @@
         }
         
         @media (min-width: 768px) {
-            h1 { font-size: 52px; letter-spacing: -2px; }
+            h1 { font-size: 56px; letter-spacing: -2px; }
             h2 { font-size: 40px; letter-spacing: -1.5px; }
         }
         
@@ -100,7 +100,7 @@
             font-size: 13px;
             font-weight: 600;
             line-height: 1;
-            color: #9296A4;
+            color: #E86A1C;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             margin-bottom: 20px;
@@ -600,21 +600,35 @@
 
     <!-- 1. HERO -->
     <section class="section" style="min-height: 85vh; display: flex; align-items: center;">
-        <div class="container">
+        <div class="container" style="text-align: center;">
             <div class="eyebrow">For architecture students</div>
-            <h1 style="margin-bottom: 20px;">The fastest way to become a top 1% architecture student without more sleepless nights.</h1>
-            <p class="subheadline">Master the frameworks your lecturers use but never teach. 45+ Videos. 5 chapters. Concept development. Time management. Site analysis. Crit preparation.<br><span style="position: relative; display: inline;">Built by the architect who won best thesis across all faculties<svg style="position: absolute; bottom: -6px; left: 0; width: 100%; height: 12px; overflow: visible;" viewBox="0 0 400 12" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 8 C30 2, 60 10, 90 6 C120 2, 150 10, 180 5 C210 1, 240 10, 270 6 C300 2, 330 10, 360 5 C375 3, 390 8, 398 6" stroke="#E86A1C" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg></span></p>
-            
-            <div class="cta-group" style="flex-direction: column; align-items: flex-start; gap: 12px;">
-                <a href="checkout.html?plan=trial" class="btn btn-primary" onclick="fbq('track','ViewContent')">Try free for 7 days</a>
+            <h1 style="margin-bottom: 24px; font-size: 40px; max-width: 640px; margin-left: auto; margin-right: auto;">The fastest way to become a top 1% architecture student without more sleepless nights.</h1>
+            <p class="subheadline" style="max-width: 580px; margin-left: auto; margin-right: auto; margin-bottom: 12px;">Master the frameworks your lecturers use but never teach. 45+ Videos. 5 chapters. Concept development. Time management. Site analysis. Crit preparation.</p>
+
+            <!-- Dan credibility with photo + hand-drawn arrow -->
+            <div style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 36px;">
+                <div style="position: relative;">
+                    <img src="images/dan-profile.jpg" alt="Dan Fouche" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #E86A1C;">
+                    <!-- Hand-drawn arrow -->
+                    <svg width="60" height="40" viewBox="0 0 60 40" style="position: absolute; top: -30px; right: -55px;" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 35 C10 30, 15 20, 25 15 C35 10, 45 8, 55 5" stroke="#E86A1C" stroke-width="1.5" stroke-linecap="round" fill="none" stroke-dasharray="0"/>
+                        <path d="M48 2 L55 5 L50 10" stroke="#E86A1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                    <span style="position: absolute; top: -38px; right: -120px; font-size: 13px; font-weight: 600; color: #E86A1C; white-space: nowrap; font-style: italic;">Dan Fouche</span>
+                </div>
+                <span style="font-size: 15px; color: #555; margin-left: 24px;"><span style="position: relative; display: inline;">Built by the architect who won best thesis across all faculties<svg style="position: absolute; bottom: -6px; left: 0; width: 100%; height: 12px; overflow: visible;" viewBox="0 0 400 12" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 8 C30 2, 60 10, 90 6 C120 2, 150 10, 180 5 C210 1, 240 10, 270 6 C300 2, 330 10, 360 5 C375 3, 390 8, 398 6" stroke="#E86A1C" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg></span></span>
+            </div>
+
+            <div class="cta-group" style="flex-direction: column; align-items: center; gap: 12px;">
+                <a href="checkout.html?plan=trial" class="btn btn-primary" style="font-size: 18px; padding: 18px 40px;" onclick="fbq('track','ViewContent')">Try free for 7 days</a>
                 <div style="font-size: 13px; color: #999; display: flex; align-items: center; gap: 6px;">
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     7-day free trial · 30-day money-back guarantee
                 </div>
                 <a href="#whats-inside" class="text-link">See what's inside ↓</a>
             </div>
-            
-            <div class="checklist">
+
+            <div class="checklist" style="justify-content: center;">
                 <div class="checklist-item">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="20 6 9 17 4 12"/>
@@ -634,9 +648,9 @@
                     363+ students inside
                 </div>
             </div>
-            
+
             <!-- Hero course preview video -->
-            <div style="margin-top: 40px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.12); max-width: 720px;">
+            <div style="margin-top: 40px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.12); max-width: 720px; margin-left: auto; margin-right: auto;">
                 <video autoplay loop muted playsinline style="width: 100%; display: block;">
                     <source src="videos/skool-walkthrough-web.mp4" type="video/mp4">
                 </video>
