@@ -22,7 +22,6 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '26300556566305220');
     fbq('track', 'PageView');
-    fbq('track', 'InitiateCheckout');
     </script>
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=26300556566305220&ev=PageView&noscript=1"
@@ -422,6 +421,12 @@
             annual: 'https://buy.stripe.com/fZubJ1bEq3A3fUX2ni5Rm03'
         };
 
+        const planValues = {
+            trial: 0.00,
+            monthly: 29.00,
+            annual: 249.00
+        };
+
         const btnLabels = {
             trial: 'Start your free trial',
             monthly: 'Continue to secure payment - $29/mo',
@@ -443,15 +448,25 @@
 
         function handleCheckout(e) {
             e.preventDefault();
+            
+            // Fire InitiateCheckout with value and currency
+            fbq('track', 'InitiateCheckout', {
+                value: planValues[selectedPlan],
+                currency: 'USD',
+                content_name: 'Konteks Kourse - ' + selectedPlan,
+                content_category: 'Architecture Education',
+                num_items: 1
+            });
+
             const btn = document.getElementById('ctaBtn');
             btn.textContent = 'Redirecting to Stripe...';
             btn.style.opacity = '0.7';
             btn.style.pointerEvents = 'none';
 
-            // Small delay so user sees the state change
+            // Small delay so pixel fires before redirect
             setTimeout(() => {
                 window.location.href = stripeLinks[selectedPlan];
-            }, 400);
+            }, 600);
         }
 
         // Initialize button text
