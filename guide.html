@@ -3,288 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Guide: 5 Things Your Lecturers Grade On (But Never Tell You)</title>
-    
-    <meta property="og:title" content="Free Guide: 5 Things Your Lecturers Grade On">
-    <meta property="og:description" content="The hidden grading rubric your lecturers use - free PDF guide by Dan Fouche">
+    <title>5 Things Your Lecturers Grade On (That They Never Tell You) - Konteks</title>
+
+    <meta property="og:title" content="5 Things Your Lecturers Grade On (That They Never Tell You)">
+    <meta property="og:description" content="Free guide for architecture students. The unwritten grading criteria nobody explains.">
     <meta property="og:type" content="website">
-    
+    <meta property="og:url" content="https://kourse.konteks.co/guide">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Meta Pixel -->
     <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '26300556566305220');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=26300556566305220&ev=PageView&noscript=1" /></noscript>
-    
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        html { overflow-x: hidden; }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 17px;
             line-height: 1.6;
-            color: #1A1A1A;
-            background: #F9F7F4;
+            color: #333;
+            background: #fff;
             -webkit-font-smoothing: antialiased;
         }
-        
         .container {
-            max-width: 640px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 0 24px;
         }
-        
-        header {
-            padding: 32px 0;
-            text-align: center;
-            background: #fff;
-            border-bottom: 1px solid #E5E5E5;
-        }
-        
-        .logo {
-            font-weight: 800;
-            font-size: 24px;
-            color: #1A1A1A;
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-        
-        main {
-            padding: 60px 0 80px;
-        }
-        
-        @media (min-width: 768px) {
-            main { padding: 80px 0 120px; }
-        }
-        
+
+        /* Hero */
         .hero {
+            padding: 60px 0 40px;
             text-align: center;
-            background: #fff;
-            border-radius: 16px;
-            padding: 48px 32px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
-        
-        h1 {
-            font-weight: 800;
+        .eyebrow {
+            font-size: 13px;
+            font-weight: 600;
+            color: #E86A1C;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
             font-size: 32px;
+            font-weight: 800;
             line-height: 1.1;
             letter-spacing: -1px;
-            color: #1A1A1A;
-            margin-bottom: 16px;
+            color: #000;
+            margin-bottom: 20px;
         }
-        
         @media (min-width: 768px) {
-            h1 { font-size: 40px; letter-spacing: -1.5px; }
+            .hero h1 { font-size: 44px; letter-spacing: -1.5px; }
         }
-        
-        .subhead {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 32px;
+        .hero p {
+            font-size: 17px;
+            color: #555;
+            margin-bottom: 0;
+            line-height: 1.6;
         }
-        
-        .bullets {
-            text-align: left;
-            margin: 40px 0;
-            padding: 0;
+
+        /* What's inside */
+        .whats-inside {
+            padding: 40px 0;
         }
-        
-        .bullets li {
-            list-style: none;
-            padding: 16px 0;
-            border-bottom: 1px solid #F0F0F0;
-            font-size: 16px;
-            color: #1A1A1A;
-            line-height: 1.5;
+        .inside-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
         }
-        
-        .bullets li:last-child { border-bottom: none; }
-        
-        .bullets li:before {
-            content: "✓";
+        .inside-num {
+            width: 32px; height: 32px;
+            background: #FFF0E8;
             color: #E86A1C;
-            font-weight: 700;
-            font-size: 18px;
-            margin-right: 12px;
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 14px; font-weight: 700; flex-shrink: 0;
         }
-        
-        .social-proof {
+        .inside-text h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 4px;
+        }
+        .inside-text p {
             font-size: 15px;
             color: #666;
-            margin: 32px 0 40px;
-            font-weight: 500;
+            line-height: 1.5;
+            margin: 0;
         }
-        
-        form {
-            max-width: 420px;
-            margin: 0 auto;
+
+        /* Form section */
+        .form-section {
+            background: #F7F7F7;
+            border-radius: 16px;
+            padding: 36px 28px;
+            margin: 20px 0 40px;
         }
-        
-        input[type="email"] {
+        .form-section h2 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 8px;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+        .form-section .sub {
+            font-size: 15px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .form-input {
             width: 100%;
-            padding: 16px;
+            padding: 14px 18px;
+            border: 2px solid #E3E3E5;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
             font-size: 16px;
-            font-family: 'Inter', sans-serif;
-            border: 2px solid #E5E5E5;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            transition: border-color 0.2s;
-        }
-        
-        input[type="email"]:focus {
+            margin-bottom: 10px;
             outline: none;
-            border-color: #E86A1C;
+            transition: border-color 0.2s;
+            background: #fff;
         }
-        
-        button {
+        .form-input:focus { border-color: #E86A1C; }
+        .btn-download {
             width: 100%;
-            padding: 16px 32px;
-            font-size: 17px;
-            font-weight: 600;
-            font-family: 'Inter', sans-serif;
-            color: #fff;
+            padding: 16px 28px;
             background: #E86A1C;
+            color: #fff;
             border: none;
-            border-radius: 12px;
+            border-radius: 100px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
             transition: background 0.2s;
+            min-height: 48px;
         }
-        
-        button:hover {
-            background: #C85A16;
-        }
-        
-        button:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-        
-        .fine-print {
+        .btn-download:hover { background: #C85A16; }
+        .btn-download:disabled { background: #CCC; cursor: not-allowed; }
+        .form-note {
             font-size: 13px;
             color: #999;
-            margin-top: 16px;
+            margin-top: 12px;
+            text-align: center;
         }
-        
-        .error {
-            color: #d32f2f;
-            font-size: 14px;
-            margin-top: 8px;
+
+        /* Success state */
+        .form-success {
             display: none;
+            text-align: center;
+            padding: 20px 0;
         }
-        
-        .error.show { display: block; }
+        .form-success h2 {
+            font-size: 24px;
+            font-weight: 800;
+            color: #000;
+            margin-bottom: 12px;
+        }
+        .form-success p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .checkmark {
+            width: 48px; height: 48px;
+            background: #E86A1C;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 16px;
+        }
+
+        /* Credibility */
+        .credibility {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 24px 0 40px;
+            justify-content: center;
+        }
+        .credibility img {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #E86A1C;
+        }
+        .credibility-info {
+            font-size: 14px;
+            color: #555;
+        }
+        .credibility-info strong {
+            display: block;
+            color: #000;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 24px 0 40px;
+            font-size: 13px;
+            color: #999;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">Konteks</a>
+    <div class="container">
+        <!-- HERO -->
+        <div class="hero">
+            <div class="eyebrow">Free guide for architecture students</div>
+            <h1>5 things your lecturers grade on that they never tell you</h1>
+            <p>The unwritten grading criteria that separate top students from everyone else. From the architect who won best thesis across engineering, science and architecture.</p>
         </div>
-    </header>
-    
-    <main>
-        <div class="container">
-            <div class="hero">
-                <h1>The 5 Things Your Architecture Lecturers Grade On (But Never Tell You)</h1>
-                
-                <p class="subhead">Free PDF guide by Dan Fouche - the architect who won best thesis across engineering, science, and technology.</p>
-                
-                <ul class="bullets">
-                    <li>The hidden grading rubric your lecturers use (and how to design for it)</li>
-                    <li>Why "push it further" isn't feedback - and what they actually mean</li>
-                    <li>The concept development shortcut that top students use</li>
-                    <li>The one thing every site analysis is missing</li>
-                </ul>
-                
-                <p class="social-proof">363 architecture students already have this guide</p>
-                
-                <!-- UPDATE: Replace AC form ID -->
-                <!-- TODO: Connect to ActiveCampaign -->
-                <form id="leadForm" action="https://konteks.activehosted.com/proc.php" method="POST">
-                    <input type="hidden" name="u" value="1">
-                    <input type="hidden" name="f" value="1">
-                    <input type="hidden" name="s" value="">
-                    <input type="hidden" name="c" value="0">
-                    <input type="hidden" name="m" value="0">
-                    <input type="hidden" name="act" value="sub">
-                    <input type="hidden" name="v" value="2">
-                    <input type="hidden" name="or" value="free-guide">
-                    
-                    <input 
-                        type="email" 
-                        name="email" 
-                        id="email" 
-                        placeholder="Your email address" 
-                        required
-                    >
-                    
-                    <button type="submit" id="submitBtn">Send Me The Guide</button>
-                    
-                    <p class="error" id="errorMsg">Please enter a valid email address.</p>
-                </form>
-                
-                <p class="fine-print">Free. No spam. Unsubscribe anytime.</p>
+
+        <!-- CREDIBILITY -->
+        <div class="credibility">
+            <img src="images/dan-profile.jpg" alt="Dan Fouche">
+            <div class="credibility-info">
+                <strong>Dan Fouche</strong>
+                Architect, @studwalldan
             </div>
         </div>
-    </main>
-    
+
+        <!-- WHAT'S INSIDE -->
+        <div class="whats-inside">
+            <div class="inside-item">
+                <div class="inside-num">1</div>
+                <div class="inside-text">
+                    <h3>The hidden rubric</h3>
+                    <p>What lecturers look for in the first 30 seconds of your crit - before you've said a word.</p>
+                </div>
+            </div>
+            <div class="inside-item">
+                <div class="inside-num">2</div>
+                <div class="inside-text">
+                    <h3>Concept depth scoring</h3>
+                    <p>How your concept is evaluated and why "light and shadow" gets a C while place-specific concepts get an A.</p>
+                </div>
+            </div>
+            <div class="inside-item">
+                <div class="inside-num">3</div>
+                <div class="inside-text">
+                    <h3>The iteration signal</h3>
+                    <p>Why lecturers can tell in seconds whether you iterated or settled. And what they're actually looking at.</p>
+                </div>
+            </div>
+            <div class="inside-item">
+                <div class="inside-num">4</div>
+                <div class="inside-text">
+                    <h3>Site analysis depth</h3>
+                    <p>The difference between a sun path diagram and the layered analysis that makes lecturers sit up.</p>
+                </div>
+            </div>
+            <div class="inside-item">
+                <div class="inside-num">5</div>
+                <div class="inside-text">
+                    <h3>The presentation test</h3>
+                    <p>How your boards and drawings are read before your concept is even considered. First impressions in crits.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="form-section" id="formSection">
+            <h2>Get the free guide</h2>
+            <div class="sub">Straight to your inbox. Takes 10 minutes to read.</div>
+            <input type="text" class="form-input" id="guideNameInput" placeholder="First name" autocomplete="given-name">
+            <input type="email" class="form-input" id="guideEmailInput" placeholder="Email address" autocomplete="email">
+            <button class="btn-download" id="guideSubmitBtn" onclick="submitGuide()" disabled>Send me the guide</button>
+            <div class="form-note">No spam. Unsubscribe anytime. We'll also send you one email with the system 363+ students are using in studio.</div>
+        </div>
+
+        <!-- SUCCESS -->
+        <div class="form-success" id="formSuccess">
+            <div class="checkmark">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h2>Check your inbox</h2>
+            <p>The guide is on its way to your email. If you don't see it in 2 minutes, check your spam folder.</p>
+            <div style="margin-top: 24px;">
+                <a href="https://buy.stripe.com/9B68wP37U6Mf9wzfa45Rm05" style="display: inline-flex; align-items: center; justify-content: center; padding: 14px 32px; background: #E86A1C; color: #fff; border-radius: 100px; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; text-decoration: none; min-height: 48px;" onclick="fbq('track','ViewContent')">Try the full system free for 7 days</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 @studwalldan
+        </div>
+    </div>
+
     <script>
-        const form = document.getElementById('leadForm');
-        const emailInput = document.getElementById('email');
-        const submitBtn = document.getElementById('submitBtn');
-        const errorMsg = document.getElementById('errorMsg');
-        
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const email = emailInput.value.trim();
-            
-            // Basic email validation
-            if (!email || !email.includes('@')) {
-                errorMsg.classList.add('show');
-                return;
-            }
-            
-            errorMsg.classList.remove('show');
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-            
-            // Track lead conversion
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead');
-            }
-            
-            // Store email in sessionStorage
-            sessionStorage.setItem('konteks_lead_email', email);
-            sessionStorage.setItem('konteks_lead_captured', 'true');
-            
-            // Fallback API call to Cloudflare Worker (will be built later)
-            try {
-                await fetch('https://kourse.konteks.co/api/subscribe', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, source: 'free-guide' })
-                });
-            } catch (err) {
-                console.log('Fallback API not yet configured');
-            }
-            
-            // Redirect to thank you page
-            setTimeout(() => {
-                window.location.href = '/guide-thanks.html';
-            }, 500);
-        });
+    const nameInput = document.getElementById('guideNameInput');
+    const emailInput = document.getElementById('guideEmailInput');
+    const submitBtn = document.getElementById('guideSubmitBtn');
+
+    function checkInputs() {
+        const email = emailInput.value.trim();
+        const name = nameInput.value.trim();
+        submitBtn.disabled = !(email.includes('@') && email.includes('.') && name.length > 0);
+    }
+    nameInput.addEventListener('input', checkInputs);
+    emailInput.addEventListener('input', checkInputs);
+
+    function submitGuide() {
+        const email = emailInput.value.trim();
+        const name = nameInput.value.trim();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        fbq('track', 'Lead', { content_name: 'guide_download' });
+
+        // POST to Cloudflare Worker (adds to AC with lead-magnet tag)
+        fetch('/api/guide-submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, firstName: name, source: 'guide' })
+        }).catch(() => {});
+
+        // Show success regardless
+        setTimeout(() => {
+            document.getElementById('formSection').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'block';
+        }, 800);
+    }
     </script>
 </body>
 </html>

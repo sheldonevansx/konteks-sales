@@ -40,10 +40,10 @@
                 
                 <h2 style="font-family: 'Inter', sans-serif; font-weight: 800; font-size: 28px; line-height: 1.2; color: #1A1A1A; margin-bottom: 16px; letter-spacing: -0.5px;">Wait - before you go</h2>
 
-                <p style="font-family: 'Inter', sans-serif; font-size: 16px; color: #666; margin-bottom: 8px; line-height: 1.5;">Not sure yet? <strong style="color: #1A1A1A;">Try the full Konteks Kourse free for 7 days.</strong></p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 16px; color: #666; margin-bottom: 8px; line-height: 1.5;">Not sure yet? <strong style="color: #1A1A1A;">Try the full system free for 7 days.</strong></p>
                 <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #999; margin-bottom: 24px; line-height: 1.5;">All 5 chapters. The Konteks Kalendar. The student community. No charge until day 8.</p>
 
-                <a href="checkout.html?plan=trial" id="popupTrialBtn" style="display: block; width: 100%; padding: 16px 24px; font-size: 16px; font-weight: 700; font-family: 'Inter', sans-serif; color: #fff; background: #E86A1C; border: none; border-radius: 10px; cursor: pointer; transition: background 0.2s; text-align: center; text-decoration: none; margin-bottom: 16px;">Try free for 7 days</a>
+                <a href="https://buy.stripe.com/9B68wP37U6Mf9wzfa45Rm05" id="popupTrialBtn" style="display: block; width: 100%; padding: 16px 24px; font-size: 16px; font-weight: 700; font-family: 'Inter', sans-serif; color: #fff; background: #E86A1C; border: none; border-radius: 10px; cursor: pointer; transition: background 0.2s; text-align: center; text-decoration: none; margin-bottom: 16px;">Try free for 7 days</a>
 
                 <button id="dismissPopup" style="background: none; border: none; color: #999; font-size: 14px; cursor: pointer; text-decoration: underline; font-family: 'Inter', sans-serif;">No thanks, I'm not ready</button>
             </div>

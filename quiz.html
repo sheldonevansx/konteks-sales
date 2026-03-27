@@ -3,505 +3,699 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What Type of Architecture Student Are You? - Konteks Quiz</title>
-    
-    <meta property="og:title" content="What Type of Architecture Student Are You?">
-    <meta property="og:description" content="Take the 2-minute quiz. Get a personalized study plan.">
+    <title>What type of architecture student are you? - Konteks</title>
+
+    <meta property="og:title" content="What type of architecture student are you?">
+    <meta property="og:description" content="Take the 2-minute quiz and find out what's actually holding you back in studio.">
     <meta property="og:type" content="website">
-    
+    <meta property="og:url" content="https://kourse.konteks.co/quiz">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Meta Pixel -->
     <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '26300556566305220');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=26300556566305220&ev=PageView&noscript=1" /></noscript>
-    
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+        html { overflow-x: hidden; }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 17px;
             line-height: 1.6;
-            color: #1A1A1A;
-            background: #F9F7F4;
+            color: #333;
+            background: #fff;
             -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
         }
-        
-        .container {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        
-        header {
-            padding: 32px 0;
-            text-align: center;
-            background: #fff;
-            border-bottom: 1px solid #E5E5E5;
-        }
-        
-        .logo {
-            font-weight: 800;
-            font-size: 24px;
-            color: #1A1A1A;
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-        
-        main {
-            padding: 60px 0 80px;
-        }
-        
-        @media (min-width: 768px) {
-            main { padding: 80px 0 120px; }
-        }
-        
-        .quiz-intro {
-            text-align: center;
-            background: #fff;
-            border-radius: 16px;
-            padding: 48px 32px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-        }
-        
-        h1 {
-            font-weight: 800;
-            font-size: 32px;
-            line-height: 1.1;
-            letter-spacing: -1px;
-            color: #1A1A1A;
-            margin-bottom: 16px;
-        }
-        
-        @media (min-width: 768px) {
-            h1 { font-size: 40px; letter-spacing: -1.5px; }
-        }
-        
-        .subtitle {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 32px;
-        }
-        
-        .start-btn {
-            display: inline-block;
-            padding: 16px 48px;
-            font-size: 17px;
-            font-weight: 600;
-            color: #fff;
-            background: #E86A1C;
-            border: none;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: background 0.2s;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .start-btn:hover {
-            background: #C85A16;
-        }
-        
+
         .quiz-container {
-            display: none;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 24px 60px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        
+
+        /* Progress bar */
+        .progress-wrap { margin-bottom: 40px; }
         .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: #E5E5E5;
-            border-radius: 4px;
-            margin-bottom: 40px;
+            height: 6px;
+            background: #E8E8E8;
+            border-radius: 3px;
             overflow: hidden;
         }
-        
         .progress-fill {
             height: 100%;
             background: #E86A1C;
-            transition: width 0.3s ease;
-            border-radius: 4px;
+            border-radius: 3px;
+            transition: width 0.4s ease;
+            width: 0%;
         }
-        
-        .question-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 40px 32px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            display: none;
+        .progress-text {
+            font-size: 13px;
+            color: #999;
+            margin-top: 8px;
+            text-align: right;
         }
-        
-        .question-card.active {
-            display: block;
-            animation: slideIn 0.3s ease-out;
+
+        /* Screens */
+        .screen { display: none; animation: fadeIn 0.3s ease; }
+        .screen.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
+
         .question-number {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             color: #E86A1C;
-            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
         }
-        
         .question-text {
             font-size: 24px;
-            font-weight: 700;
-            color: #1A1A1A;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            color: #000;
             margin-bottom: 32px;
-            line-height: 1.3;
         }
-        
-        .answers {
-            display: grid;
-            gap: 12px;
+        @media (min-width: 768px) {
+            .question-text { font-size: 28px; }
         }
-        
-        .answer-btn {
-            width: 100%;
-            padding: 18px 20px;
-            font-size: 16px;
-            font-family: 'Inter', sans-serif;
-            color: #1A1A1A;
-            background: #fff;
-            border: 2px solid #E5E5E5;
+
+        /* Options */
+        .options { display: flex; flex-direction: column; gap: 12px; }
+        .option {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 20px;
+            border: 2px solid #E3E3E5;
             border-radius: 12px;
             cursor: pointer;
-            transition: all 0.2s;
-            text-align: left;
-            line-height: 1.4;
-        }
-        
-        .answer-btn:hover {
-            border-color: #E86A1C;
-            background: #FFF5F0;
-        }
-        
-        .email-capture {
+            transition: all 0.2s ease;
             background: #fff;
-            border-radius: 16px;
-            padding: 40px 32px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            display: none;
-            text-align: center;
         }
-        
-        .email-capture.active {
-            display: block;
+        .option:hover { border-color: #E86A1C; background: #FFF8F5; }
+        .option.selected { border-color: #E86A1C; background: #FFF8F5; }
+        .option-radio {
+            width: 22px; height: 22px;
+            border: 2px solid #CCC;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
         }
-        
-        .email-capture h2 {
-            font-size: 28px;
-            font-weight: 800;
-            color: #1A1A1A;
-            margin-bottom: 16px;
-            letter-spacing: -0.5px;
-        }
-        
-        .email-capture p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 32px;
-        }
-        
-        input[type="email"] {
-            width: 100%;
-            max-width: 400px;
-            padding: 16px;
-            font-size: 16px;
-            font-family: 'Inter', sans-serif;
-            border: 2px solid #E5E5E5;
-            border-radius: 12px;
-            margin-bottom: 16px;
-            transition: border-color 0.2s;
-        }
-        
-        input[type="email"]:focus {
-            outline: none;
+        .option.selected .option-radio {
             border-color: #E86A1C;
-        }
-        
-        .submit-btn {
-            width: 100%;
-            max-width: 400px;
-            padding: 16px 32px;
-            font-size: 17px;
-            font-weight: 600;
-            font-family: 'Inter', sans-serif;
-            color: #fff;
             background: #E86A1C;
-            border: none;
+        }
+        .option.selected .option-radio::after {
+            content: '';
+            width: 8px; height: 8px;
+            background: #fff;
+            border-radius: 50%;
+        }
+        .option-label { font-size: 16px; font-weight: 500; color: #333; line-height: 1.4; }
+
+        /* Email gate */
+        .email-gate { text-align: center; }
+        .email-gate h2 {
+            font-size: 28px; font-weight: 800;
+            letter-spacing: -0.5px; color: #000;
+            margin-bottom: 12px; line-height: 1.2;
+        }
+        .email-gate p { font-size: 16px; color: #666; margin-bottom: 28px; }
+        .gate-input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #E3E3E5;
             border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            margin-bottom: 12px;
+            transition: border-color 0.2s;
+            outline: none;
+        }
+        .gate-input:focus { border-color: #E86A1C; }
+        .btn-submit {
+            width: 100%;
+            padding: 16px 28px;
+            background: #E86A1C;
+            color: #fff;
+            border: none;
+            border-radius: 100px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
             transition: background 0.2s;
+            min-height: 48px;
         }
-        
-        .submit-btn:hover {
-            background: #C85A16;
+        .btn-submit:hover { background: #C85A16; }
+        .btn-submit:disabled { background: #CCC; cursor: not-allowed; }
+        .email-note { font-size: 13px; color: #999; margin-top: 12px; }
+
+        /* Results */
+        .result-card {
+            background: #F7F7F7;
+            border-radius: 16px;
+            padding: 32px 28px;
+            margin-bottom: 28px;
+            text-align: center;
         }
-        
-        .submit-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
+        .result-type {
+            font-size: 13px; font-weight: 600;
+            color: #E86A1C; text-transform: uppercase;
+            letter-spacing: 1.5px; margin-bottom: 8px;
         }
+        .result-title {
+            font-size: 28px; font-weight: 800;
+            letter-spacing: -0.5px; color: #000;
+            margin-bottom: 16px; line-height: 1.2;
+        }
+        .result-desc { font-size: 16px; color: #555; line-height: 1.6; }
+        .result-chapters { margin-bottom: 32px; }
+        .result-chapters h3 { font-size: 18px; font-weight: 700; color: #000; margin-bottom: 16px; }
+        .chapter-rec {
+            display: flex; align-items: flex-start; gap: 14px;
+            padding: 16px; background: #fff;
+            border: 1px solid rgba(227,227,229,0.5);
+            border-radius: 12px; margin-bottom: 10px; text-align: left;
+        }
+        .chapter-num {
+            width: 36px; height: 36px;
+            background: #E86A1C; color: #fff;
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 14px; font-weight: 700; flex-shrink: 0;
+        }
+        .chapter-info h4 { font-size: 15px; font-weight: 600; color: #000; margin-bottom: 4px; }
+        .chapter-info p { font-size: 14px; color: #666; line-height: 1.4; margin: 0; }
+        .result-cta { text-align: center; }
+        .btn-trial {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 16px 36px; background: #E86A1C; color: #fff;
+            border-radius: 100px; font-family: 'Inter', sans-serif;
+            font-size: 16px; font-weight: 600; text-decoration: none;
+            transition: background 0.2s; min-height: 48px;
+        }
+        .btn-trial:hover { background: #C85A16; }
+        .result-guarantee { font-size: 13px; color: #999; margin-top: 12px; }
+
+        /* Intro */
+        .intro-screen { text-align: center; }
+        .intro-screen h1 {
+            font-size: 32px; font-weight: 800;
+            letter-spacing: -1px; line-height: 1.15;
+            color: #000; margin-bottom: 16px;
+        }
+        @media (min-width: 768px) { .intro-screen h1 { font-size: 40px; } }
+        .intro-screen p { font-size: 17px; color: #555; margin-bottom: 32px; line-height: 1.6; }
+        .intro-stats {
+            display: flex; justify-content: center; gap: 32px;
+            margin-bottom: 36px; font-size: 14px; color: #666;
+        }
+        .intro-stat strong { display: block; font-size: 20px; font-weight: 800; color: #000; }
+        .btn-start {
+            display: inline-flex; align-items: center; justify-content: center;
+            padding: 16px 40px; background: #E86A1C; color: #fff;
+            border: none; border-radius: 100px;
+            font-family: 'Inter', sans-serif; font-size: 17px;
+            font-weight: 600; cursor: pointer; transition: background 0.2s;
+            min-height: 48px;
+        }
+        .btn-start:hover { background: #C85A16; }
+
+        /* Loading */
+        .loading-screen { text-align: center; padding: 80px 0; }
+        .spinner {
+            width: 40px; height: 40px;
+            border: 4px solid #E8E8E8;
+            border-top-color: #E86A1C;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 20px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .loading-screen p { font-size: 15px; color: #999; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="/" class="logo">Konteks</a>
+    <div class="quiz-container">
+
+        <div class="progress-wrap" id="progressWrap" style="display: none;">
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-text" id="progressText">1 of 7</div>
         </div>
-    </header>
-    
-    <main>
-        <div class="container">
-            <!-- Quiz Intro -->
-            <div id="quizIntro" class="quiz-intro">
-                <h1>What Type of Architecture Student Are You?</h1>
-                <p class="subtitle">Take the 2-minute quiz. Get a personalized study plan.</p>
-                <button class="start-btn" onclick="startQuiz()">Start Quiz</button>
-            </div>
-            
-            <!-- Quiz Questions -->
-            <div id="quizContainer" class="quiz-container">
-                <div class="progress-bar">
-                    <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+
+        <!-- INTRO -->
+        <div class="screen active" id="screenIntro">
+            <div class="intro-screen">
+                <div style="font-size: 13px; font-weight: 600; color: #E86A1C; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px;">2-minute quiz</div>
+                <h1>What type of architecture student are you?</h1>
+                <p>7 questions. Find out what's actually holding you back in studio - and the specific fix for your type.</p>
+                <div class="intro-stats">
+                    <div><strong>2,847</strong> students tested</div>
+                    <div><strong>7</strong> questions</div>
+                    <div><strong>~2</strong> minutes</div>
                 </div>
-                
-                <!-- Q1: Year -->
-                <div class="question-card" data-question="1">
-                    <div class="question-number">Question 1 of 7</div>
-                    <div class="question-text">What year are you in?</div>
-                    <div class="answers">
-                        <button class="answer-btn" onclick="answerQuestion(1, 'year', 'first')">First year</button>
-                        <button class="answer-btn" onclick="answerQuestion(1, 'year', 'second')">Second year</button>
-                        <button class="answer-btn" onclick="answerQuestion(1, 'year', 'third')">Third year</button>
-                        <button class="answer-btn" onclick="answerQuestion(1, 'year', 'fourth')">Fourth year+</button>
-                        <button class="answer-btn" onclick="answerQuestion(1, 'year', 'masters')">Masters</button>
-                    </div>
-                </div>
-                
-                <!-- Q2: Biggest struggle -->
-                <div class="question-card" data-question="2">
-                    <div class="question-number">Question 2 of 7</div>
-                    <div class="question-text">What's your biggest struggle right now?</div>
-                    <div class="answers">
-                        <button class="answer-btn" onclick="answerQuestion(2, 'struggle', 'concept')">I can't develop a strong concept</button>
-                        <button class="answer-btn" onclick="answerQuestion(2, 'struggle', 'time')">I run out of time on every project</button>
-                        <button class="answer-btn" onclick="answerQuestion(2, 'struggle', 'site')">My site analysis feels shallow</button>
-                        <button class="answer-btn" onclick="answerQuestion(2, 'struggle', 'crits')">I freeze up during crits</button>
-                        <button class="answer-btn" onclick="answerQuestion(2, 'struggle', 'renders')">My renders/drawings don't look professional</button>
-                    </div>
-                </div>
-                
-                <!-- Q3: All-nighters -->
-                <div class="question-card" data-question="3">
-                    <div class="question-number">Question 3 of 7</div>
-                    <div class="question-text">How many all-nighters did you pull last month?</div>
-                    <div class="answers">
-                        <button class="answer-btn" onclick="answerQuestion(3, 'allnighters', 'none')">None (I plan ahead)</button>
-                        <button class="answer-btn" onclick="answerQuestion(3, 'allnighters', 'few')">1-2 (normal amount... right?)</button>
-                        <button class="answer-btn" onclick="answerQuestion(3, 'allnighters', 'many')">3-4 (it's getting bad)</button>
-                        <button class="answer-btn" onclick="answerQuestion(3, 'allnighters', 'extreme')">5+ (I basically live in studio)</button>
-                    </div>
-                </div>
-                
-                <!-- Q4: Push it further -->
-                <div class="question-card" data-question="4">
-                    <div class="question-number">Question 4 of 7</div>
-                    <div class="question-text">When your lecturer says 'push it further,' you...</div>
-                    <div class="answers">
-                        <button class="answer-btn" onclick="answerQuestion(4, 'feedback', 'clear')">Know exactly what to change</button>
-                        <button class="answer-btn" onclick="answerQuestion(4, 'feedback', 'rough')">Have a rough idea but second-guess yourself</button>
-                        <button class="answer-btn" onclick="answerQuestion(4, 'feedback', 'confused')">Honestly have no clue what they mean</button>
-                        <button class="answer-btn" onclick="answerQuestion(4, 'feedback', 'panic')">Panic quietly and start over</button>
-                    </div>
-                </div>
-                
-                <!-- Q5: Site analysis -->
-                <div class="question-card" data-question="5">
-                    <div class="question-number">Question 5 of 7</div>
-                    <div class="question-text">Your site analysis usually includes:</div>
-                    <div class="answers">
-                        <button class="answer-btn" onclick="answerQuestion(5, 'siteanalysis', 'basic')">Sun path, wind, and basic mapping</button>
-                        <button class="answer-btn" onclick="answerQuestion(5, 'siteanalysis', 'layers')">Multiple layers (history, social, movement, environment)</button>
-                        <button class="answer-btn" onclick="answerQuestion(5, 'siteanalysis', 'rushed')">Whatever I can finish the night before</button>
-                        <button class="answer-btn" onclick="answerQuestion(5, 'siteanalysis', 'unsure')">I'm not sure what a proper site analysis looks like</button>
-                    </div>
-                </div>
-                
-                <!-- Q6: Concept development -->
-                <div class="question-card" data-question="6">
-                    <div class="question-number">Question 6 of 7</div>
-                    <div class="question-text">How do you develop your design concepts?</div>
-                    <div class="answers">
-                        <button class="answer-btn" onclick="answerQuestion(6, 'conceptprocess', 'method')">I have a clear method I follow</button>
-                        <button class="answer-btn" onclick="answerQuestion(6, 'conceptprocess', 'pinterest')">I browse Pinterest until something clicks</button>
-                        <button class="answer-btn" onclick="answerQuestion(6, 'conceptprocess', 'stare')">I stare at the brief until an idea appears</button>
-                        <button class="answer-btn" onclick="answerQuestion(6, 'conceptprocess', 'noprocess')">I don't really have a process</button>
-                    </div>
-                </div>
-                
-                <!-- Q7: Fix one thing -->
-                <div class="question-card" data-question="7">
-                    <div class="question-number">Question 7 of 7</div>
-                    <div class="question-text">If you could fix ONE thing about your architecture school experience, it would be:</div>
-                    <div class="answers">
-                        <button class="answer-btn" onclick="answerQuestion(7, 'fix', 'understanding')">Understanding what lecturers actually want</button>
-                        <button class="answer-btn" onclick="answerQuestion(7, 'fix', 'time')">Managing my time without burning out</button>
-                        <button class="answer-btn" onclick="answerQuestion(7, 'fix', 'concepts')">Developing stronger, more original concepts</button>
-                        <button class="answer-btn" onclick="answerQuestion(7, 'fix', 'crits')">Presenting with confidence in crits</button>
-                        <button class="answer-btn" onclick="answerQuestion(7, 'fix', 'all')">All of the above honestly</button>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Email Capture -->
-            <div id="emailCapture" class="email-capture">
-                <h2>Almost there!</h2>
-                <p>Enter your email to see your personalized results.</p>
-                
-                <form id="resultsForm" onsubmit="submitEmail(event)">
-                    <input type="email" id="emailInput" placeholder="Your email address" required>
-                    <button type="submit" class="submit-btn" id="submitBtn">See My Results</button>
-                </form>
+                <button class="btn-start" onclick="startQuiz()">Take the quiz</button>
             </div>
         </div>
-    </main>
-    
+
+        <!-- Q1 -->
+        <div class="screen" id="screen1" data-q="1">
+            <div class="question-number">Question 1 of 7</div>
+            <div class="question-text">When you sit down in studio, which sounds most like you?</div>
+            <div class="options">
+                <div class="option" data-value="perfectionist" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I spend hours on one thing trying to get it right before moving on</div>
+                </div>
+                <div class="option" data-value="scrambler" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I bounce between tasks and often realize I've wasted the day</div>
+                </div>
+                <div class="option" data-value="overthinker" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I stare at my screen not knowing where to start</div>
+                </div>
+                <div class="option" data-value="grinder" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I work nonstop but my output still feels average</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="screen" id="screen2" data-q="2">
+            <div class="question-number">Question 2 of 7</div>
+            <div class="question-text">When you get a new brief, what happens first?</div>
+            <div class="options">
+                <div class="option" data-value="panic" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">Mild panic. I don't know how to start developing a concept.</div>
+                </div>
+                <div class="option" data-value="generic" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I come up with ideas but they always feel generic or forced</div>
+                </div>
+                <div class="option" data-value="research" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I dive into research and precedents but struggle to form my own position</div>
+                </div>
+                <div class="option" data-value="confident" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I have a process for this. Concepts aren't my main issue.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="screen" id="screen3" data-q="3">
+            <div class="question-number">Question 3 of 7</div>
+            <div class="question-text">How does a typical deadline week go for you?</div>
+            <div class="options">
+                <div class="option" data-value="allnighter" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">All-nighters are normal. I'm always finishing at the last minute.</div>
+                </div>
+                <div class="option" data-value="behind" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I plan ahead but somehow still fall behind</div>
+                </div>
+                <div class="option" data-value="sacrifice" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I finish on time but sacrifice quality on some deliverables</div>
+                </div>
+                <div class="option" data-value="managed" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I manage my time well. Deadlines aren't my main problem.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="screen" id="screen4" data-q="4">
+            <div class="question-number">Question 4 of 7</div>
+            <div class="question-text">After your last crit, how did you feel?</div>
+            <div class="options">
+                <div class="option" data-value="confused" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">"Push it further" - but push WHAT further? The feedback was vague.</div>
+                </div>
+                <div class="option" data-value="crushed" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">Honestly, kind of crushed. I put in the hours but it wasn't enough.</div>
+                </div>
+                <div class="option" data-value="ok" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">Fine, but I know I could be doing better</div>
+                </div>
+                <div class="option" data-value="good" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">Good. Crits usually go well for me.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="screen" id="screen5" data-q="5">
+            <div class="question-number">Question 5 of 7</div>
+            <div class="question-text">Be honest - what does your site analysis usually look like?</div>
+            <div class="options">
+                <div class="option" data-value="basic" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">Sun path, wind arrows, maybe some photos. I know it's not enough.</div>
+                </div>
+                <div class="option" data-value="thorough" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I do thorough research but struggle to connect it to my design</div>
+                </div>
+                <div class="option" data-value="skip" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I usually rush through it because I want to start designing</div>
+                </div>
+                <div class="option" data-value="strong" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">My site analysis is one of my strengths</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="screen" id="screen6" data-q="6">
+            <div class="question-number">Question 6 of 7</div>
+            <div class="question-text">Which statement hits closest to home?</div>
+            <div class="options">
+                <div class="option" data-value="imposter" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">Other students seem to "get it" and I don't know what I'm missing</div>
+                </div>
+                <div class="option" data-value="talented" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I know I'm good but I can't consistently produce my best work</div>
+                </div>
+                <div class="option" data-value="lost" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I'm not sure architecture is for me anymore</div>
+                </div>
+                <div class="option" data-value="driven" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">I want to be the best in studio. I just need the right system.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="screen" id="screen7" data-q="7">
+            <div class="question-number">Question 7 of 7</div>
+            <div class="question-text">If you could fix one thing about your architecture school experience, what would it be?</div>
+            <div class="options">
+                <div class="option" data-value="time" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">Stop pulling all-nighters and actually have a life</div>
+                </div>
+                <div class="option" data-value="concepts" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">Develop original concepts that lecturers actually respond to</div>
+                </div>
+                <div class="option" data-value="crits" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">Walk into crits feeling confident instead of anxious</div>
+                </div>
+                <div class="option" data-value="all" onclick="selectOption(this)">
+                    <div class="option-radio"></div>
+                    <div class="option-label">All of the above, honestly</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EMAIL GATE -->
+        <div class="screen" id="screenEmail">
+            <div class="email-gate">
+                <h2>Your result is ready</h2>
+                <p>Enter your name and email to see your architecture student type, what's holding you back, and which chapters will fix it.</p>
+                <input type="text" class="gate-input" id="nameInput" placeholder="First name" autocomplete="given-name">
+                <input type="email" class="gate-input" id="emailInput" placeholder="Email address" autocomplete="email">
+                <button class="btn-submit" id="submitBtn" onclick="submitEmail()" disabled>Show my result</button>
+                <div class="email-note">No spam. Just your result and the one thing that'll change how you work in studio.</div>
+            </div>
+        </div>
+
+        <!-- LOADING -->
+        <div class="screen" id="screenLoading">
+            <div class="loading-screen">
+                <div class="spinner"></div>
+                <p>Analyzing your answers...</p>
+            </div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="screen" id="screenResult">
+            <div class="result-card">
+                <div class="result-type" id="resultType"></div>
+                <div class="result-title" id="resultTitle"></div>
+                <div class="result-desc" id="resultDesc"></div>
+            </div>
+            <div class="result-chapters" id="resultChapters">
+                <h3>Your recommended starting path:</h3>
+            </div>
+            <div class="result-cta">
+                <a href="https://buy.stripe.com/9B68wP37U6Mf9wzfa45Rm05" class="btn-trial" id="resultCTA" onclick="fbq('track','ViewContent')">Try it free for 7 days</a>
+                <div class="result-guarantee">7-day free trial - 30-day money-back guarantee - 363+ students inside</div>
+            </div>
+        </div>
+    </div>
+
     <script>
-        let currentQuestion = 0;
-        const answers = {};
-        
-        function startQuiz() {
-            document.getElementById('quizIntro').style.display = 'none';
-            document.getElementById('quizContainer').style.display = 'block';
-            
-            // Track quiz start
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'ViewContent');
-            }
-            
-            showQuestion(1);
-        }
-        
-        function showQuestion(questionNum) {
-            const questions = document.querySelectorAll('.question-card');
-            questions.forEach(q => q.classList.remove('active'));
-            
-            const targetQuestion = document.querySelector(`.question-card[data-question="${questionNum}"]`);
-            if (targetQuestion) {
-                targetQuestion.classList.add('active');
-                currentQuestion = questionNum;
-                
-                // Update progress bar
-                const progress = (questionNum / 7) * 100;
-                document.getElementById('progressFill').style.width = progress + '%';
-                
-                // Scroll to top
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        }
-        
-        function answerQuestion(questionNum, key, value) {
-            answers[key] = value;
-            
-            if (questionNum < 7) {
-                setTimeout(() => {
-                    showQuestion(questionNum + 1);
-                }, 200);
+    const answers = {};
+    let currentScreen = 'intro';
+    const totalQuestions = 7;
+
+    function startQuiz() {
+        document.getElementById('screenIntro').classList.remove('active');
+        document.getElementById('progressWrap').style.display = 'block';
+        showScreen('screen1');
+        updateProgress(1);
+        fbq('track', 'ViewContent', { content_name: 'quiz_start' });
+    }
+
+    function selectOption(el) {
+        const screen = el.closest('.screen');
+        const qNum = screen.dataset.q;
+        screen.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+        el.classList.add('selected');
+        answers['q' + qNum] = el.dataset.value;
+
+        setTimeout(() => {
+            const nextQ = getNextQuestion(parseInt(qNum));
+            if (nextQ <= totalQuestions) {
+                showScreen('screen' + nextQ);
+                updateProgress(nextQ);
             } else {
-                // Show email capture
-                setTimeout(() => {
-                    document.getElementById('quizContainer').style.display = 'none';
-                    document.getElementById('emailCapture').classList.add('active');
-                    document.getElementById('emailInput').focus();
-                }, 200);
+                showScreen('screenEmail');
+                document.getElementById('progressWrap').style.display = 'none';
             }
+        }, 400);
+    }
+
+    // Branching logic - skip questions when answers make them redundant
+    function getNextQuestion(current) {
+        if (current === 3 && answers.q2 === 'confident' && answers.q3 === 'managed') {
+            return 5; // Skip crit question - they're doing fine
         }
-        
-        function determineResultType() {
-            // Primary: based on Q2 (struggle)
-            const struggle = answers.struggle;
-            
-            if (struggle === 'concept') return 'concept-seeker';
-            if (struggle === 'time') return 'time-bomber';
-            if (struggle === 'site') return 'surface-skimmer';
-            if (struggle === 'crits' || struggle === 'renders') return 'crit-survivor';
-            
-            // Fallback: check other answers
-            if (answers.fix === 'all') return 'full-reset';
-            if (answers.allnighters === 'many' || answers.allnighters === 'extreme') return 'time-bomber';
-            if (answers.conceptprocess === 'noprocess' || answers.conceptprocess === 'stare') return 'concept-seeker';
-            if (answers.siteanalysis === 'basic' || answers.siteanalysis === 'unsure') return 'surface-skimmer';
-            if (answers.feedback === 'confused' || answers.feedback === 'panic') return 'crit-survivor';
-            
-            return 'full-reset';
+        return current + 1;
+    }
+
+    function showScreen(id) {
+        document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        currentScreen = id;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateProgress(q) {
+        const pct = (q / totalQuestions) * 100;
+        document.getElementById('progressFill').style.width = pct + '%';
+        document.getElementById('progressText').textContent = q + ' of ' + totalQuestions;
+    }
+
+    // Email gate validation
+    const emailInput = document.getElementById('emailInput');
+    const nameInput = document.getElementById('nameInput');
+    const submitBtn = document.getElementById('submitBtn');
+
+    function checkInputs() {
+        const email = emailInput.value.trim();
+        const name = nameInput.value.trim();
+        submitBtn.disabled = !(email.includes('@') && email.includes('.') && name.length > 0);
+    }
+    emailInput.addEventListener('input', checkInputs);
+    nameInput.addEventListener('input', checkInputs);
+
+    function submitEmail() {
+        const email = emailInput.value.trim();
+        const name = nameInput.value.trim();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Loading...';
+
+        const result = calculateResult();
+
+        const payload = {
+            email: email,
+            firstName: name,
+            quizResult: result.type,
+            answers: answers
+        };
+
+        fbq('track', 'Lead', { content_name: 'quiz_complete', content_category: result.typeKey });
+
+        // POST to Cloudflare Worker (adds to AC with quiz-result tag)
+        fetch('/api/quiz-submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        }).catch(() => {});
+
+        showScreen('screenLoading');
+        setTimeout(() => { showResult(result); }, 2000);
+    }
+
+    // ========== RESULT TYPES ==========
+    const resultTypes = {
+        lastMinuter: {
+            typeKey: 'last-minuter',
+            type: 'The Last-Minuter',
+            title: "You're working hard, not smart.",
+            desc: "You put in the hours - probably more than most of your class. But without a system, all that effort turns into all-nighters and average output. The gap isn't talent or effort. It's structure. You need a framework for splitting your work into modes so you stop mixing deep creative thinking with deadline panic.",
+            chapters: [
+                { num: 3, title: 'Crits, Deadlines & Timing', why: "The Deep Work / Steady Work / Easy Work framework will restructure how you spend every hour in studio." },
+                { num: 1, title: 'So... Architecture', why: "Understanding what lecturers actually grade on will help you prioritize the right tasks." },
+                { num: 2, title: 'The Top Student Mindset', why: "Stop filtering your ideas too early. You're killing concepts before they have a chance." }
+            ]
+        },
+        conceptStruggler: {
+            typeKey: 'concept-struggler',
+            type: 'The Concept Struggler',
+            title: "Your ideas aren't the problem. Your process is.",
+            desc: "You can see what good work looks like. You just can't figure out how people get there. Concept development is a specific skill that nobody teaches in architecture school. The students pulling original ideas out of thin air aren't more creative - they have a method for extracting concepts from briefs and sites.",
+            chapters: [
+                { num: 4, title: 'From "Brief" to Concept', why: "The brief analysis method that turns vague prompts into specific, place-driven concepts." },
+                { num: 5, title: 'Site Analysis & Urban Design', why: "Your concept should come from the site. This shows you how to read a place deeply enough that your design can only belong there." },
+                { num: 2, title: 'The Top Student Mindset', why: "The iteration framework that stops you from settling on your first idea." }
+            ]
+        },
+        imposter: {
+            typeKey: 'imposter',
+            type: 'The Imposter',
+            title: "You're not behind. You just never got the manual.",
+            desc: "Architecture school was designed to see who figures it out on their own. That filter is the point. You're not less talented than the students who seem to get it - they found the patterns earlier, or someone showed them. This isn't about catching up. It's about getting the frameworks that turn confusion into clarity.",
+            chapters: [
+                { num: 1, title: 'So... Architecture', why: "What architecture school actually expects from you - the unwritten rules nobody explains." },
+                { num: 2, title: 'The Top Student Mindset', why: "Why your seemingly stupid ideas are actually your best ones, and how to stop killing them." },
+                { num: 4, title: 'From "Brief" to Concept', why: "A repeatable process for developing concepts. No more staring at a blank page." }
+            ]
+        },
+        highAchiever: {
+            typeKey: 'high-achiever',
+            type: 'The High Achiever',
+            title: "You're good. This makes you the one they remember.",
+            desc: "You have the fundamentals. You manage your time, you get through crits, you produce work. But there's a gap between doing well and being the student whose work people talk about after the presentation. The difference is depth - deeper site analysis, sharper concept framing, and a representation strategy that makes your ideas impossible to ignore.",
+            chapters: [
+                { num: 5, title: 'Site Analysis & Urban Design', why: "Go beyond sun paths. Layered analysis that gives your project a depth nobody else in studio has." },
+                { num: 4, title: 'From "Brief" to Concept', why: "Concept framing at the level that makes lecturers ask how you thought of it." },
+                { num: 3, title: 'Crits, Deadlines & Timing', why: "The energy-based scheduling system that lets you do your best creative work when it matters most." }
+            ]
         }
-        
-        async function submitEmail(event) {
-            event.preventDefault();
-            
-            const email = document.getElementById('emailInput').value.trim();
-            const submitBtn = document.getElementById('submitBtn');
-            
-            if (!email || !email.includes('@')) {
-                return;
-            }
-            
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Processing...';
-            
-            // Track lead
-            if (typeof fbq !== 'undefined') {
-                fbq('track', 'Lead');
-            }
-            
-            // Store email and answers
-            sessionStorage.setItem('konteks_lead_email', email);
-            sessionStorage.setItem('konteks_lead_captured', 'true');
-            sessionStorage.setItem('konteks_quiz_answers', JSON.stringify(answers));
-            
-            // Fallback API call
-            try {
-                await fetch('https://kourse.konteks.co/api/subscribe', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ 
-                        email, 
-                        source: 'quiz',
-                        answers: answers
-                    })
-                });
-            } catch (err) {
-                console.log('Fallback API not yet configured');
-            }
-            
-            // Determine result type
-            const resultType = determineResultType();
-            
-            // Redirect to results page
-            window.location.href = `/quiz-results.html?type=${resultType}`;
+    };
+
+    function calculateResult() {
+        const scores = { lastMinuter: 0, conceptStruggler: 0, imposter: 0, highAchiever: 0 };
+
+        // Q1: Studio identity
+        const q1 = { perfectionist: 'conceptStruggler', scrambler: 'lastMinuter', overthinker: 'imposter', grinder: 'lastMinuter' };
+        if (q1[answers.q1]) scores[q1[answers.q1]] += 3;
+
+        // Q2: Concept development
+        if (answers.q2 === 'panic') { scores.imposter += 3; scores.conceptStruggler += 2; }
+        if (answers.q2 === 'generic') { scores.conceptStruggler += 3; }
+        if (answers.q2 === 'research') { scores.conceptStruggler += 2; scores.highAchiever += 1; }
+        if (answers.q2 === 'confident') { scores.highAchiever += 3; }
+
+        // Q3: Time management
+        if (answers.q3 === 'allnighter') scores.lastMinuter += 3;
+        if (answers.q3 === 'behind') { scores.lastMinuter += 2; scores.imposter += 1; }
+        if (answers.q3 === 'sacrifice') { scores.lastMinuter += 1; scores.highAchiever += 1; }
+        if (answers.q3 === 'managed') scores.highAchiever += 3;
+
+        // Q4: Crit experience
+        if (answers.q4 === 'confused') { scores.conceptStruggler += 2; scores.imposter += 1; }
+        if (answers.q4 === 'crushed') scores.imposter += 3;
+        if (answers.q4 === 'ok') { scores.highAchiever += 1; scores.lastMinuter += 1; }
+        if (answers.q4 === 'good') scores.highAchiever += 3;
+
+        // Q5: Site analysis
+        if (answers.q5 === 'basic') { scores.imposter += 1; scores.conceptStruggler += 1; }
+        if (answers.q5 === 'thorough') scores.conceptStruggler += 2;
+        if (answers.q5 === 'skip') scores.lastMinuter += 2;
+        if (answers.q5 === 'strong') scores.highAchiever += 2;
+
+        // Q6: Self-awareness
+        const q6 = { imposter: 'imposter', talented: 'highAchiever', lost: 'imposter', driven: 'highAchiever' };
+        if (q6[answers.q6]) scores[q6[answers.q6]] += 3;
+
+        // Q7: Priority
+        if (answers.q7 === 'time') scores.lastMinuter += 2;
+        if (answers.q7 === 'concepts') scores.conceptStruggler += 2;
+        if (answers.q7 === 'crits') { scores.imposter += 1; scores.conceptStruggler += 1; }
+        if (answers.q7 === 'all') scores.imposter += 2;
+
+        let maxType = 'imposter';
+        let maxScore = 0;
+        for (const [type, score] of Object.entries(scores)) {
+            if (score > maxScore) { maxScore = score; maxType = type; }
         }
+        return resultTypes[maxType];
+    }
+
+    function showResult(result) {
+        document.getElementById('resultType').textContent = 'Your type: ' + result.type;
+        document.getElementById('resultTitle').textContent = result.title;
+        document.getElementById('resultDesc').textContent = result.desc;
+
+        const div = document.getElementById('resultChapters');
+        let html = '<h3>Your recommended starting path:</h3>';
+        result.chapters.forEach((ch, i) => {
+            html += '<div class="chapter-rec">' +
+                '<div class="chapter-num">' + String(ch.num).padStart(2, '0') + '</div>' +
+                '<div class="chapter-info"><h4>' + (i === 0 ? 'Start here: ' : '') + ch.title + '</h4>' +
+                '<p>' + ch.why + '</p></div></div>';
+        });
+        div.innerHTML = html;
+        showScreen('screenResult');
+    }
     </script>
 </body>
 </html>
