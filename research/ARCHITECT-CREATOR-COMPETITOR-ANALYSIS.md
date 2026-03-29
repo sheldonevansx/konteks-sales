@@ -14,11 +14,38 @@
 - **Practitioner-level offers** (for working architects) are sparse - opportunity gap
 - **Monetization models:** Skool communities ($29-49/mo), one-time courses ($99-499), app subscriptions, coaching
 
+### Key Market Insights
+1. **Low price ceiling** - most architecture educators cap at $50/mo, leaving massive revenue on table
+2. **Student market saturation** - everyone targets architecture students, few target professionals
+3. **Weak funnels** - most creators have ONE offer, no price ascension or backend
+4. **Generic positioning** - "learn architecture" vs "become the architect firms hire as consultants"
+5. **Software-heavy** - most courses focus on Revit/Rhino/Enscape, neglecting business/client skills
+6. **No coaching model** - all self-serve, no 1-on-1 or group coaching at premium prices
+
 ### Critical Gaps (Nobody Is Doing This)
 1. **No "architect your architect hires" positioning** - everyone targets students or firms, not the consultant-level architect
 2. **No premium architecture consulting/coaching** ($2K+ offers for working architects)
 3. **No hybrid tech+consulting** - most are either pure education or pure tools, not both
 4. **Limited content creator presence** - most architecture educators don't have strong personal brands
+
+### Pricing Lessons from Adjacent Markets
+
+**Interior Design Educators:**
+- Basic courses: $297-997
+- Masterminds: $3K-7K
+- 1-on-1: $10K-25K/year
+
+**Graphic Design Educators (The Futur model):**
+- Free YouTube content (top of funnel)
+- $1.5K courses (self-serve)
+- $5K-15K masterminds
+- $25K+ business coaching
+
+**Why Architecture Can Command Similar Prices:**
+- Architects earn $60K-150K+ salaries
+- High-value client projects ($100K-$5M+)
+- Specialized knowledge with clear ROI
+- Status-driven profession (willing to invest in differentiation)
 
 ---
 
@@ -194,6 +221,32 @@ Target: Working architects (3-10 years experience) who want to level up to consu
 2. Create beta cohort with 10-15 graduates at 50% off ($1,497)
 3. Document transformation + results
 4. Launch publicly with case studies
+
+---
+
+## Proven Offer Frameworks (From Other Niches)
+
+### The Russell Brunson Ascension Ladder
+1. **Free content** (YouTube, Instagram) → build audience
+2. **Low-ticket ($29-49/mo)** → Skool community (current Konteks Kourse)
+3. **Mid-ticket ($997-1997)** → Self-serve course with templates/systems
+4. **High-ticket ($3K-7K)** → Group coaching/mastermind
+5. **Premium ($10K+)** → 1-on-1 consulting/done-with-you
+
+### The Alex Hormozi "Value Ladder"
+- **Bottom:** Free (books, content, lead magnets)
+- **Low:** $99-499 (digital course)
+- **Mid:** $2K-5K (group program)
+- **High:** $10K+ (mastermind + implementation)
+
+### The Skool → Backend Model
+1. Build Skool community ($29-49/mo) → prove concept
+2. Survey top 10% of members → what do they need next?
+3. Create backend offer ($2K-5K) targeting that need
+4. Launch to existing community first (warm traffic)
+5. Scale with ads once proven
+
+**Dan's Current Position:** Step 1 complete (363 Skool members). Ready for Step 2.
 
 ---
 
