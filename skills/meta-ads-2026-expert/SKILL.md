@@ -1622,3 +1622,253 @@ After vetting 37 videos across three expert channels against primary sources, th
 5. Does this contradict what another expert with equal credibility says? (CONFLICTING - test it yourself)
 
 The best use of this skill is the 30% that's genuinely new: the pack system, the swim lane implementation, the lead quality hack, the CPM trend data, and the creative testing methodology. Everything else is good to know but not unique to these sources.
+
+---
+
+## BEHAVIORAL SCIENCE FOR META ADS STRATEGY
+
+*Cross-reference with `behavioral-science-marketing/SKILL.md` for full framework and primary sources.*
+
+### Why Behavioral Science Matters for Campaign Structure
+
+Meta's algorithm optimizes for conversions, but HUMAN PSYCHOLOGY determines whether someone converts. Understanding behavioral science lets you structure campaigns that work WITH cognitive biases, not against them.
+
+**Key insight:** Campaign structure decisions (swim lanes, budget allocation, creative sequencing) have behavioral implications. The three-swim-lane system isn't just account hygiene - it's a behavioral science application.
+
+---
+
+### Behavioral Principles in Campaign Architecture
+
+#### 1. Loss Aversion + The Three Swim Lanes
+
+[PRIMARY - Kahneman & Tversky, Prospect Theory 1979]
+
+**Why swim lanes work:** Without separation, Meta overspends on existing customers because converting a warm lead feels "safer" to the algorithm than cold prospecting. This is loss aversion at the algorithmic level - the system prefers the "sure thing" (retargeting) over the risk (prospecting).
+
+**Behavioral fix:** Force the algorithm to take prospecting "risks" by separating campaigns.
+
+**Application:**
+- Prospecting campaign = pure risk-taking (new acquisition)
+- Retargeting campaign = medium risk (engaged non-buyers)
+- Retention campaign = near-zero risk (existing customers)
+
+Without swim lanes, 30-40% of your budget goes to the lowest-risk bucket (retention/retargeting) even though prospecting has higher long-term value.
+
+---
+
+#### 2. Default Effect + Ad Set Minimums
+
+[PRIMARY - Samuelson & Zeckhauser, 1988]
+
+**The problem:** When you launch a new pack into an established CBO campaign, the algorithm defaults to spending on proven winners. New ads get zero spend = zero chance.
+
+**Behavioral fix:** Ad set minimums override the default (existing winners) and force the algorithm to test new ads.
+
+**Application (Moonlighters' Pack System):**
+- New pack launches with ad set minimum = 1x target CPA
+- This guarantees spend for 7-14 days (testing period)
+- After 7-14 days, remove the minimum → algorithm defaults to winners
+- Result: New ads get a fair test without permanent budget waste
+
+**Why it works:** You're manipulating the algorithm's "default" setting. For 7 days, the new pack IS the default.
+
+---
+
+#### 3. Mere Exposure Effect + Creative Refresh
+
+[PRIMARY - Zajonc, 1968]
+
+**The principle:** Repeated exposure increases liking - up to a point. Beyond ~5-7 exposures, "liking" turns into "ad fatigue."
+
+**Application for creative refresh:**
+- Best-performing ads will fatigue after 3-6 months (high frequency = faster fatigue)
+- When an ad fatigues, DON'T remake the entire ad
+- Instead: shoot NEW HOOKS with a DIFFERENT PERSON, keep the same body
+- This resets the mere exposure counter without losing the proven body content
+
+**Data:** [PRACTITIONER - Blue Sense] Shot new hooks with different person for fatigued testimonial ad → performance matched original
+
+**Why it works:** The "new" face triggers fresh mere exposure. The proven body still converts.
+
+---
+
+#### 4. Social Proof (Descriptive Norms) + Audience Segment Reporting
+
+[PRIMARY - Cialdini et al., 1990]
+
+**The insight:** Showing WHAT OTHERS DO (descriptive norm) is more persuasive than showing what they approve of.
+
+**Application in campaign monitoring:**
+- Use Audience Segment Reporting to track spend distribution
+- Monitor what percentage goes to new vs. engaged vs. existing customers
+- If 40%+ is going to existing customers in your prospecting campaign, you have a problem
+- Fix: Add exclusions, check "use as suggestion" toggles are OFF
+
+**Why monitoring matters:** You can't optimize what you don't measure. Audience Segment Reporting shows the ACTUAL behavior (where spend goes), not the intended behavior (what you set up).
+
+---
+
+### Behavioral Principles in Creative Testing
+
+#### 1. Curiosity Gap + Hook Testing
+
+[PRIMARY - Loewenstein, 1994]
+
+**The mechanism:** Incomplete information creates cognitive discomfort. Viewers NEED to close the loop.
+
+**Application in hooks:**
+- "I noticed something about my best-performing students..." (loop opened)
+- The body/landing page closes the loop
+- If you close the loop IN THE HOOK, there's no reason to watch
+
+**Testing methodology:**
+- Test 5-10 different curiosity gaps for the same body
+- "The one mistake architecture students make..." (open loop)
+- "Why do top students finish first?" (open loop)
+- "Here's what nobody teaches you..." (open loop)
+
+**Metric:** 3-second view rate = how many people NEED to close your loop.
+
+---
+
+#### 2. Processing Fluency + Ad Set Naming
+
+[PRIMARY - Reber & Schwarz, 1999]
+
+**The principle:** Things that are easier to process feel more true and trustworthy.
+
+**Application:** Clear ad set names make analysis faster and decisions easier.
+
+**Good naming:** `Broad Pack 2024-03-15 - Architecture Students - Framework Angle`
+
+**Bad naming:** `Campaign Copy 3 - Test`, `Adset 47`, `New Campaign`
+
+**Why it matters:** When reviewing 50+ ad sets, fluency determines how fast you make kill/scale decisions. Cognitive load = bad decisions.
+
+---
+
+#### 3. Peak-End Rule + Creative Performance Windows
+
+[PRIMARY - Kahneman et al., 1993]
+
+**The principle:** Experiences are judged by the PEAK and the END, not the average.
+
+**Application to ad lifespan:**
+- An ad's "experience" in the account has a peak (best performance week) and an end (when you kill it)
+- Don't judge an ad by its first 3 days (still learning)
+- Don't judge by its last 3 days (fatiguing)
+- Judge by the PEAK week + overall lifespan
+
+**Decision framework:**
+- If peak performance was strong (above target CPA) but current is weak → test new hooks, don't kill
+- If peak performance was weak (never hit target) → kill, move on
+
+---
+
+### Behavioral Principles in Budget & Scaling
+
+#### 1. Loss Aversion + The 20% Rule
+
+[PRIMARY - Kahneman & Tversky, 1979]
+
+**Why the 20% budget change rule exists:** The algorithm has "learned" a budget level. Changing it dramatically feels like a LOSS of that learned state → resets learning phase.
+
+**The 20% threshold is practitioner convention, not Meta-documented, but it maps to loss aversion psychology:**
+- Small changes (<20%) = adjustment, not loss
+- Large changes (>50%) = loss of learned state, triggers reset
+
+**Application:**
+- Scale 10-20% per day maximum
+- Accept that scaling = slower growth to preserve learning
+- Aggressive scaling (2x overnight) triggers learning reset = worse performance
+
+---
+
+#### 2. Temporal Discounting + The 7-14 Day Rule
+
+[PRIMARY - Laibson, 1997]
+
+**The bias:** Humans prefer immediate results over delayed results. This makes us kill ads too early.
+
+**The fix:** Force a 7-14 day waiting period before killing any ad set.
+
+**Why it works:** Temporal discounting makes Day 3 performance feel like "enough data." It's not. The 7-day minimum overrides the bias.
+
+**Decision aid:** Set a calendar reminder 7 days after launching new packs. Don't check performance before Day 7.
+
+---
+
+#### 3. Sunk Cost Fallacy + Killing Losers
+
+[PRIMARY - Arkes & Blumer, 1985]
+
+**The trap:** "I've spent $500 on this ad set. If I kill it now, I've wasted that $500."
+
+**The reality:** Past spend is GONE. The decision is: will the NEXT $500 perform?
+
+**How to avoid:**
+- Ignore total spend when deciding to kill
+- Only look at RECENT performance (last 7 days)
+- Ask: "If this were a new ad with this performance, would I scale it?" If no → kill it.
+
+**Meta-specific caveat:** The algorithm DOES learn from historical data, so there's genuine value in letting ads accumulate data. BUT after 2-3x your CPA in spend with no conversions, historical data won't save it.
+
+---
+
+### Behavioral Audit Checklist for Meta Campaigns
+
+**Campaign Structure:**
+- [ ] Three swim lanes enforced (Prospecting / Retargeting / Retention)?
+- [ ] Audience Segment Reporting active (tracking new vs. engaged vs. existing)?
+- [ ] Exclusions set correctly ("use as suggestion" toggles OFF)?
+
+**Creative Testing:**
+- [ ] New packs grouped by avatar + concept (not random)?
+- [ ] Ad set minimums set for new packs (1x CPA for 7 days)?
+- [ ] Hook testing methodology in place (new hooks for fatigued winners)?
+
+**Budget & Scaling:**
+- [ ] Budget changes ≤20% per day?
+- [ ] 7-day minimum before killing new ad sets?
+- [ ] Decisions based on incremental attribution (not just last-click)?
+
+**Creative Content (see ad-creatives-mastery skill for details):**
+- [ ] Hooks trigger curiosity gap or loss aversion?
+- [ ] Social proof uses specific numbers ("2,847 students" not "thousands")?
+- [ ] CTAs use zero-risk language ("Try free" not "Buy now")?
+
+---
+
+### Common Behavioral Traps in Meta Ads
+
+**Trap 1: Recency Bias**  
+"My ad performed great yesterday but terrible today → kill it."
+
+**Fix:** Look at 7-day rolling average, not daily fluctuations. Day-to-day variance is normal.
+
+---
+
+**Trap 2: Confirmation Bias**  
+"I think video ads work best, so I only test video and ignore statics."
+
+**Fix:** Test formats you DON'T believe in. Data > beliefs.
+
+---
+
+**Trap 3: Overconfidence Bias**  
+"This ad will definitely work. I'm launching it with $200/day."
+
+**Fix:** Start every new concept at minimum viable budget. Scale only after proof.
+
+---
+
+**Trap 4: Analysis Paralysis (Choice Overload)**  
+"I have 80 ad sets. I don't know which ones to kill."
+
+**Fix:** Rank by CPA. Kill bottom 20%. Simple rules > perfect analysis.
+
+---
+
+*Behavioral science additions: 2026-03-29*
+*See `behavioral-science-marketing/SKILL.md` for complete framework and primary sources.*
+

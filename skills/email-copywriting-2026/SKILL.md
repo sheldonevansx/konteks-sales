@@ -983,3 +983,368 @@ Everything else is scaffolding. Use it to build, then remove it.
 8. **One CTA per email. One clear action.** [PRIMARY - Ogilvy; universal consensus]
 9. **Divert blame from the reader. Never make them feel stupid.** [PRIMARY - Schwartz; PRACTITIONER - Boyuan Zhao]
 10. **Write it, then rewrite it 25 times.** [PRACTITIONER - Harry Dry; PRIMARY - Hemingway: "The first draft of anything is shit."]
+
+---
+
+## BEHAVIORAL SCIENCE FOR EMAIL COPYWRITING
+
+*Cross-reference with `behavioral-science-marketing/SKILL.md` for full framework and primary sources.*
+
+### Why Behavioral Science Transforms Email Performance
+
+Email copywriting isn't about "tricks" - it's about understanding how humans process information and make decisions. Apply these principles systematically and your open rates, click rates, and conversions will improve measurably.
+
+---
+
+### Behavioral Principles for Subject Lines
+
+#### 1. Curiosity Gap (Information Gap Theory)  
+[PRIMARY - Loewenstein, 1994]
+
+**The mechanism:** When people perceive a gap between what they know and what they want to know, they experience cognitive discomfort. Closing the gap is intrinsically rewarding.
+
+**Application:**
+```
+✅ "I noticed something weird about your architecture projects..."  
+> "Konteks Kourse Newsletter #47"
+
+✅ "Quick question about your trading system"  
+> "New trading tips inside"
+```
+
+**Why it works:** The first versions create a gap. The reader NEEDS to open to close the loop.
+
+**Caveat:** The email MUST deliver on the promise. Clickbait without payoff destroys trust permanently.
+
+---
+
+#### 2. Loss Aversion + Urgency  
+[PRIMARY - Kahneman & Tversky, 1979]
+
+**The principle:** Losses hurt ~2x more than equivalent gains. Frame subject lines as avoiding a loss, not gaining a benefit.
+
+**Application:**
+```
+✅ "You're about to lose your early-bird discount"  
+> "Get your early-bird discount"
+
+✅ "Your trial expires in 24 hours"  
+> "Trial ending soon"
+```
+
+**Why it works:** "Lose your discount" activates loss aversion. "Get your discount" is a gain frame - half as motivating.
+
+---
+
+#### 3. Social Proof (Descriptive Norms)  
+[PRIMARY - Cialdini et al., 1990]
+
+**Application:**
+```
+✅ "347 students joined this week"  
+> "Join our community"
+
+✅ "2,847 traders use this system"  
+> "Popular trading system"
+```
+
+**Why it works:** Specific numbers = credibility. "347 joined THIS WEEK" = momentum (bandwagon effect).
+
+---
+
+### Behavioral Principles for Email Body
+
+#### 1. Processing Fluency  
+[PRIMARY - Reber & Schwarz, 1999]
+
+**The principle:** Things that are easier to process feel more true and more valuable.
+
+**Application for email formatting:**
+- Short paragraphs (2-4 lines max on mobile)
+- One idea per paragraph
+- Whitespace between paragraphs
+- Simple words > complex jargon
+- High contrast (dark text, light background)
+
+**Bad example:**
+```
+"Our comprehensive architectural design curriculum, meticulously 
+curated by experienced practitioners, provides an accelerated 
+pathway to professional competency through project-based learning 
+modalities that emphasize iterative design thinking frameworks and..."
+```
+
+**Good example:**
+```
+"Learn architecture by designing real projects.
+
+12 chapters. Built by practicing architects.
+
+No fluff. Just frameworks that work."
+```
+
+**Why it works:** The second version processes instantly. The reader's brain doesn't have to work hard = the offer feels more trustworthy.
+
+---
+
+#### 2. Narrative Transportation  
+[PRIMARY - Green & Brock, 2000]
+
+**The principle:** When readers are absorbed in a story, they don't counter-argue. Stories bypass analytical resistance.
+
+**Application (Welcome Email Example - Konteks):**
+
+```
+Subject: Your Chapter 1 access is ready
+
+Hey,
+
+Three years ago, I was pulling all-nighters in architecture studio.
+
+Not because I was lazy. Because I had NO IDEA how to start 
+a project. My professors would say "design something interesting" 
+and I'd stare at a blank page for hours.
+
+Then a senior student showed me a 4-step framework.
+
+Suddenly, every project had a clear starting point. I went from 
+dreading studio to finishing early.
+
+That framework became The Konteks Method. 363 students use it now.
+
+Your first project brief is ready. Start Chapter 1 →
+
+Dan
+```
+
+**Why it works:** The reader experiences Dan's journey. They're not being sold to - they're watching someone solve the problem they have.
+
+---
+
+#### 3. Endowment Effect + Trial Language  
+[PRIMARY - Kahneman, Knetsch & Thaler, 1990]
+
+**The principle:** Once people feel ownership of something, they value it more and resist giving it up.
+
+**Application:**
+```
+✅ "Your Chapter 1 access is ready"  
+> "Chapter 1 is available"
+
+✅ "Your trial ends in 3 days"  
+> "Trial ending soon"
+```
+
+**Why it works:** "Your Chapter 1" and "Your trial" create ownership. When the trial expires, it feels like LOSING something they own (loss aversion kicks in).
+
+**Email sequence strategy:**
+- Email 1 (welcome): "Your access is ready" (establish ownership)
+- Email 5 (trial expiry): "Your access expires in 3 days" (loss aversion + endowment)
+- Result: Higher trial-to-paid conversion
+
+---
+
+#### 4. Sunk Cost + Progress Tracking  
+[PRIMARY - Arkes & Blumer, 1985]
+
+**The principle:** People continue investing in something because they've already invested, even when it's irrational.
+
+**Application (Mid-Trial Email):**
+
+```
+Subject: You've completed 3 projects
+
+Hey,
+
+Nice work. You've designed 3 projects in Chapter 1.
+
+Chapters 2-12 have 21 more projects waiting.
+
+But your trial ends in 2 days. After that, you'll lose 
+access to your work.
+
+Don't lose your progress. Continue with Complete Course ($249) →
+```
+
+**Behavioral chain:**
+- Sunk Cost: "3 projects completed" = investment made
+- Endowment: "Your work" = ownership
+- Loss Aversion: "lose access" = loss frame
+
+**Why it works:** The reader has invested effort (3 projects). Abandoning now means that effort was wasted. Loss aversion makes continuation feel mandatory.
+
+---
+
+### Behavioral Principles for CTAs
+
+#### 1. Zero-Risk Bias  
+[PRIMARY - Kahneman & Tversky, 1979]
+
+**The principle:** People prefer reducing risk to ZERO over reducing a larger risk by the same amount.
+
+**Application:**
+```
+✅ "Try free for 7 days. No card required."  
+> "Start your free trial"
+
+✅ "Full refund if you don't design a portfolio project in Chapter 1. No questions."  
+> "Try it risk-free"
+```
+
+**Why it works:** "No card required" and "full refund, no questions" = ZERO risk. "Risk-free" implies low risk but not zero.
+
+---
+
+#### 2. Temporal Discounting  
+[PRIMARY - Laibson, 1997]
+
+**The principle:** Immediate rewards feel more valuable than future rewards.
+
+**Application:**
+```
+✅ "Start Chapter 1 now. First project brief in 5 minutes."  
+> "Join the course and start learning"
+
+✅ "Click below. Access in 30 seconds."  
+> "Enroll today"
+```
+
+**Why it works:** "5 minutes" and "30 seconds" = immediate gratification. "Start learning" and "enroll today" are vague future states.
+
+---
+
+#### 3. Choice Overload  
+[PRIMARY - Iyengar & Lepper, 2000]
+
+**The principle:** Too many options reduce conversion.
+
+**Application:**
+```
+✅ One CTA per email: "Start Chapter 1 →"
+
+❌ Multiple CTAs:
+- "Browse the course"
+- "Join the community"
+- "Download the syllabus"
+- "Book a call"
+- "Follow us on Instagram"
+```
+
+**Why it works:** One option = clear decision. Five options = decision paralysis.
+
+---
+
+### Behavioral Principles for Email Sequences
+
+#### 1. Peak-End Rule  
+[PRIMARY - Kahneman et al., 1993]
+
+**The principle:** Experiences are judged by the peak moment and the ending.
+
+**Application to welcome sequences:**
+- Email 3-4 = PEAK (the most valuable insight or the transformation story)
+- Email 7 = END (final value + soft CTA)
+- The emails in between matter less than the peak and end
+
+**Example structure:**
+- Email 1: Welcome (set expectations)
+- Email 2: Story (relatability)
+- **Email 3-4: PEAK (the breakthrough insight that makes them think "I need this")**
+- Email 5: Social proof (reinforcement)
+- Email 6: Objection handling (remove friction)
+- **Email 7: END (final value + soft CTA)**
+
+---
+
+#### 2. Mere Exposure Effect  
+[PRIMARY - Zajonc, 1968]
+
+**The principle:** Repeated exposure increases liking.
+
+**Application:**
+- Use the same key phrases across all emails ("The Konteks Method," "4-step framework")
+- Sign every email the same way ("Dan" or "Dan from Konteks")
+- Consistent visual branding (if using HTML emails)
+
+**Example:**
+- Email 1: "Welcome to The Konteks Method"
+- Email 3: "The Konteks Method breaks down into 4 steps..."
+- Email 5: "363 students use The Konteks Method"
+- By the 5th email, "The Konteks Method" feels familiar and trustworthy.
+
+---
+
+#### 3. Affect Heuristic  
+[PRIMARY - Slovic et al., 2007]
+
+**The principle:** Emotions drive decisions; logic justifies them.
+
+**Application to email sequencing:**
+- Early emails (1-3): Lead with emotion (pain, aspiration, relatability)
+- Middle emails (4-5): Provide logic (social proof, mechanism, authority)
+- Late emails (6-7): Return to emotion (transformation, belonging, confidence)
+
+**Why this works:** Hook with emotion → justify with logic → close with emotion.
+
+---
+
+### Behavioral Audit Checklist for Emails
+
+**Subject Line:**
+- [ ] Creates curiosity gap (incomplete information)?
+- [ ] Uses specific numbers if including social proof?
+- [ ] Uses loss framing for urgency ("expires," "lose," "miss out")?
+- [ ] Under 50 characters (mobile truncation)?
+
+**Body:**
+- [ ] Short paragraphs (2-4 lines max)?
+- [ ] One main idea (not 5 different points)?
+- [ ] Uses "you" and "your" (ownership language)?
+- [ ] Tells a story or includes narrative element?
+
+**CTA:**
+- [ ] One primary CTA only?
+- [ ] Low-friction language ("Try free" not "Buy now")?
+- [ ] Removes risk ("No card required")?
+- [ ] Emphasizes immediacy ("Start now," "Access in 30 seconds")?
+
+**Sequence (if applicable):**
+- [ ] Peak email (3-4) contains the strongest insight/transformation?
+- [ ] Final email (7) ends strong (value + soft CTA)?
+- [ ] Repeated key phrases across emails (mere exposure)?
+
+---
+
+### Common Behavioral Mistakes in Email Copy
+
+**Mistake 1: Over-Relying on Loss Aversion**  
+Every email = "Don't miss out! Last chance! You're losing money!"
+
+**Fix:** Balance loss frames (urgency) with gain frames (transformation). 60/40 split.
+
+---
+
+**Mistake 2: Generic Social Proof**  
+"Thousands of happy customers" = empty.
+
+**Fix:** Specific numbers + specific outcomes. "2,847 students. Sarah went from C's to A's in 6 weeks."
+
+---
+
+**Mistake 3: Burying the CTA**  
+The CTA is in paragraph 7, after 500 words.
+
+**Fix:** CTA should appear within the first screen on mobile. Repeat it at the end if email is long.
+
+---
+
+**Mistake 4: Clickbait Curiosity Gaps**  
+"You won't BELIEVE what happened next!" when nothing interesting happened.
+
+**Fix:** The payoff must match the setup. If you promise "the one mistake," reveal something genuinely valuable.
+
+---
+
+*Behavioral science additions: 2026-03-29*
+*See `behavioral-science-marketing/SKILL.md` for complete framework and primary sources.*
+

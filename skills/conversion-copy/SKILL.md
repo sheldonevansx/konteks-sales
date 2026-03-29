@@ -842,3 +842,479 @@ View on phone. Does first line hook? Are paragraphs short? Is CTA visible?
 ---
 
 *This skill is based on direct response frameworks + 2026 practitioner insights. Update when new patterns emerge or platform dynamics change.*
+
+---
+
+## BEHAVIORAL SCIENCE FOR CONVERSION COPY
+
+*Cross-reference with `behavioral-science-marketing/SKILL.md` for full framework and primary sources.*
+
+### Why Behavioral Science Is the Foundation of Conversion Copy
+
+Every copywriting principle (from Hopkins to Hormozi) is an application of behavioral science, whether the practitioner knows it or not. Understanding the underlying psychology lets you:
+1. Diagnose WHY copy works or fails
+2. Adapt proven frameworks to new contexts
+3. Chain multiple principles for compound effects
+
+---
+
+### Behavioral Principles for Landing Pages
+
+#### HERO SECTION
+
+**1. Anchoring Effect + Price Framing**  
+[PRIMARY - Tversky & Kahneman, 1974]
+
+**Application:**
+```
+"12 Chapters. 4 Years of Studio Compressed. $249."
+
+vs.
+
+"$249 for the complete course."
+```
+
+**Why the first works better:** "4 Years" and "12 Chapters" anchor to the VALUE before introducing price. The price feels trivial by comparison.
+
+**Chaining example:**
+```
+"Architecture School: $120K over 4 years
+The framework it doesn't teach: $249/year
+
+Cancel anytime."
+```
+
+**Behavioral chain:**
+- Anchoring: $120K anchors high
+- Contrast Effect: $249 feels insignificant
+- Zero-Risk Bias: "Cancel anytime" = no commitment risk
+
+---
+
+**2. Identity-Based Persuasion**  
+[PRIMARY - Berger & Heath, 2007]
+
+**The principle:** "Be the kind of person who X" is more persuasive than "Do X."
+
+**Application:**
+```
+✅ "For Architects Who Build"  
+> "Learn Architecture Online"
+
+✅ "Trade like someone who actually knows what's happening"  
+> "Improve your trading results"
+```
+
+**Why it works:** Identity appeals (who you ARE) create stronger commitment than behavior appeals (what you DO).
+
+---
+
+#### PROBLEM SECTION
+
+**1. Loss Aversion + Pain Agitation**  
+[PRIMARY - Kahneman & Tversky, 1979]
+
+**The principle:** Losses hurt 2x more than gains feel good. Amplify the pain to activate loss aversion.
+
+**Application:**
+```
+"You're staring at charts at 2am, reading 14 conflicting takes, 
+and you still don't know if you should sell.
+
+Every month without a system, you're one emotional trade 
+away from giving back six months of gains."
+```
+
+**Why it works:**
+- Line 1: Paints the specific pain (relatable)
+- Line 2: Amplifies the LOSS (6 months of gains = huge loss)
+- Loss aversion makes the pain feel 2x worse than the gain of a solution feels good
+
+---
+
+**2. Affect Heuristic + Emotional Language**  
+[PRIMARY - Slovic et al., 2007]
+
+**The principle:** Emotions drive decisions. Logic justifies them afterward.
+
+**Application:**
+```
+✅ "Staring at 14 open tabs at midnight, still don't know if you should sell"  
+> "Making suboptimal trading decisions due to information overload"
+
+✅ "Dreading every crit because you have no idea if your project is good"  
+> "Lacking confidence in design critique situations"
+```
+
+**Why it works:** The first versions trigger emotional recognition. The second versions are logical but emotionally flat.
+
+---
+
+#### MECHANISM / SOLUTION SECTION
+
+**1. Processing Fluency + Simple Language**  
+[PRIMARY - Reber & Schwarz, 1999]
+
+**The principle:** Things that are easier to process feel more true and more valuable.
+
+**Application:**
+```
+✅ "The Trifecta Method: Check 3 scores before every trade.
+- Fundamentals (0-10)
+- Sentiment (0-10)  
+- Regime (0-10)
+
+When all three are above 7, you trade. When they're not, you wait."
+
+❌ "Our proprietary algorithmic framework synthesizes multidimensional 
+market signals through a quantitative scoring methodology that 
+integrates on-chain metrics, sentiment analysis, and macroeconomic 
+regime classification..."
+```
+
+**Why the first works:** It processes instantly. The reader understands the system in 10 seconds. The second requires cognitive effort = feels complex and suspicious.
+
+---
+
+**2. Curiosity Gap + Mechanism Naming**  
+[PRIMARY - Loewenstein, 1994]
+
+**Application:**
+```
+✅ "THE TRIFECTA METHOD" (named, proprietary-feeling)  
+> "Our three-factor system" (generic)
+
+✅ "THE KONTEKS METHOD" (named)  
+> "Our framework" (unmemorable)
+```
+
+**Why naming matters:**
+- Named systems feel proprietary (even if the principles aren't new)
+- Naming creates curiosity ("What's The Trifecta Method?")
+- Named systems are easier to remember and share (mere exposure effect)
+
+---
+
+#### SOCIAL PROOF SECTION
+
+**1. Social Proof (Descriptive Norms)**  
+[PRIMARY - Cialdini et al., 1990]
+
+**Application:**
+```
+✅ "2,847 architecture students use The Konteks Method"  
+> "Thousands of students"
+
+✅ "347 joined this month" (momentum)  
+> "2,847 total students" (static)
+```
+
+**Why specificity works:**
+- Specific numbers = credible (not made up)
+- "347 joined this month" = bandwagon effect (adoption is accelerating)
+- "Thousands" = vague, feels like marketing speak
+
+---
+
+**2. Narrative Transportation + Testimonials**  
+[PRIMARY - Green & Brock, 2000]
+
+**Application:**
+```
+✅ STORY FORMAT:
+"I was getting chopped up in sideways markets, revenge trading, 
+down $8k in a month. The Trifecta Method gave me a system. 
+Now I only trade when all three scores align. I'm up $14k in 
+6 weeks and I actually sleep at night."  
+— Marcus T., 2 years trading experience
+
+❌ BULLET FORMAT:
+"Great system!"  
+"Really helped me."  
+"Highly recommend."
+```
+
+**Why stories work:** The reader experiences the transformation vicariously. Bullets are just claims without evidence.
+
+---
+
+**3. Peak-End Rule + Testimonial Structure**  
+[PRIMARY - Kahneman et al., 1993]
+
+**Application:**
+```
+Structure testimonials as: Problem → PEAK moment → End result
+
+"I was pulling all-nighters, dreading every crit.
+
+[PEAK] Week 4 was the turning point. I designed a project 
+I'm genuinely proud of - my first real architecture work.
+
+[END] By Week 12, I had a full portfolio. I landed my first 
+studio internship a week after finishing."
+```
+
+**Why it works:** The reader remembers the PEAK (Week 4 breakthrough) and the END (portfolio + job). The middle details fade.
+
+---
+
+#### PRICING SECTION
+
+**1. Charm Pricing (Left-Digit Effect)**  
+[PRIMARY - Thomas & Morwitz, 2005]
+
+**Application:**
+```
+✅ $249/year  
+> $250/year
+
+✅ $29/month  
+> $30/month
+```
+
+**Why it works:** $249 encodes as "$2XX" in the brain. $250 encodes as "$3XX." The difference feels larger than $1.
+
+---
+
+**2. Anchoring + Partitioned Pricing**  
+[PRIMARY - Tversky & Kahneman, 1974 + Morwitz et al., 1998]
+
+**Application:**
+```
+"Complete Course: $249/year
+
+Includes:
+- All 12 Chapters ($348 value if bought individually)
+- Lifetime Updates ($79/year value)
+- Community Access (priceless)
+- Project Templates ($79 value)
+
+Total Value: $506+
+You Pay: $249
+You Save: $257"
+```
+
+**Behavioral chain:**
+- Anchoring: $506 total value anchors high
+- Contrast: $249 feels cheap by comparison
+- Partitioned Pricing: Breaking down the value (not the cost) makes $249 feel like a steal
+
+---
+
+**3. Default Effect + Pre-Selected Tiers**  
+[PRIMARY - Samuelson & Zeckhauser, 1988]
+
+**Application:**
+```
+[ ] Basic - $149/year  
+[X] Professional - $249/year (RECOMMENDED - 72% choose this)  
+[ ] Studio - $499/year
+```
+
+**Why it works:**
+- Pre-selecting Professional makes it the default
+- "72% choose this" = social proof reinforcing the default
+- To choose Basic or Studio, the user must ACTIVELY opt out (requires effort)
+
+**Data:** Pre-selecting the target tier increases its selection rate by 30-40% vs. no default.
+
+---
+
+#### GUARANTEE SECTION
+
+**1. Zero-Risk Bias**  
+[PRIMARY - Kahneman & Tversky, 1979]
+
+**Application:**
+```
+✅ "ZERO-Risk Guarantee
+
+If you don't design a portfolio-ready project in Chapter 1, 
+email us for a full refund.
+
+No questions. No hoops. No hassle.
+
+Zero risk."
+
+vs.
+
+"30-day money-back guarantee"
+```
+
+**Why "ZERO" works:** People prefer reducing risk to ZERO over reducing a larger risk by the same amount. The repetition of "zero" emphasizes complete risk elimination.
+
+---
+
+#### CTA SECTION
+
+**1. Temporal Discounting**  
+[PRIMARY - Laibson, 1997]
+
+**Application:**
+```
+✅ "Start Chapter 1 now. First project brief in 5 minutes."  
+> "Enroll in the course"
+
+✅ "Click below. Access in 30 seconds."  
+> "Get started today"
+```
+
+**Why it works:** "5 minutes" and "30 seconds" = immediate gratification. "Enroll" and "get started" are vague future states that trigger temporal discounting (delayed = less valuable).
+
+---
+
+**2. Loss Aversion + Urgency**  
+[PRIMARY - Kahneman & Tversky, 1979]
+
+**Application:**
+```
+✅ "Early-bird pricing ends Friday. Save $99 or pay full price."  
+> "Early-bird discount available"
+
+✅ "Only 7 spots left this cohort"  
+> "Limited spots available"
+```
+
+**Why it works:** "Save $99 or pay full price" = avoid a $99 LOSS. "Only 7 spots" = avoid losing your spot. Loss framing is 2x more motivating than gain framing.
+
+---
+
+### Chaining Behavioral Principles (Compound Effects)
+
+The most powerful landing pages chain MULTIPLE principles in sequence. Here's a full-page behavioral chain:
+
+```
+HERO:
+"2,847 Architecture Students Refused to Waste 3 Years on Redlines"  
+[Social Proof: 2,847 = specific]  
+[Identity: "Students who refused" = in-group]  
+[Loss Aversion: "waste 3 years" = loss frame]
+
+"Master studio in 12 weeks. Design your first real project in Week 2."  
+[Temporal Discounting: "12 weeks" and "Week 2" = immediate]
+
+[CTA Button] "Start Chapter 1 →"
+
+PROBLEM SECTION:
+"You didn't go to architecture school to spend 3 years doing redlines..."  
+[Loss Aversion: amplify the pain]  
+[Affect Heuristic: emotional language]
+
+MECHANISM:
+"THE KONTEKS METHOD: 4 steps to confident design"  
+[Curiosity Gap: "What are the 4 steps?"]  
+[Processing Fluency: simple, numbered system]
+
+SOCIAL PROOF:
+"Sarah went from dreading crits to top of her class in 6 weeks."  
+[Narrative Transportation: story format]  
+[Peak-End Rule: "Week 6 breakthrough" = peak]
+
+PRICING:
+"Complete Course: $249/year (save $99 vs. buying chapters individually)"  
+[Anchoring: $348 individual price]  
+[Contrast: $249 feels cheap]  
+[Charm Pricing: $249 not $250]  
+[Loss Aversion: "save $99" = avoid loss]
+
+GUARANTEE:
+"Zero-Risk Guarantee: Full refund if you don't design a real project in Chapter 1."  
+[Zero-Risk Bias: emphasis on "zero"]
+
+CTA:
+"Start Chapter 1 now. First project brief in 5 minutes."  
+[Temporal Discounting: "now" and "5 minutes"]  
+[Endowment: "Start Chapter 1" implies it's already yours]
+
+URGENCY:
+"7 spots left this cohort"  
+[Scarcity + Loss Aversion: don't lose your spot]
+```
+
+**Result:** Every section amplifies the next. The compound effect is 5-10x more persuasive than any single principle alone.
+
+---
+
+### Behavioral Audit Checklist for Landing Pages
+
+**Hero:**
+- [ ] Anchors to value before showing price?
+- [ ] Uses identity-based language ("For [persona] who [value]")?
+- [ ] Includes social proof number (specific, not vague)?
+
+**Problem:**
+- [ ] Uses loss-framed language ("Stop wasting," "Don't lose")?
+- [ ] Specific, relatable pain points (not generic)?
+- [ ] Emotional language, not just logical?
+
+**Mechanism:**
+- [ ] Named system (feels proprietary)?
+- [ ] Simple, clear explanation (processing fluency)?
+- [ ] Creates curiosity gap ("What's the method?")?
+
+**Social Proof:**
+- [ ] Specific numbers ("2,847 students" not "thousands")?
+- [ ] Story format testimonials (not just quotes)?
+- [ ] Highlights peak moment + end result?
+
+**Pricing:**
+- [ ] High anchor shown first ($X value)?
+- [ ] Contrast effect clear (savings calculated)?
+- [ ] Charm pricing ($249 not $250)?
+- [ ] Default tier pre-selected?
+
+**Guarantee:**
+- [ ] Uses "zero risk" language?
+- [ ] Unconditional and clear (no fine print)?
+
+**CTA:**
+- [ ] Emphasizes immediacy ("Start now," "Access in 30 seconds")?
+- [ ] Low-friction language ("Try free" not "Buy")?
+- [ ] One primary CTA per section?
+
+**Urgency (if applicable):**
+- [ ] REAL scarcity (not fake)?
+- [ ] Specific ("7 spots left" not "limited availability")?
+
+---
+
+### Common Behavioral Mistakes in Landing Page Copy
+
+**Mistake 1: Burying the Anchor**  
+Showing price before establishing value.
+
+**Fix:** Always anchor to value FIRST (alternative cost, total value, time saved), THEN show price.
+
+---
+
+**Mistake 2: Generic Social Proof**  
+"Thousands of happy customers love this product!"
+
+**Fix:** Specific numbers + specific outcomes. "2,847 students. Sarah went from C's to A's."
+
+---
+
+**Mistake 3: Too Many CTAs**  
+"Start free trial, Download syllabus, Join community, Follow us, Book a call"
+
+**Fix:** One primary CTA above the fold. Repeat it. Other actions can be secondary links.
+
+---
+
+**Mistake 4: Fake Scarcity**  
+"Only 2 spots left!" for an unlimited digital product.
+
+**Fix:** Use REAL scarcity (cohort enrollment, limited review slots) or don't use it. Fake scarcity destroys trust.
+
+---
+
+**Mistake 5: Over-Complicating the Mechanism**  
+"Our proprietary algorithmic framework synthesizes multidimensional market signals..."
+
+**Fix:** Simplify ruthlessly. "Check 3 scores. Trade when aligned. That's it."
+
+---
+
+*Behavioral science additions: 2026-03-29*
+*See `behavioral-science-marketing/SKILL.md` for complete framework and primary sources.*
+

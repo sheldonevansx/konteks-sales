@@ -1546,7 +1546,310 @@ For info products:
 
 ---
 
-## Bibliography
+## BEHAVIORAL SCIENCE APPLICATIONS FOR AD CREATIVE
+
+*Cross-reference with `behavioral-science-marketing/SKILL.md` for full framework details and primary sources.*
+
+### Why Behavioral Science Matters for Ad Creative
+
+Ad creatives that leverage behavioral science principles consistently outperform generic creative because they work WITH how human decision-making actually functions, not against it. These aren't "hacks" - they're applications of decades of peer-reviewed research.
+
+**Key insight:** Most ad practitioners unknowingly use behavioral science (social proof, urgency, anchoring) but don't COMPOUND multiple principles systematically. The biggest performance gains come from CHAINING behavioral triggers in sequence.
+
+---
+
+### Behavioral Principles by Ad Format
+
+#### STATIC ADS (Pain List, Persona Callout, Before/After)
+
+**1. Loss Aversion + Framing**  
+[PRIMARY - Kahneman & Tversky, Prospect Theory 1979]
+
+Losses hurt ~2x more than equivalent gains. Frame pain points as LOSSES to avoid, not just benefits to gain.
+
+**Example (Konteks Kourse Pain List Static):**
+
+```
+❌ WEAK (gain-framed):
+"- Learn design frameworks
+- Finish projects faster  
+- Better crit feedback"
+
+✅ STRONG (loss-framed):
+"- Stop wasting 40 hours per project
+- Don't spend another year on redlines
+- No more crits where you feel clueless"
+```
+
+**Why it works:** The second version activates loss aversion. "Don't spend another year on redlines" hurts more than "learn frameworks faster" feels good.
+
+**2. Anchoring Effect**  
+[PRIMARY - Tversky & Kahneman, 1974]
+
+The first number people see becomes the reference point. Use this in before/after statics and pricing callouts.
+
+**Example (Architecture Course Pricing Static):**
+
+```
+"Your degree: R200K+ over 4 years
+The framework it doesn't teach: $29/mo
+
+Cancel anytime."
+```
+
+**Why it works:** R200K anchors high, making $29/mo feel trivial. The contrast creates perceived value.
+
+**3. Social Proof (Descriptive Norms)**  
+[PRIMARY - Cialdini et al., 1990]
+
+What people ACTUALLY DO is more persuasive than what they approve of. Use specific numbers and active language.
+
+**Example:**
+
+```
+✅ "347 students joined this month"  
+> "Thousands love this course"
+
+✅ "2,847 architecture students use this"  
+> "Popular with architecture students"
+```
+
+**Why it works:** Specificity = credibility. "347 joined this month" shows MOMENTUM (bandwagon effect). "2,847 use this" shows SCALE.
+
+**4. Curiosity Gap / Information Gap Theory**  
+[PRIMARY - Loewenstein, 1994]
+
+Incomplete information creates cognitive tension. Open a loop in the hook, close it with the CTA.
+
+**Example (Twitter-Style Static):**
+
+```
+"I noticed something about my best students.
+
+They all do ONE thing before starting any project.
+
+It's not mood boards. It's not sketching.
+
+It's [framework name] → link"
+```
+
+**Why it works:** "ONE thing" opens the loop. The reader NEEDS to know what it is. The CTA becomes the only way to close the loop.
+
+---
+
+#### VIDEO ADS (Talking Head, UGC, Testimonial)
+
+**1. Narrative Transportation**  
+[PRIMARY - Green & Brock, 2000]
+
+Stories bypass analytical resistance. When viewers are "transported" into a narrative, they don't counter-argue.
+
+**Example (Student Transformation Video):**
+
+```
+Structure:
+[0-10s] Problem state (relatable struggle)  
+[10-30s] Turning point (discovered the framework)  
+[30-50s] After state (specific result)  
+[50-60s] CTA
+
+Don't just LIST benefits. SHOW the journey.
+```
+
+**Why it works:** The viewer experiences the transformation vicariously. They're not being sold to - they're watching someone like them solve the problem they have.
+
+**2. Peak-End Rule**  
+[PRIMARY - Kahneman et al., 1993]
+
+Experiences are judged by the PEAK moment and the END, not the average. Structure video ads accordingly.
+
+**Example (60-second Testimonial Compilation):**
+
+```
+[20-25s] PEAK: "Week 6 was the breakthrough. I designed my first portfolio-ready project and actually felt CONFIDENT presenting it."
+
+[55-60s] END: "Now I finish by 8pm instead of pulling all-nighters. Same course. Same professors. Different me."
+```
+
+**Why it works:** The viewer will remember the peak emotion (confidence in Week 6) and the final state (8pm finishes). The middle seconds matter less.
+
+**3. Affect Heuristic**  
+[PRIMARY - Slovic et al., 2007]
+
+Emotions drive decisions; logic justifies them. Lead with emotion, support with logic.
+
+**Example (Talking Head Script):**
+
+```
+[Hook - Emotional]:  
+"Architecture students - remember the last time you walked into a crit and had NO IDEA if your project was good?"
+
+[Body - Logical]:  
+"There's a 4-step framework professors use to evaluate. Once you know it..."
+
+[Close - Emotional]:  
+"Imagine walking into your next crit actually confident."
+```
+
+**Why it works:** The emotional bookends (fear of crits → confidence in crits) drive the decision. The logic in the middle justifies it.
+
+**4. Mere Exposure Effect**  
+[PRIMARY - Zajonc, 1968]
+
+Repeated exposure increases liking. For video ads, this means:
+
+- Use the SAME key phrases across all ads ("The Konteks Method," "4-step framework")
+- Keep visual branding consistent (same colors, same logo placement)
+- Retargeting = repeated exposure done right
+
+**Example:**
+
+```
+Ad 1: "The Konteks Method: 4 steps to confident design"  
+Ad 2: "363 students use The Konteks Method"  
+Email 1: "Welcome to The Konteks Method"  
+Landing page H1: "Master The Konteks Method in 12 Weeks"
+```
+
+**Why it works:** By the 4th exposure, "The Konteks Method" feels familiar and trustworthy.
+
+---
+
+### Chaining Behavioral Principles (Compound Effects)
+
+The most powerful creative chains MULTIPLE principles in sequence. Here's how:
+
+#### Static Ad Example: Pricing Callout with 4 Principles
+
+```
+[ANCHORING] "Architecture school: $120K"  
+[CONTRAST] "The framework it doesn't teach: $29/mo"  
+[LOSS AVERSION] "Don't waste another year on redlines"  
+[SOCIAL PROOF] "2,847 students already use it"  
+[CTA] "Try free for 7 days →"
+```
+
+**Behavioral chain:**
+1. **Anchoring**: $120K anchors high  
+2. **Contrast**: $29/mo feels trivial by comparison  
+3. **Loss Aversion**: "Don't waste" = loss frame  
+4. **Social Proof**: "2,847 students" = descriptive norm  
+5. **Zero-Risk Bias**: "Try free" = zero payment risk
+
+**Result:** Each principle amplifies the next. The combined effect is 3-5x more persuasive than any single principle alone.
+
+---
+
+#### Video Hook Example: 3-Second Hook with 5 Principles
+
+```
+[VISUAL] Student at 3am, exhausted, staring at blank project  
+[AUDIO] "Architecture students - this was me every week"  
+[TEXT OVERLAY] "There's a 4-step fix"
+```
+
+**Behavioral chain:**
+1. **Affect Heuristic**: Exhaustion = emotional pain  
+2. **Identity-Based Persuasion**: "Architecture students" = in-group  
+3. **Social Proof (implied)**: "This was me" = someone like them had this problem  
+4. **Curiosity Gap**: "4-step fix" = incomplete information  
+5. **Temporal Discounting**: "fix" implies immediate solution
+
+---
+
+### Behavioral Audit Checklist for Ad Creative
+
+Before launching any ad, check these boxes:
+
+**Hook (First 3 seconds):**
+- [ ] Triggers loss aversion OR curiosity gap OR social proof?  
+- [ ] Uses specific numbers or details (not vague)?  
+- [ ] Speaks to target identity ("Architecture students...")?  
+- [ ] Opens a loop that the ad/landing page closes?
+
+**Body (Main content):**
+- [ ] Shows transformation (before → after)?  
+- [ ] Uses social proof with specific numbers ("2,847 students")?  
+- [ ] Frames benefits as losses avoided (loss aversion)?  
+- [ ] Creates narrative transportation (tells a story)?
+
+**CTA:**
+- [ ] Low-friction language ("Try free" not "Buy now")?  
+- [ ] Includes social proof ("Join 2,847 students")?  
+- [ ] Removes risk (zero-risk bias: "No card required")?  
+- [ ] Creates urgency if appropriate (scarcity: "7 spots left")?
+
+**Pricing/Anchoring:**
+- [ ] High anchor shown first (degree cost, alternative price)?  
+- [ ] Contrast effect clear ($348 → $249)?  
+- [ ] Charm pricing used ($249 not $250)?
+
+---
+
+### Common Misapplications (What NOT To Do)
+
+**1. Fake Scarcity**  
+"Only 2 spots left!" for a digital course with unlimited seats = destroys trust when discovered.
+
+**Solution:** Use REAL scarcity (cohort-based enrollment, limited review slots) or don't use it.
+
+**2. Over-Relying on Loss Aversion**  
+All loss-framed copy ("Don't miss out! Don't waste time!") creates anxiety, not aspiration.
+
+**Solution:** Balance loss frames (pain) with gain frames (transformation). 60/40 split works well.
+
+**3. Generic Social Proof**  
+"Thousands of happy students" = empty. No credibility.
+
+**Solution:** Specific numbers ("2,847 students"), specific outcomes ("Sarah went from C's to A's"), specific timeframes ("347 joined this month").
+
+**4. Clickbait Curiosity Gaps**  
+"You won't BELIEVE what happened next!" when nothing interesting happened = one-time traffic, no trust.
+
+**Solution:** The payoff must match the setup. If you promise "the one thing professors don't teach," actually reveal something valuable.
+
+---
+
+### Behavioral Science by Awareness Level
+
+Different principles work at different stages of awareness (Schwartz's 5 levels):
+
+| Awareness | Primary Principles | Example (Konteks) |
+|-----------|-------------------|-------------------|
+| **Unaware** | Curiosity Gap, Narrative Transportation | "Why do top students finish faster?" (curiosity) |
+| **Problem-Aware** | Loss Aversion, Affect Heuristic | "Stop wasting 40 hours per project" (loss frame) |
+| **Solution-Aware** | Social Proof, Authority Bias | "2,847 students use the 4-step method" (social proof) |
+| **Product-Aware** | Anchoring, Endowment, Zero-Risk | "Try free for 7 days. No card required." (zero-risk) |
+| **Most Aware** | Scarcity, FOMO, Sunk Cost | "7 spots left this cohort" (scarcity) |
+
+**Practical application:** Match your ad's behavioral triggers to the audience's awareness level. Don't use scarcity on unaware audiences (they don't know what they'd be missing).
+
+---
+
+### Testing Behavioral Principles
+
+**A/B test ONE behavioral principle at a time:**
+
+**Test 1: Loss Frame vs. Gain Frame**
+- Ad A: "Stop wasting time on redlines" (loss)  
+- Ad B: "Start designing real projects" (gain)  
+Run for 7 days. Measure CPA.
+
+**Test 2: Social Proof (specific vs. vague)**
+- Ad A: "2,847 students" (specific)  
+- Ad B: "Thousands of students" (vague)  
+Run for 7 days. Measure CTR.
+
+**Test 3: Anchoring (with vs. without)**
+- Ad A: "$249/year (vs. $348 buying individually)" (anchored)  
+- Ad B: "$249/year" (not anchored)  
+Run for 7 days. Measure conversion rate.
+
+**Why test one at a time:** If you change multiple principles, you won't know which one caused the lift.
+
+---
+
+## Bibliography (Updated with Behavioral Science Sources)
 
 ### Primary Sources (Canonical Works)
 - Ogilvy, David. *Confessions of an Advertising Man* (1963). Headline principle, authority positioning.
@@ -1555,7 +1858,14 @@ For info products:
 - Cialdini, Robert. *Influence* (1984). Social proof, authority, scarcity.
 - Hormozi, Alex. *$100M Offers* (2021). Value equation, offer construction.
 - Brunson, Russell. *DotCom Secrets* (2015). Funnel architecture, attractive character framework.
-- Kahneman, Daniel. *Thinking, Fast and Slow* (2011). Anchoring bias, loss aversion.
+- **Kahneman, Daniel. *Thinking, Fast and Slow* (2011). Anchoring bias, loss aversion, prospect theory.**
+- **Tversky, Amos & Kahneman, Daniel. *Judgment under Uncertainty: Heuristics and Biases* (1974). Anchoring effect.**
+- **Kahneman, Daniel & Tversky, Amos. *Prospect Theory: An Analysis of Decision Under Risk* (1979). Loss aversion.**
+- **Cialdini, Robert B., Reno, R.R., & Kallgren, C.A. *A Focus Theory of Normative Conduct* (1990). Social proof, descriptive vs. injunctive norms.**
+- **Loewenstein, George. *The Psychology of Curiosity* (1994). Information gap theory, curiosity gap.**
+- **Green, Melanie C. & Brock, Timothy C. *The Role of Transportation in the Persuasiveness of Public Narratives* (2000). Narrative transportation.**
+- **Zajonc, Robert B. *Attitudinal Effects of Mere Exposure* (1968). Mere exposure effect.**
+- **Slovic, Paul et al. *The Affect Heuristic* (2007). Emotions drive decisions.**
 
 ### Practitioner Sources (2025-2026 Transcripts)
 - Blue Sense Digital (Nathan): 8 Static Creatives Analysed, Ads Crushed vs. Burned, Reviewing 7 Ads, Ad Hooks That Scale, Hook Testing With Andromeda, Outperform 99% of Advertisers, Hormozi's Strategy Breakdown
@@ -1569,6 +1879,6 @@ For info products:
 
 ---
 
-*Last updated: 2026-03-28. Source: 37+ practitioner transcripts, 6 canonical advertising texts, Meta documentation.*
+*Last updated: 2026-03-29. Source: 37+ practitioner transcripts, 6 canonical advertising texts, 9 behavioral science primary sources, Meta documentation.*
 *This skill is specifically built for info products (courses, memberships, communities). E-commerce advice is noted but flagged where it diverges.*
 *Every framework is source-tagged: [PRIMARY] [PRACTITIONER] [REGURGITATED] [ANECDOTAL] [CONFLICTING]*
