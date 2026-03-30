@@ -29,7 +29,9 @@ export async function onRequestPost(context) {
             });
         }
 
-        const apiBase = AC_URL + '/api/3';
+        // Ensure URL has protocol
+        const baseUrl = AC_URL.startsWith('http') ? AC_URL : 'https://' + AC_URL;
+        const apiBase = baseUrl + '/api/3';
         const headers = { 'Api-Token': AC_KEY, 'Content-Type': 'application/json' };
 
         // 1. Create or update contact
@@ -43,8 +45,26 @@ export async function onRequestPost(context) {
                 }
             })
         });
+        
+        if (!contactRes.ok) {
+            const errText = await contactRes.text();
+            console.error('AC contact/sync failed:', contactRes.status, errText);
+            return new Response(JSON.stringify({ error: 'AC API error', status: contactRes.status }), {
+                status: 502,
+                headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+            });
+        }
+        
         const contactData = await contactRes.json();
-        const contactId = contactData.contact.id;
+        const contactId = contactData.contact?.id;
+        
+        if (!contactId) {
+            console.error('No contact ID returned:', JSON.stringify(contactData));
+            return new Response(JSON.stringify({ error: 'Contact creation failed' }), {
+                status: 500,
+                headers: { ...corsHeaders, 'Content-Type': 'application/json' }
+            });
+        }
 
         // 2. Add to list "Konteks Kourse Subscribers" (ID: 4)
         await fetch(apiBase + '/contactLists', {
