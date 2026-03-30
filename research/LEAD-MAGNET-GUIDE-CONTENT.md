@@ -115,24 +115,22 @@ These are 5 of those shortcuts. They're the highest-impact, lowest-effort change
 
 ---
 
-### Page 7: What's Next?
+### Page 7: Want the full system?
 
-These 5 shortcuts are the start.
+These 5 shortcuts are from a bigger system I built after winning best thesis.
 
-The full system - 5 chapters, 45+ videos, weekly planner, concept development frameworks, crit preparation templates, and a community of 363+ architecture students - is The Konteks Kourse.
+5 video chapters. Each one solves a specific problem architecture school creates but never fixes.
 
-**What's inside:**
-- Chapter 1: How architecture school actually works (the rules nobody explains)
-- Chapter 2: The top student mindset (abstract thinking, creative risk)
-- Chapter 3: Time management, crits, and deadline systems
-- Chapter 4: From brief to concept (the framework most students never learn)
-- Chapter 5: Site analysis and urban design done properly
-- Konteks Kalendar: Weekly planner designed for architecture students
+- How architecture school actually works (the rules nobody explains)
+- The top student mindset (abstract thinking, creative risk)
+- Time management, crits, and deadline systems
+- From brief to concept (the framework most students never learn)
+- Site analysis and urban design done properly
+- Plus: the Konteks Kalendar (weekly planner built for studio)
 
-**Try it free for 7 days.**
+20,000+ architecture students follow @studwalldan for this stuff.
+
 kourse.konteks.co
-
-No risk. Cancel anytime. 30-day money-back guarantee.
 
 Dan Fouche
 @studwalldan
