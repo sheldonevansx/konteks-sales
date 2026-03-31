@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join the Konteks Kourse - Secure Checkout</title>
 
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,8 +24,7 @@
     fbq('track', 'ViewContent', {content_name:'Konteks Kourse Checkout',content_category:'Checkout',value:29.00,currency:'USD'});
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=26300556566305220&ev=PageView&noscript=1"
-    /></noscript>
+    src="https://www.facebook.com/tr?id=26300556566305220&ev=PageView&noscript=1" /></noscript>
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,10 +33,9 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             font-size: 17px;
             line-height: 1.6;
-            color: #333;
-            background: #F7F7F7;
+            color: #E3E8EF;
+            background: #000000;
             -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -53,11 +50,8 @@
             animation: fadeIn 0.5s ease forwards;
         }
 
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
+        @keyframes fadeIn { to { opacity: 1; } }
 
-        /* Dan's reassurance */
         .reassurance {
             text-align: center;
             margin-bottom: 24px;
@@ -69,6 +63,7 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 12px;
+            border: 2px solid rgba(204, 255, 0, 0.3);
         }
 
         .reassurance h1 {
@@ -76,24 +71,22 @@
             font-size: 24px;
             line-height: 1.2;
             letter-spacing: -0.5px;
-            color: #000;
+            color: #FFFFFF;
             margin-bottom: 6px;
         }
 
         .reassurance p {
             font-size: 15px;
-            color: #666;
+            color: #8A94A6;
         }
 
-        /* Main card */
         .checkout-card {
-            background: #fff;
-            border-radius: 16px;
+            background: rgba(15, 15, 15, 0.6);
+            border: 1px solid rgba(204, 255, 0, 0.15);
+            border-radius: 3px;
             padding: 28px 24px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.04);
         }
 
-        /* Plan selector */
         .plan-selector {
             display: flex;
             gap: 10px;
@@ -102,28 +95,27 @@
 
         .plan-option {
             flex: 1;
-            border: 2px solid #e5e5e5;
-            border-radius: 12px;
+            border: 2px solid rgba(204, 255, 0, 0.1);
+            border-radius: 3px;
             padding: 16px;
             cursor: pointer;
             text-align: center;
             transition: all 0.2s;
             position: relative;
+            background: transparent;
         }
 
-        .plan-option:hover {
-            border-color: #ccc;
-        }
+        .plan-option:hover { border-color: rgba(204, 255, 0, 0.3); }
 
         .plan-option.selected {
-            border-color: #E86A1C;
-            background: #FFF8F5;
+            border-color: #CCFF00;
+            background: rgba(204, 255, 0, 0.05);
         }
 
         .plan-option .plan-name {
             font-size: 13px;
             font-weight: 600;
-            color: #666;
+            color: #8A94A6;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 4px;
@@ -132,19 +124,19 @@
         .plan-option .plan-price {
             font-weight: 800;
             font-size: 24px;
-            color: #000;
+            color: #FFFFFF;
             line-height: 1.2;
         }
 
         .plan-option .plan-price span {
             font-size: 15px;
             font-weight: 500;
-            color: #666;
+            color: #8A94A6;
         }
 
         .plan-option .plan-note {
             font-size: 13px;
-            color: #999;
+            color: #6B7280;
             margin-top: 2px;
         }
 
@@ -152,12 +144,12 @@
             position: absolute;
             top: -10px;
             right: -6px;
-            background: #E86A1C;
-            color: #fff;
+            background: #CCFF00;
+            color: #000;
             font-size: 11px;
             font-weight: 700;
             padding: 3px 8px;
-            border-radius: 20px;
+            border-radius: 2px;
             letter-spacing: 0.3px;
         }
 
@@ -166,25 +158,22 @@
             top: -10px;
             left: 50%;
             transform: translateX(-50%);
-            background: #2D6A2E;
-            color: #fff;
+            background: #CCFF00;
+            color: #000;
             font-size: 10px;
             font-weight: 700;
             padding: 3px 8px;
-            border-radius: 20px;
+            border-radius: 2px;
             letter-spacing: 0.3px;
             white-space: nowrap;
         }
 
-        /* What's included */
-        .included {
-            margin-bottom: 24px;
-        }
+        .included { margin-bottom: 24px; }
 
         .included-label {
             font-size: 13px;
             font-weight: 600;
-            color: #999;
+            color: #6B7280;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 12px;
@@ -192,21 +181,19 @@
 
         .included-item {
             font-size: 14px;
-            color: #333;
+            color: #C5CAD3;
             margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .included-item:last-child {
-            margin-bottom: 0;
-        }
+        .included-item:last-child { margin-bottom: 0; }
 
         .check-icon {
             width: 18px;
             height: 18px;
-            background: #FFF0E8;
+            background: rgba(204, 255, 0, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -214,12 +201,8 @@
             flex-shrink: 0;
         }
 
-        .check-icon svg {
-            width: 10px;
-            height: 10px;
-        }
+        .check-icon svg { width: 10px; height: 10px; }
 
-        /* CTA button */
         .cta-btn {
             display: block;
             width: 100%;
@@ -227,55 +210,48 @@
             font-family: 'Inter', sans-serif;
             font-size: 16px;
             font-weight: 700;
-            color: #fff;
-            background: #E86A1C;
+            color: #000;
+            background: #CCFF00;
             border: none;
-            border-radius: 12px;
+            border-radius: 3px;
             cursor: pointer;
             text-align: center;
             text-decoration: none;
-            transition: background 0.2s;
+            transition: all 0.2s;
             margin-bottom: 16px;
         }
 
         .cta-btn:hover {
-            background: #C85A16;
+            background: #D9FF33;
+            transform: translateY(-1px);
         }
 
-        /* Guarantee */
         .guarantee {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             padding: 14px;
-            background: #F0FAF0;
-            border-radius: 10px;
+            background: rgba(204, 255, 0, 0.05);
+            border: 1px solid rgba(204, 255, 0, 0.1);
+            border-radius: 3px;
             margin-bottom: 16px;
-        }
-
-        .guarantee svg {
-            flex-shrink: 0;
         }
 
         .guarantee p {
             font-size: 13px;
-            color: #2D6A2E;
+            color: #CCFF00;
             font-weight: 500;
         }
 
-        /* Social proof */
         .social-proof {
             text-align: center;
             font-size: 13px;
-            color: #999;
+            color: #6B7280;
         }
 
-        .social-proof strong {
-            color: #666;
-        }
+        .social-proof strong { color: #8A94A6; }
 
-        /* Footer */
         .footer-trust {
             text-align: center;
             margin-top: 20px;
@@ -284,7 +260,7 @@
             justify-content: center;
             gap: 6px;
             font-size: 13px;
-            color: #999;
+            color: #6B7280;
         }
 
         .footer-trust .stripe-logo {
@@ -292,21 +268,17 @@
             color: #635BFF;
         }
 
-        /* Back link */
         .back-link {
             display: block;
             text-align: center;
             margin-top: 16px;
             font-size: 13px;
-            color: #999;
+            color: #6B7280;
             text-decoration: none;
         }
 
-        .back-link:hover {
-            color: #666;
-        }
+        .back-link:hover { color: #CCFF00; }
 
-        /* Mobile */
         @media (max-width: 480px) {
             body { padding: 16px; }
             .checkout-card { padding: 24px 20px; }
@@ -328,7 +300,6 @@
         </div>
 
         <div class="checkout-card">
-            <!-- Plan selector -->
             <div class="plan-selector">
                 <div class="plan-option selected" id="trialPlan" onclick="selectPlan('trial')">
                     <span class="trial-badge">RECOMMENDED</span>
@@ -349,70 +320,57 @@
                 </div>
             </div>
 
-            <!-- What's included -->
             <div class="included">
                 <div class="included-label">Included from day one</div>
                 <div class="included-item">
                     <div class="check-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"/>
-                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#CCFF00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     </div>
                     All 5 chapters - concept, crits, time management, site analysis
                 </div>
                 <div class="included-item">
                     <div class="check-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"/>
-                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#CCFF00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     </div>
                     The Konteks Kalendar (weekly planner)
                 </div>
                 <div class="included-item">
                     <div class="check-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"/>
-                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#CCFF00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     </div>
                     Private student community (363+ members)
                 </div>
                 <div class="included-item">
                     <div class="check-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#E86A1C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="20 6 9 17 4 12"/>
-                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#CCFF00" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                     </div>
                     Direct access to Dan for feedback
                 </div>
             </div>
 
-            <!-- CTA -->
-            <a href="#" class="cta-btn" id="ctaBtn" onclick="handleCheckout(event)">Continue to secure payment</a>
+            <a href="#" class="cta-btn" id="ctaBtn" onclick="handleCheckout(event)">Start your free trial</a>
 
-            <!-- Guarantee -->
             <div class="guarantee">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2D6A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#CCFF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 </svg>
                 <p>30-day money-back guarantee. Not for you? Full refund, no questions.</p>
             </div>
 
-            <!-- Social proof -->
             <div class="social-proof">
                 <strong>363+ architecture students</strong> already inside
             </div>
         </div>
 
-        <!-- Footer trust -->
         <div class="footer-trust">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
                 <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
             </svg>
             Secure payment via <span class="stripe-logo">Stripe</span>
         </div>
 
-        <a href="/" class="back-link">Back to the sales page</a>
+        <a href="/index-lead.html" class="back-link">Back to the guide</a>
     </div>
 
     <script>
@@ -422,11 +380,7 @@
             annual: 'https://buy.stripe.com/fZubJ1bEq3A3fUX2ni5Rm03'
         };
 
-        const planValues = {
-            trial: 0.00,
-            monthly: 29.00,
-            annual: 249.00
-        };
+        const planValues = { trial: 0.00, monthly: 29.00, annual: 249.00 };
 
         const btnLabels = {
             trial: 'Start your free trial',
@@ -434,7 +388,6 @@
             annual: 'Continue to secure payment - $249/yr'
         };
 
-        // Get plan from URL param, default to trial
         let selectedPlan = new URLSearchParams(window.location.search).get('plan') || 'trial';
         if (['monthly', 'annual', 'trial'].includes(selectedPlan)) selectPlan(selectedPlan);
 
@@ -443,14 +396,11 @@
             document.getElementById('trialPlan').classList.toggle('selected', plan === 'trial');
             document.getElementById('monthlyPlan').classList.toggle('selected', plan === 'monthly');
             document.getElementById('annualPlan').classList.toggle('selected', plan === 'annual');
-
             document.getElementById('ctaBtn').textContent = btnLabels[plan];
         }
 
         function handleCheckout(e) {
             e.preventDefault();
-            
-            // Fire InitiateCheckout with value and currency
             fbq('track', 'InitiateCheckout', {
                 value: planValues[selectedPlan],
                 currency: 'USD',
@@ -464,13 +414,9 @@
             btn.style.opacity = '0.7';
             btn.style.pointerEvents = 'none';
 
-            // Small delay so pixel fires before redirect
-            setTimeout(() => {
-                window.location.href = stripeLinks[selectedPlan];
-            }, 600);
+            setTimeout(() => { window.location.href = stripeLinks[selectedPlan]; }, 600);
         }
 
-        // Initialize button text
         selectPlan(selectedPlan);
     </script>
 </body>
