@@ -23,8 +23,8 @@
     let mobileTimerStarted = false;
     
     const popupHTML = `
-        <div id="konteksExitPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 37, 64, 0.92); z-index: 9999; justify-content: center; align-items: center; padding: 20px; backdrop-filter: blur(8px);">
-            <div style="background: linear-gradient(135deg, rgba(13, 42, 71, 0.95) 0%, rgba(10, 37, 64, 0.98) 100%); border: 1px solid rgba(0, 212, 170, 0.3); border-radius: 3px; max-width: 480px; width: 100%; padding: 40px 32px; position: relative; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); animation: slideUp 0.3s ease-out;">
+        <div id="konteksExitPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.92); z-index: 9999; justify-content: center; align-items: center; padding: 20px; backdrop-filter: blur(8px);">
+            <div style="background: linear-gradient(135deg, rgba(15, 15, 15, 0.95) 0%, rgba(0, 0, 0, 0.98) 100%); border: 1px solid rgba(204, 255, 0, 0.3); border-radius: 3px; max-width: 480px; width: 100%; padding: 40px 32px; position: relative; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); animation: slideUp 0.3s ease-out;">
                 <button id="closePopup" style="position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 28px; color: #6B7280; cursor: pointer; padding: 8px; line-height: 1; transition: color 0.2s;" aria-label="Close">&times;</button>
                 
                 <h2 style="font-family: 'Inter', sans-serif; font-weight: 800; font-size: 28px; line-height: 1.2; color: #FFFFFF; margin-bottom: 16px; letter-spacing: -0.5px;">Wait - grab this before you go</h2>
@@ -34,13 +34,13 @@
 
                 <form id="popupGuideForm" onsubmit="return submitPopupForm(event)">
                     <input type="text" id="popupFirstName" placeholder="First name" required
-                        style="width: 100%; padding: 14px 18px; border: 1.5px solid rgba(0, 212, 170, 0.2); border-radius: 3px; font-family: 'Inter', sans-serif; font-size: 15px; margin-bottom: 10px; outline: none; box-sizing: border-box; background: rgba(13, 42, 71, 0.4); color: #FFFFFF; transition: border-color 0.2s;">
+                        style="width: 100%; padding: 14px 18px; border: 1.5px solid rgba(204, 255, 0, 0.2); border-radius: 3px; font-family: 'Inter', sans-serif; font-size: 15px; margin-bottom: 10px; outline: none; box-sizing: border-box; background: rgba(15, 15, 15, 0.4); color: #FFFFFF; transition: border-color 0.2s;">
                     <input type="email" id="popupEmail" placeholder="Your best email" required
-                        style="width: 100%; padding: 14px 18px; border: 1.5px solid rgba(0, 212, 170, 0.2); border-radius: 3px; font-family: 'Inter', sans-serif; font-size: 15px; margin-bottom: 14px; outline: none; box-sizing: border-box; background: rgba(13, 42, 71, 0.4); color: #FFFFFF; transition: border-color 0.2s;">
-                    <button type="submit" style="display: block; width: 100%; padding: 16px 24px; font-size: 16px; font-weight: 700; font-family: 'Inter', sans-serif; color: #0A2540; background: #00D4AA; border: none; border-radius: 3px; cursor: pointer; transition: all 0.2s; text-align: center;">Send me the free guide</button>
+                        style="width: 100%; padding: 14px 18px; border: 1.5px solid rgba(204, 255, 0, 0.2); border-radius: 3px; font-family: 'Inter', sans-serif; font-size: 15px; margin-bottom: 14px; outline: none; box-sizing: border-box; background: rgba(15, 15, 15, 0.4); color: #FFFFFF; transition: border-color 0.2s;">
+                    <button type="submit" style="display: block; width: 100%; padding: 16px 24px; font-size: 16px; font-weight: 700; font-family: 'Inter', sans-serif; color: #000000; background: #CCFF00; border: none; border-radius: 3px; cursor: pointer; transition: all 0.2s; text-align: center;">Send me the free guide</button>
                 </form>
                 <div id="popupSuccess" style="display: none; text-align: center; padding: 12px 0;">
-                    <div style="font-size: 24px; margin-bottom: 8px; color: #00D4AA;">&#10003;</div>
+                    <div style="font-size: 24px; margin-bottom: 8px; color: #CCFF00;">&#10003;</div>
                     <div style="font-size: 16px; font-weight: 600; color: #FFFFFF;">Check your email!</div>
                 </div>
 
@@ -55,17 +55,17 @@
             }
             #konteksExitPopup input:focus { 
                 outline: none; 
-                border-color: #00D4AA !important; 
+                border-color: #CCFF00 !important; 
             }
             #konteksExitPopup input::placeholder {
                 color: #6B7280;
             }
             #konteksExitPopup button[type="submit"]:hover { 
-                background: #80E9D0; 
+                background: #D9FF33; 
                 transform: translateY(-1px);
             }
             #closePopup:hover { 
-                color: #00D4AA; 
+                color: #CCFF00; 
             }
             #dismissPopup:hover {
                 color: #8A94A6;
@@ -107,8 +107,8 @@
         
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
         
-        if (isMobile) { startMobileTimer(); window.addEventListener('scroll', handleScroll); }
-        else { document.addEventListener('mouseleave', handleMouseLeave); }
+        // Desktop only - no popup on mobile (too distracting)
+        if (!isMobile) { document.addEventListener('mouseleave', handleMouseLeave); }
         
         closeBtn.addEventListener('click', hidePopup);
         dismissBtn.addEventListener('click', hidePopup);
