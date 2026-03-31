@@ -1,5 +1,6 @@
 /**
  * Exit Intent Popup for Konteks Lead Capture Page
+ * Stripe dark+green aesthetic
  * 
  * Usage: Add to lead capture pages with <script src="/exit-popup-lead.js"></script>
  * 
@@ -22,28 +23,28 @@
     let mobileTimerStarted = false;
     
     const popupHTML = `
-        <div id="konteksExitPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; justify-content: center; align-items: center; padding: 20px; backdrop-filter: blur(4px);">
-            <div style="background: #fff; border-radius: 16px; max-width: 480px; width: 100%; padding: 40px 32px; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.3); animation: slideUp 0.3s ease-out;">
-                <button id="closePopup" style="position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 28px; color: #999; cursor: pointer; padding: 8px; line-height: 1; transition: color 0.2s;" aria-label="Close">&times;</button>
+        <div id="konteksExitPopup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(10, 37, 64, 0.92); z-index: 9999; justify-content: center; align-items: center; padding: 20px; backdrop-filter: blur(8px);">
+            <div style="background: linear-gradient(135deg, rgba(13, 42, 71, 0.95) 0%, rgba(10, 37, 64, 0.98) 100%); border: 1px solid rgba(0, 212, 170, 0.3); border-radius: 3px; max-width: 480px; width: 100%; padding: 40px 32px; position: relative; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); animation: slideUp 0.3s ease-out;">
+                <button id="closePopup" style="position: absolute; top: 16px; right: 16px; background: none; border: none; font-size: 28px; color: #6B7280; cursor: pointer; padding: 8px; line-height: 1; transition: color 0.2s;" aria-label="Close">&times;</button>
                 
-                <h2 style="font-family: 'Inter', sans-serif; font-weight: 800; font-size: 28px; line-height: 1.2; color: #1A1A1A; margin-bottom: 16px; letter-spacing: -0.5px;">Wait - grab this before you go</h2>
+                <h2 style="font-family: 'Inter', sans-serif; font-weight: 800; font-size: 28px; line-height: 1.2; color: #FFFFFF; margin-bottom: 16px; letter-spacing: -0.5px;">Wait - grab this before you go</h2>
 
-                <p style="font-family: 'Inter', sans-serif; font-size: 16px; color: #666; margin-bottom: 8px; line-height: 1.5;"><strong style="color: #1A1A1A;">5 studio shortcuts</strong> your lecturers never taught you.</p>
-                <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #999; margin-bottom: 24px; line-height: 1.5;">Free PDF. The frameworks that won best thesis across engineering, science and architecture. Takes 10 minutes to read, saves you hundreds of hours.</p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 16px; color: #C5CAD3; margin-bottom: 8px; line-height: 1.5;"><strong style="color: #FFFFFF;">5 studio shortcuts</strong> your lecturers never taught you.</p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 14px; color: #8A94A6; margin-bottom: 24px; line-height: 1.5;">Free PDF. The frameworks that won best thesis across engineering, science and architecture. Takes 10 minutes to read, saves you hundreds of hours.</p>
 
                 <form id="popupGuideForm" onsubmit="return submitPopupForm(event)">
                     <input type="text" id="popupFirstName" placeholder="First name" required
-                        style="width: 100%; padding: 14px 18px; border: 1.5px solid #ddd; border-radius: 10px; font-family: 'Inter', sans-serif; font-size: 15px; margin-bottom: 10px; outline: none; box-sizing: border-box;">
+                        style="width: 100%; padding: 14px 18px; border: 1.5px solid rgba(0, 212, 170, 0.2); border-radius: 3px; font-family: 'Inter', sans-serif; font-size: 15px; margin-bottom: 10px; outline: none; box-sizing: border-box; background: rgba(13, 42, 71, 0.4); color: #FFFFFF; transition: border-color 0.2s;">
                     <input type="email" id="popupEmail" placeholder="Your best email" required
-                        style="width: 100%; padding: 14px 18px; border: 1.5px solid #ddd; border-radius: 10px; font-family: 'Inter', sans-serif; font-size: 15px; margin-bottom: 14px; outline: none; box-sizing: border-box;">
-                    <button type="submit" style="display: block; width: 100%; padding: 16px 24px; font-size: 16px; font-weight: 700; font-family: 'Inter', sans-serif; color: #fff; background: #E86A1C; border: none; border-radius: 10px; cursor: pointer; transition: background 0.2s; text-align: center;">Send me the free guide</button>
+                        style="width: 100%; padding: 14px 18px; border: 1.5px solid rgba(0, 212, 170, 0.2); border-radius: 3px; font-family: 'Inter', sans-serif; font-size: 15px; margin-bottom: 14px; outline: none; box-sizing: border-box; background: rgba(13, 42, 71, 0.4); color: #FFFFFF; transition: border-color 0.2s;">
+                    <button type="submit" style="display: block; width: 100%; padding: 16px 24px; font-size: 16px; font-weight: 700; font-family: 'Inter', sans-serif; color: #0A2540; background: #00D4AA; border: none; border-radius: 3px; cursor: pointer; transition: all 0.2s; text-align: center;">Send me the free guide</button>
                 </form>
                 <div id="popupSuccess" style="display: none; text-align: center; padding: 12px 0;">
-                    <div style="font-size: 24px; margin-bottom: 8px;">&#10003;</div>
-                    <div style="font-size: 16px; font-weight: 600; color: #333;">Check your email!</div>
+                    <div style="font-size: 24px; margin-bottom: 8px; color: #00D4AA;">&#10003;</div>
+                    <div style="font-size: 16px; font-weight: 600; color: #FFFFFF;">Check your email!</div>
                 </div>
 
-                <button id="dismissPopup" style="background: none; border: none; color: #999; font-size: 14px; cursor: pointer; text-decoration: underline; font-family: 'Inter', sans-serif; margin-top: 16px;">No thanks</button>
+                <button id="dismissPopup" style="background: none; border: none; color: #6B7280; font-size: 14px; cursor: pointer; text-decoration: underline; font-family: 'Inter', sans-serif; margin-top: 16px; transition: color 0.2s;">No thanks</button>
             </div>
         </div>
         
@@ -52,9 +53,23 @@
                 from { opacity: 0; transform: translateY(30px); }
                 to { opacity: 1; transform: translateY(0); }
             }
-            #konteksExitPopup input:focus { outline: none; border-color: #E86A1C; }
-            #konteksExitPopup button[type="submit"]:hover { background: #C85A16; }
-            #closePopup:hover { color: #1A1A1A; }
+            #konteksExitPopup input:focus { 
+                outline: none; 
+                border-color: #00D4AA !important; 
+            }
+            #konteksExitPopup input::placeholder {
+                color: #6B7280;
+            }
+            #konteksExitPopup button[type="submit"]:hover { 
+                background: #80E9D0; 
+                transform: translateY(-1px);
+            }
+            #closePopup:hover { 
+                color: #00D4AA; 
+            }
+            #dismissPopup:hover {
+                color: #8A94A6;
+            }
         </style>
     `;
     
