@@ -14,7 +14,7 @@ Hey,
 
 You're in the Konteks Kourse. Here's your access:
 
-[SKOOL_LINK]
+https://www.skool.com/architecture?utm_source=email&utm_medium=automation&utm_campaign=onboarding
 
 Start with Chapter 1. It sets up how everything else works - grading systems, what lecturers actually want, and how to structure your project from day one.
 
@@ -72,7 +72,7 @@ Even if it's just a question or a work-in-progress. The students who post get fe
 
 Drop something in there today. Doesn't need to be polished.
 
-[COMMUNITY_LINK]
+https://www.skool.com/architecture?utm_source=email&utm_medium=automation&utm_campaign=community
 
 Dan
 
@@ -228,10 +228,10 @@ Dan
 - Only applies to annual subscribers
 
 ### Placeholder links to replace:
-- [SKOOL_LINK] → https://www.skool.com/architecture?utm_source=email&utm_medium=automation&utm_campaign=onboarding
+- https://www.skool.com/architecture?utm_source=email&utm_medium=automation&utm_campaign=onboarding → https://www.skool.com/architecture?utm_source=email&utm_medium=automation&utm_campaign=onboarding
 - [CHAPTER_2_LINK] → Skool classroom direct link to Chapter 2
 - [CHAPTER_3_LINK] → Skool classroom direct link to Chapter 3
-- [COMMUNITY_LINK] → https://www.skool.com/architecture?utm_source=email&utm_medium=automation&utm_campaign=community
+- https://www.skool.com/architecture?utm_source=email&utm_medium=automation&utm_campaign=community → https://www.skool.com/architecture?utm_source=email&utm_medium=automation&utm_campaign=community
 - [UPDATE_PAYMENT_LINK] → Stripe Customer Portal URL
 - [REJOIN_LINK] → https://kourse.konteks.co (or Stripe Payment Link)
 - [DISCOUNT_LINK] → Stripe Payment Link with coupon applied (or checkout page with promo code)
@@ -252,13 +252,17 @@ Guide: "5 Things Your Lecturers Grade On (That They Never Tell You)"
 
 Hey {{first_name}},
 
-Here's the guide: 5 Things Your Lecturers Grade On (That They Never Tell You).
+Here's the guide: 5 Studio Shortcuts Your Lecturers Never Taught You.
 
-[GUIDE_PDF_LINK]
+[GUIDE_PDF_LINK_TODO]
 
-Takes about 10 minutes to read. The section on concept depth scoring (point #2) is the one most students tell me changed how they approach projects.
+Takes about 10 minutes to read. The section on concept development (shortcut #2) is the one most students tell me changed how they approach projects.
+
+Quick question: what year are you in? Reply and let me know - I read every email.
 
 Dan
+
+P.S. If the link doesn't work, reply to this email and I'll send it directly.
 
 ---
 
@@ -280,7 +284,7 @@ I built a system that breaks down every one of those patterns. 5 chapters. How t
 
 363 students are using it right now.
 
-If you want to see inside: [TRIAL_LINK]
+If you want to see inside: https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 7 days free. Cancel anytime.
 
@@ -300,7 +304,7 @@ The thing is, Priya isn't more talented now than she was before. She just has a 
 
 That system is what I teach inside Konteks.
 
-[TRIAL_LINK]
+https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 7 days free. All 5 chapters. The time management system. The community.
 
@@ -320,7 +324,7 @@ If the guide was useful, the full system goes deeper into every one of those 5 p
 
 363 students are inside. 37 spots left at the current price before it goes from $29/mo to $49/mo.
 
-[TRIAL_LINK]
+https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 Try it free for 7 days. If it's not for you, cancel before day 8 and you pay nothing.
 
@@ -346,7 +350,7 @@ The fix is a framework called Deep Work / Steady Work / Easy Work. You never mix
 
 That framework lives in Chapter 3 of Konteks. Students who use it report saving 5-10 hours a week.
 
-Want to try it? 7 days free: [TRIAL_LINK]
+Want to try it? 7 days free: https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 Dan
 
@@ -368,7 +372,7 @@ Without that distinction, you default to whatever feels urgent. And urgency alwa
 
 The full time management system is in Chapter 3. The Konteks Kalendar is the weekly planner that makes it work.
 
-[TRIAL_LINK]
+https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 Dan
 
@@ -390,7 +394,7 @@ Easy Work = printing, formatting, organizing files. Save this for when your brai
 
 Just sorting your tasks into those three categories will save you hours. If it works, the full system inside Konteks takes it further with weekly planning templates and energy-based scheduling.
 
-[TRIAL_LINK]
+https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 7 days free.
 
@@ -416,7 +420,7 @@ The fix is surprisingly mechanical. There's a brief analysis method that pulls s
 
 That process is Chapter 4 of Konteks. It's the chapter students tell me changed how they approach every project.
 
-Try it free for 7 days: [TRIAL_LINK]
+Try it free for 7 days: https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 Dan
 
@@ -434,7 +438,7 @@ When a lecturer says "your concept isn't specific enough," what they really mean
 
 Chapter 4 (concept development) and Chapter 5 (site analysis) work together. You learn to read a site at a depth most students never reach, and then you learn to turn that analysis into a concept that can only belong in that specific place.
 
-[TRIAL_LINK]
+https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 Dan
 
@@ -454,7 +458,7 @@ If you answered yes to #1 or no to #2 or #3, your concept needs work. That's not
 
 The full process is in Chapter 4 of Konteks. It starts with brief analysis, moves through site reading, and ends with a concept so specific your lecturer asks how you thought of it.
 
-[TRIAL_LINK]
+https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 Dan
 
@@ -480,7 +484,7 @@ Konteks is everything I figured out about what the system actually expects from 
 
 363 students are using it. Many of them felt exactly like you do right now.
 
-[TRIAL_LINK]
+https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 7 days free.
 
@@ -500,7 +504,7 @@ Architecture school trains you to self-censor. You see polished work on the wall
 
 The framework in Chapter 2 (The Top Student Mindset) teaches you to hold ideas longer before judging them. Start messy. Iterate after. The students who produce original work aren't more creative - they just didn't kill their ideas at stage one.
 
-[TRIAL_LINK]
+https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 Dan
 
@@ -520,7 +524,7 @@ There were multiple points during my degree where I thought about quitting. Wher
 
 The difference is I found a way to decode what the system wanted. I turned that into a system. And I'm sharing that system with you inside Konteks.
 
-[TRIAL_LINK]
+https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 7 days free. All 5 chapters. No risk.
 
@@ -544,7 +548,7 @@ That gap is smaller than you think - and it's technical, not motivational. It's 
 
 The chapters I'd point you to: Chapter 5 (site analysis beyond the sun path) and Chapter 4 (concept development at the level that makes lecturers sit forward).
 
-[TRIAL_LINK]
+https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 7 days free.
 
@@ -566,7 +570,7 @@ Most good students have strong concepts OR strong analysis OR strong representat
 
 That alignment is what Chapters 4 and 5 teach. Chapter 4 takes your concept from "good" to "why didn't I think of that." Chapter 5 makes your site analysis so specific that your design can only belong in that place.
 
-[TRIAL_LINK]
+https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 Dan
 
@@ -582,7 +586,7 @@ You took the quiz because you want more than a passing grade. You want to be the
 
 That's exactly who Konteks was built for. Not beginners - achievers who want the edge.
 
-[TRIAL_LINK]
+https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 37 spots left at $29/mo before it goes to $49.
 
@@ -607,8 +611,8 @@ Dan
 - Each result type gets its own automation with 3 emails
 
 ### Placeholder links:
-- [TRIAL_LINK] - https://buy.stripe.com/9B68wP37U6Mf9wzfa45Rm05
-- [GUIDE_PDF_LINK] - Link to hosted PDF (needs to be created and hosted)
+- https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture - https://buy.stripe.com/9B68wP37U6Mf9wzfa45Rm05
+- [GUIDE_PDF_LINK_TODO] - Link to hosted PDF (needs to be created and hosted)
 
 ### AC Tags to create:
 - lead-magnet

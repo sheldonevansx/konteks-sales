@@ -65,7 +65,7 @@ I call it the Brief Decoder method - it's in Chapter 4 of the Konteks Kourse.
 
 The students who use it stop getting "push it further" in crits. Because their concepts are already pushed.
 
-Want to see it in action? Sign up here: https://konteks.co
+Want to see it in action? Sign up here: https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 - Dan
 ```
@@ -102,7 +102,7 @@ The Deep/Steady/Easy framework is in Chapter 3 of the Konteks Kourse. I used it 
 
 It works. You just have to use it.
 
-See the full chapter: https://konteks.co
+See the full chapter: https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 - Dan
 ```
@@ -141,7 +141,7 @@ Chapter 5 of the Konteks Kourse breaks down exactly how to map each layer - and 
 
 Your lecturers will notice the difference. Trust me.
 
-Get Chapter 5 here: https://konteks.co
+Get Chapter 5 here: https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 - Dan
 ```
@@ -170,7 +170,7 @@ Another student (4th year, UCT) told me she stopped pulling all-nighters complet
 
 363 students are inside the Kourse now. They all started where you are - confused, burned out, or both.
 
-If you want what they have, join here: https://konteks.co
+If you want what they have, join here: https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 $29/month. Cancel anytime.
 
@@ -210,7 +210,7 @@ $29/month. Cancel anytime. No lock-in.
 
 If you're still pulling all-nighters next month, that's a choice.
 
-Join here: https://konteks.co
+Join here: https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture
 
 - Dan
 
