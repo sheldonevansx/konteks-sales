@@ -14,7 +14,7 @@
 **Subject Lines (ranked by expected open rate):**
 1. here's your guide
 2. your guide is ready (check your inbox)
-3. the 5 things your lecturers won't tell you
+3. 5 studio shortcuts your lecturers never taught you
 
 **Email Body:**
 

@@ -572,7 +572,7 @@ See the framework before your next project."
 - Show the template library
 
 [30-45s] VOICEOVER highlighting key elements:
-"12 chapters. Weekly live sessions. 363 students 
+"5 chapters. Weekly live sessions. 363 students 
 asking questions and sharing work right now."
 
 [45-60s] CTA: "First 7 days free. See for yourself."
@@ -978,7 +978,7 @@ The headline appears below the image. Keep it punchy - 5-8 words max.
 
 **Rule:** Ads should lead with DESIRE, support with BENEFIT, and mention FEATURES only as proof.
 
-- ❌ "12 chapters, weekly live sessions, template library" (features)
+- ❌ "5 chapters, weekly live sessions, template library" (features)
 - ✅ "Finish projects faster, get better feedback, stop dreading crits" (benefits)
 - ✅✅ "Imagine walking into your next crit actually confident" (desire)
 
@@ -1253,7 +1253,7 @@ These are three different things. Your ads should know which one they're selling
 
 **Konteks can sell all three.** Test which angle resonates most:
 - Community: "363 students helping each other through architecture school"
-- Content: "12 chapters covering what your degree doesn't"
+- Content: "5 chapters covering what your degree doesn't"
 - Transformation: "From all-nighters to finishing by 8pm"
 
 ### 6. The Hit Rate Reality

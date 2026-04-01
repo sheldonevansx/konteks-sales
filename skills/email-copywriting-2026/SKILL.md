@@ -498,7 +498,7 @@ Every persuasion tactic used across all 17 videos traces to Cialdini's six princ
 ## Applied: Konteks Kourse Emails
 
 ### Context
-Dan (Shel's girlfriend) runs an architecture education business - "Konteks Kourse" - 12 chapters, 4 completed. Anti-academic teaching style, pop culture references. Audience: architecture students and young professionals.
+Dan (Shel's girlfriend) runs an architecture education business - "Konteks Kourse" - 5 chapters (4 completed). Anti-academic teaching style, pop culture references. Audience: architecture students and young professionals.
 
 ### Recommendations Based on This Research
 

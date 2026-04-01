@@ -1,5 +1,5 @@
 # Konteks Kourse - Email Sequences (Plain Text)
-All emails from: Dan (dan@konteks.co or whatever sender is configured)
+All emails from: Dan (info@konteks.co)
 Under 150 words each. Plain text only. No HTML formatting.
 
 ---
@@ -244,7 +244,7 @@ Dan
 
 ## SEQUENCE 5: LEAD MAGNET NURTURE (trigger: tag "lead-magnet" added)
 
-Guide: "5 Things Your Lecturers Grade On (That They Never Tell You)"
+Guide: "5 Studio Shortcuts Your Lecturers Never Taught You"
 
 ### Email 12 — Guide Delivery (Day 0, immediate)
 

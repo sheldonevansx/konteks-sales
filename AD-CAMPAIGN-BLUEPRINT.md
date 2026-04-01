@@ -15,7 +15,7 @@ v2 had 5 interest-stacked ad sets at $85/day, a premature retargeting campaign, 
 | 5 ad sets at $85/day | 2-3 ad sets at $56/day | Each ad set needs enough budget for 1+ conversion/day minimum |
 | Interest stacking (3 interest ad sets) | 1 broad + 1 optional interest | Post-Andromeda, creative does the targeting. Interests are training wheels only |
 | Separate retargeting at $15/day | No retargeting campaign yet | Premature at $56/day. Andromeda auto-retargets ~30% of spend. Add at $150+/day |
-| Lookalike from 326 emails | Drop it (too small) | Meta needs 1,000+ emails for quality lookalike |
+| Lookalike from 363 emails | Drop it (too small) | Meta needs 1,000+ emails for quality lookalike |
 | Advantage+ Shopping | Manual Sales Campaign | Advantage+ front-loads existing data. With zero purchases, it has nothing to work with |
 | Optimize for InitiateCheckout | Optimize for Purchase | You tell Meta what to find. IC finds browsers. Purchase finds buyers. |
 | Kill ads at $50 spend / $60 CPA | Kill at 2-3x CPA spend / review at $87 threshold | LTV is $87 (3-month avg retention). $60 kill threshold was leaving profitable ads on the table |
@@ -142,7 +142,7 @@ ANGLE 2             [Concept 2]           [Concept 5]           [Concept 8]
 (The system)        "Crit framework"      "Time management"     "Portfolio that works"
 
 ANGLE 3             [Concept 3]           [Concept 6]           [Concept 9]
-(Community)         "326 students inside" "Not alone in this"   "Real feedback"
+(Community)         "363 students inside" "Not alone in this"   "Real feedback"
 ```
 
 At $56/day, start with 1-2 concepts. As you scale, expand across the matrix.

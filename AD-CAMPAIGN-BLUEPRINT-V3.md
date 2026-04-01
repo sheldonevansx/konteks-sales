@@ -229,7 +229,7 @@ tutorial content and save design reference posts.
 - Position Konteks as the anti-establishment solution
 - Use Dan's signature harsh-but-helpful tone: "If you're redesigning your project 3 times before every crit, your concept is overdesigned and under-thought."
 
-**CTA:** "5 chapters. 326+ students inside. $29/month. Cancel anytime."
+**CTA:** "5 chapters. 363+ students inside. $29/month. Cancel anytime."
 
 ### Angle B: Simple Framework Positioning
 
@@ -252,7 +252,7 @@ tutorial content and save design reference posts.
 
 **Hook:**
 1. "Built by the architect who won best thesis across engineering, science, and technology."
-2. "326 architecture students already learning this system."
+2. "363 architecture students already learning this system."
 3. "I teach architecture at a university in Dubai. This is what I don't tell my students in class."
 
 **Body:** Brief bio + proof + offer
@@ -263,7 +263,7 @@ tutorial content and save design reference posts.
 ### Angle D: Community-First
 
 **Hook:**
-1. "326 architecture students sharing work, getting feedback, and actually helping each other."
+1. "363 architecture students sharing work, getting feedback, and actually helping each other."
 2. "What if you had a group of students who actually understand what you're going through?"
 
 **Body:**
@@ -476,7 +476,7 @@ They just learned what nobody in studio teaches:
 • A time system that eliminates all-nighters
 • How to present at crits with confidence
 
-5 chapters. Weekly planner included. 326+ students inside.
+5 chapters. Weekly planner included. 363+ students inside.
 
 Built by the architect who won best thesis across 
 engineering, science, and technology.
@@ -499,7 +499,7 @@ The Konteks Kourse breaks down what top students know:
 ✓ The Crit Presentation Framework (Chapter 3)
 ✓ Plus: Weekly planner built for studio schedules
 
-326 students. 5 chapters. $29/month.
+363 students. 5 chapters. $29/month.
 ```
 
 **Headline:** Systems your professors won't share  
@@ -511,7 +511,7 @@ The Konteks Kourse breaks down what top students know:
 You've watched. You know this makes sense.
 
 5 chapters that cover everything architecture school skips.
-A community of 326 students who actually get it.
+A community of 363 students who actually get it.
 A weekly planner that eliminates all-nighters.
 
 $29/month. Cancel anytime. If Chapter 3 doesn't save you 

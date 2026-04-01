@@ -21,7 +21,7 @@ Subject line: here's your guide
 Body:
 Hey %FIRSTNAME%,
 
-Here's the guide: 5 Things Your Lecturers Grade On (That They Never Tell You).
+Here's the guide: 5 Studio Shortcuts Your Lecturers Never Taught You.
 
 [GUIDE_PDF_LINK]
 
