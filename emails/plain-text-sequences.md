@@ -254,7 +254,7 @@ Hey {{first_name}},
 
 Here's the guide: 5 Studio Shortcuts Your Lecturers Never Taught You.
 
-[GUIDE_PDF_LINK_TODO]
+https://kourse.konteks.co/guide/5-studio-shortcuts-guide.pdf
 
 Takes about 10 minutes to read. The section on concept development (shortcut #2) is the one most students tell me changed how they approach projects.
 
@@ -612,7 +612,7 @@ Dan
 
 ### Placeholder links:
 - https://kourse.konteks.co/checkout.html?plan=trial&utm_source=email&utm_medium=nurture - https://buy.stripe.com/9B68wP37U6Mf9wzfa45Rm05
-- [GUIDE_PDF_LINK_TODO] - Link to hosted PDF (needs to be created and hosted)
+- https://kourse.konteks.co/guide/5-studio-shortcuts-guide.pdf - Link to hosted PDF (needs to be created and hosted)
 
 ### AC Tags to create:
 - lead-magnet
