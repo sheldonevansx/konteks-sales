@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're In - Konteks Kourse</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '26300556566305220');
+    fbq('track', 'PageView');
+    fbq('track', 'Purchase', {value: 29.00, currency: 'USD', content_name: 'Konteks Kourse'});
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #E3E8EF;
+            background: #000000;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        
+        .container {
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .check-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(204, 255, 0, 0.1);
+            border: 2.5px solid #CCFF00;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 32px;
+            font-size: 36px;
+            color: #CCFF00;
+        }
+        
+        h1 {
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            color: #FFFFFF;
+            margin-bottom: 16px;
+        }
+        
+        .subhead {
+            font-size: 18px;
+            color: #8A94A6;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+        
+        .steps {
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        
+        .step {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(204, 255, 0, 0.08);
+        }
+        
+        .step:last-child { border-bottom: none; }
+        
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: rgba(204, 255, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 800;
+            color: #CCFF00;
+            flex-shrink: 0;
+        }
+        
+        .step-text {
+            font-size: 16px;
+            color: #C5CAD3;
+            line-height: 1.5;
+        }
+        
+        .step-text strong {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 17px;
+            font-weight: 700;
+            color: #000;
+            background: #CCFF00;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: all 0.2s;
+            margin-bottom: 24px;
+        }
+        
+        .cta-btn:hover {
+            background: #D9FF33;
+            transform: translateY(-1px);
+        }
+        
+        .help-text {
+            font-size: 14px;
+            color: #6B7280;
+        }
+        
+        .help-text a {
+            color: #CCFF00;
+            text-decoration: none;
+        }
+        
+        .help-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="check-icon">✓</div>
+        <h1>You're in.</h1>
+        <p class="subhead">Welcome to the Konteks Kourse. Here's what happens next:</p>
+        
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-text"><strong>Check your email.</strong> You'll get a welcome email with your Skool access link within 5 minutes.</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-text"><strong>Start with Chapter 1.</strong> It sets up how everything else works - grading systems, what lecturers actually want.</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text"><strong>Join the community.</strong> Introduce yourself. 363+ architecture students are inside. They're friendly.</div>
+            </div>
+        </div>
+        
+        <a href="https://www.skool.com/architecture" class="cta-btn">Go to the Kourse</a>
+        
+        <p class="help-text">Didn't get the email? Check spam first, then <a href="mailto:dan@konteks.co">email dan@konteks.co</a></p>
+    </div>
+</body>
+</html>
