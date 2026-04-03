@@ -433,3 +433,77 @@ Copy must:
 ---
 
 *This research is evergreen until platform algorithms change significantly. Update when new frameworks emerge from practitioners.*
+
+---
+
+## Jason Wojciechowicz (@thejasonwojo) - Organic + Paid Flywheel Strategy
+
+**Source:** Instagram Reel (Apr 2, 2026) - 113K views, 6.8K likes
+**Link:** https://www.instagram.com/reel/DWpYpZiCeU8/
+
+### Full Transcript
+
+"These are my stats for the last 30 days, posting content, going really hard. If you want to build more trust and you want to reduce your sales cycles, you've got to just be more consistent. I usually get about 15 million views a month, and I get 21 million views. I've got an extra 1.5 million interactions, 6,000 new followers that I can now DM and outreach which I have a setting team who does that, and it's just from consistent, consistent content. The biggest bridge between where you're at and where you want to go is using organic to find your winning ads, and that's what I've been doing, right? And also doing a content ad-hook strategy where I punch a bunch of videos out at $2 a day on ads, and I'm just getting three second video plays, and then I retarget all of those three second video plays to testimony videos, and those testimony videos are retargeting all the three second video plays, and then I'm grabbing all that and running conversion-based ads back to my bottom of Funnel Ads, which is book a call and buy-down."
+
+### Strategy Breakdown
+
+**The Organic-to-Paid Flywheel:**
+
+1. **Consistent organic content** (high volume) - builds trust, reduces sales cycles
+   - His stats: 21M views/month, 1.5M interactions, 6K new followers/month
+   - Has a setting team DMing new followers (outbound on inbound leads)
+
+2. **Content Ad-Hook Strategy** (the key insight):
+   - Takes organic content/hooks and runs them as ads at **$2/day per video**
+   - Objective: NOT conversions. Just **3-second video plays** (cheapest objective)
+   - This is pure audience building at minimal cost
+
+3. **Retarget 3-sec viewers with testimonial videos**
+   - Everyone who watched 3+ seconds of the hook videos gets retargeted
+   - Retarget creative = customer testimonials/social proof
+   - This moves them from "aware" to "trusting"
+
+4. **Bottom-of-funnel conversion ads**
+   - Retarget the testimonial viewers with conversion-optimized ads
+   - CTA: "Book a call" or "Buy now"
+   - This is where the actual ROAS happens
+
+### Funnel Architecture
+
+```
+COLD (Organic + $2/day hook ads)
+    → 3-sec video plays (custom audience)
+        → WARM (Testimonial retarget ads)
+            → 3-sec video plays on testimonials (custom audience)
+                → HOT (Conversion ads - book a call / buy)
+```
+
+### Key Metrics
+- 15-21M organic views/month
+- 6,000 new followers/month from organic alone
+- $2/day per hook video (testing budget)
+- Uses 3-sec video view audiences as retarget pools
+
+### Application to Konteks
+
+**What Dan could do:**
+1. Post Dan's talking head content consistently on IG/TikTok (she already does some)
+2. Take the best-performing organic posts and boost them at $2/day for 3-sec views
+3. Build a 3-sec video viewer audience in Meta
+4. Retarget that audience with student testimonial content
+5. Retarget testimonial viewers with the free guide (lead magnet) or Kourse offer
+
+**Key difference from current approach:**
+- Current: Cold traffic → lead magnet landing page (one step)
+- Wojo's method: Cold hook → warm with social proof → convert (three steps)
+- His method costs more in total ad spend but conversion rates are higher because trust is built before the ask
+
+**Budget implication at $35/day:**
+- Could split: $10/day on 5 hook videos at $2 each + $25/day on retarget/conversion
+- But this requires Dan to have testimonial video content ready
+- And it requires enough organic content volume to find "winning hooks"
+
+### Source Assessment
+- **Credibility:** PRACTITIONER - shows real dashboard stats (21M views verifiable via profile)
+- **Novelty:** The $2/day hook testing is genuinely useful - it's creative testing at near-zero cost
+- **Limitation:** His scale (15M+ views/month) makes the organic flywheel work. At Dan's current follower count, the organic side won't generate enough volume alone. The paid hook testing at $2/day is the applicable part.
