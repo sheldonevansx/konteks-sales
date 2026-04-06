@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5 Studio Shortcuts Your Lecturers Never Taught You - Konteks</title>
+    <title>5 Things Your Lecturers Grade On (That They Never Tell You) - Konteks</title>
 
-    <meta property="og:title" content="5 Studio Shortcuts Your Lecturers Never Taught You">
+    <meta property="og:title" content="5 Things Your Lecturers Grade On (That They Never Tell You)">
     <meta property="og:description" content="Free guide for architecture students. The unwritten grading criteria nobody explains.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kourse.konteks.co/guide">
@@ -26,7 +26,6 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '26300556566305220');
     fbq('track', 'PageView');
-    fbq('track', 'ViewContent', {content_name:'5 Studio Shortcuts Guide',content_category:'Lead Magnet'});
     </script>
 
     <style>
@@ -228,7 +227,7 @@
         <!-- HERO -->
         <div class="hero">
             <div class="eyebrow">Free guide for architecture students</div>
-            <h1>5 studio shortcuts your lecturers never taught you</h1>
+            <h1>5 things your lecturers grade on that they never tell you</h1>
             <p>The unwritten grading criteria that separate top students from everyone else. From the architect who won best thesis across engineering, science and architecture.</p>
         </div>
 
@@ -320,26 +319,48 @@
     nameInput.addEventListener('input', checkInputs);
     emailInput.addEventListener('input', checkInputs);
 
-    function submitGuide() {
+    async function submitGuide() {
         const email = emailInput.value.trim();
         const name = nameInput.value.trim();
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
 
-        fbq('track', 'Lead', { content_name: 'guide_download' });
-
-        // POST to Cloudflare Worker (adds to AC with lead-magnet tag)
-        fetch('/api/guide-submit', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email: email, firstName: name, source: 'guide' })
-        }).catch(() => {});
-
-        // Show success regardless
-        setTimeout(() => {
-            document.getElementById('formSection').style.display = 'none';
-            document.getElementById('formSuccess').style.display = 'block';
-        }, 800);
+        // Retry guide-submit up to 3x with backoff. NEVER fire Lead pixel
+        // or show success unless AC actually accepted the contact.
+        let lastErr = null;
+        for (let attempt = 1; attempt <= 3; attempt++) {
+            try {
+                const res = await fetch('/api/guide-submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email, firstName: name, source: 'guide' })
+                });
+                if (res.ok) {
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead', { content_name: 'guide_download' });
+                    }
+                    document.getElementById('formSection').style.display = 'none';
+                    document.getElementById('formSuccess').style.display = 'block';
+                    return;
+                }
+                lastErr = 'HTTP ' + res.status;
+            } catch (err) {
+                lastErr = (err && err.message) || 'network';
+            }
+            await new Promise(r => setTimeout(r, attempt * 600));
+        }
+        // All retries failed - tell user, do NOT fire Lead, do NOT show success
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Try again';
+        let errEl = document.getElementById('formError');
+        if (!errEl) {
+            errEl = document.createElement('div');
+            errEl.id = 'formError';
+            errEl.style.cssText = 'color:#c0392b;margin-top:12px;font-size:14px;';
+            submitBtn.parentNode.appendChild(errEl);
+        }
+        errEl.textContent = "Couldn't save your details (" + lastErr + "). Please try again or email info@konteks.co.";
+        if (window.console) console.error('guide-submit failed:', lastErr);
     }
     </script>
 </body>
