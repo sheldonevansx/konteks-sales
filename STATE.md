@@ -1,151 +1,145 @@
 # Konteks Kourse - Unified State File
-**Last synced:** 2026-03-26 23:15 UTC+4
-**Last agent:** Jinx (OpenClaw) - sync merge from Cowork + OpenClaw sessions
+**Last synced:** 2026-04-06 (Cowork session - post-nap briefing)
+**Last agent:** Claude Code (Cowork) - Sheldon's main Mac
 
 ---
 
-## CURRENT LIVE STATE
+## CURRENT LIVE STATE (factual, verified this session)
 
-### Landing Page (kourse.konteks.co)
-- **Headline:** "The fastest way to become a top 1% architecture student without more sleepless nights."
-- **Subheading:** "Master the frameworks your lecturers use but never teach. 45+ Videos. 5 chapters. Concept development. Time management. Site analysis. Crit preparation."
-- **Hero:** Center-aligned, Dan's photo with hand-drawn arrow, autoplay Skool walkthrough video below
-- **Default CTA:** "Try free for 7 days" → checkout.html?plan=trial
-- **All secondary CTAs:** Also "Try free for 7 days"
-- **Guarantee:** 30-day money-back (upgraded from 7-day by Cowork)
-- **Scarcity:** "Price increases from $29/mo to $49/mo at 400 members (37 spots left)"
-- **Social proof:** 20 avatar strip, "363+ students from 40+ universities"
-- **Exit popup:** Active - shows free trial CTA on exit intent (no email form, no broken promises)
-- **Checkout page:** Plan selector with 3 options: Trial (default, recommended), Monthly ($29/mo), Annual ($249/yr)
+### Live Meta Ads (only 1 campaign actually spending)
 
-### Meta Ads Campaign
-- **Campaign:** "Architecture School Doesn't Teach You" - LIVE since March 24
-- **Budget:** $80/day CBO (increased from $36 on Day 3 - learning phase reset)
-- **Day 3 stats:** ~$19/InitiateCheckout, multiple checkouts, 0 purchases
-- **3 ads running:** Pain List static, 3 Render Rule manual upload video, 3 Render Rule existing IG post
-- **Optimization event:** InitiateCheckout
-- **Countries:** US, UK, AU, CA, NZ, ZA, IE, HK, AE
-- **Note:** Budget jumped 120% in one go. Don't touch for 3-4 days. Day 4 is first review.
+**[COLD] Lead Magnet - 5 Studio Shortcuts** - ACTIVE - $35/day
+- Objective: OUTCOME_LEADS, optimizing for offsite Lead pixel
+- 1 adset: [INTEREST] Architecture Students 18-28 → US/GB/CA/AU/NZ/ZA, exclude UAE
+- Excludes: Skool Members CSV, 90d trial signups, 180d purchasers (clean)
+- **Last 7d: $152 spend, 102 attributed leads, $1.49 blended CPL**
+- **Lifetime: $179, 126 leads (ad-attr) / 319 (campaign-attr), $1.43 blended**
 
-### Stripe
-- **Trial Link (7-day free):** https://buy.stripe.com/9B68wP37U6Mf9wzfa45Rm05
-- **Monthly Link ($29/mo):** https://buy.stripe.com/cNi7sLfUG9YrcIL4vq5Rm02
-- **Annual Link ($249/yr):** https://buy.stripe.com/fZubJ1bEq3A3fUX2ni5Rm03
-- **Monthly Price ID:** price_1TFFdQI75rl019DGYrCiN9hM
-- **Annual Price ID:** price_1TD31pI75rl019DGMwfQPj70
-- **Product:** prod_UBPrqteCKB9sFO
-- **Entity:** SEVANS IT Services
+#### Live ad performance (last 7d) - sorted by efficiency
 
-### ActiveCampaign
-- **Onboarding (ID:1):** ACTIVE - 4 emails over ~8 days, triggers on "onboarding" tag
-- **ID:7:** Dead duplicate, can be deleted
-- **Dunning/Win-back/Retention:** NOT BUILT (copy written in emails/plain-text-sequences.md)
+WORKHORSES (keep, do not touch):
+| Ad | Spend | Leads | CPL |
+|---|---|---|---|
+| [MANUAL] Curriculum Gaps List | $57.92 | 50 | $1.16 |
+| [MANUAL] Site Analysis B- vs A+ | $14.74 | 17 | $0.87 |
+| [MANUAL] Archi Crits Paint | $10.82 | 11 | $0.98 |
+| [MANUAL] Top 1% Desktop | $0.80 | 1 | $0.80 |
+| [MANUAL] 3 Render Rule Desktop | $2.40 | 2 | $1.20 |
+| [STATIC] Editorial - School Doesnt Teach | $1.63 | 1 | $1.63 |
+| [AI] Drafting - Site Analysis | $20.01 | 12 | $1.67 |
 
-### Zapier
-- Monthly Zap: Stripe → Filter prod → Skool Invite → AC Contact + "onboarding" tag
-- Annual Zap: Same flow
-- Cancel Zap: Stripe Canceled → Email Shel
-- **End-to-end verified:** Stripe → Zapier → Skool + AC onboarding email received
+PAUSED THIS SESSION (5 ads, all >$2.50 CPL or zero conversions):
+- [AI] Crit Review - Push It Further ($10.88 CPL)
+- [AI] Model Study - Rubric Angle (0 leads)
+- [STATIC] Notes - 5 Things List ($3.75 CPL)
+- [AI] Late Night - All-Nighter Angle ($3.28 CPL)
+- [MANUAL] Concept Confusion ($2.79 CPL)
 
-### DNS / Hosting
-- **Cloudflare Pages** (migrated from Worker project March 26)
-- Auto-deploys from `sheldonevansx/konteks-sales` on push to main
-- Build command: blank | Output dir: `/`
-- Custom domain: `kourse.konteks.co` CNAME → `konteks-sales.pages.dev`
+### Paused Campaigns (do NOT relaunch without post-mortem)
 
----
+| Campaign | Lifetime Spend | Critical Issue |
+|---|---|---|
+| Architecture School Doesn't Teach You | $253.02 | 121 InitiateCheckouts → **0 purchases**. Pixel double-fire OR checkout.html UX broken |
+| [COLD] Prospecting - Architecture Students | $163.40 | Same root cause likely |
+| [WARM] Retargeting - IG Video Viewers | $36.26 | Audience pool too small after pause |
 
-## WHAT CHANGED TODAY (March 26)
+### Critical Funnel Leak (FIXED in branch, awaiting merge)
 
-### By OpenClaw (Jinx) - early session:
-- Added Skool walkthrough video to hero (3.2MB, autoplay/loop/muted)
-- Added 20 real student avatar strip with mobile responsiveness
-- Added scarcity section (price increase to $49 at 400 members)
-- Changed headline/subheading, added hand-drawn SVG underline
-- Added guarantee text below CTA
-- Updated all "326" to "363+"
-- Swapped Dan's profile photo
-- Migrated Cloudflare from Worker → Pages project
-- Wrote HANDOFF.md, committed 4 ad skills to repo
+**Meta showed 102 leads/wk. AC List 4 received only ~15 contacts in 2 days.**
 
-### By Cowork - later session:
-- Changed headline to "The fastest way to become a top 1% architecture student..."
-- Center-aligned hero section with Dan photo (clean stacked layout)
-- Upgraded guarantee from 7-day to 30-day money-back
-- Switched ALL CTAs to "Try free for 7 days" (free trial is now the default funnel)
-- Created Stripe trial payment link with 7-day free trial
-- Redesigned checkout.html as a plan selector (trial/monthly/annual)
-- Fixed exit popup: removed broken email form, replaced with free trial CTA
-- Cleaned up Dan profile section copy
-- Added 5 new operational skills (preflight, funnel-audit, email-writer, deploy, ac-manager)
-- Updated CLAUDE.md with current state
+Root cause: `index-lead.html` had `try { fetch(/api/guide-submit) } catch { window.location='/guide-thanks.html' }` - any AC failure silently redirected to thanks page without firing Lead pixel correctly. Combined with `guide-submit.js` crashing on undefined `contactData.contact.id` when AC returned errors → 500 → silent fallback → lost contact.
+
+**Fix pushed to branch `fix/lead-form-retry`** (NOT yet merged - local main has unrelated divergence I did not touch). PR URL: https://github.com/sheldonevansx/konteks-sales/pull/new/fix/lead-form-retry
+
+The fix:
+- Retries `/api/guide-submit` 3x with exponential backoff
+- Only fires Lead pixel and shows success when AC returns 200
+- On total failure, shows inline error and re-enables button (no silent redirect)
+- guide-submit.js worker on remote already had complementary hardening committed
+
+### Meta System User Token (NEW - working as of this session)
+
+- Stored: keychain `meta-marketing-api-long` account `konteks`
+- System User: 61576455171207 ("Conversions API System User")
+- App: Personal Analysis Konteks (Develop app role assigned)
+- Scopes: ads_management, ads_read, business_management, pages_show_list, pages_read_engagement
+- Expiry: Never (system user tokens are durable)
+- **Verified working against act_1252541203714869**
+- Multi-advertiser ads: OPTED OUT on 52/57 ads (5 ads couldn't update due to unrelated "Page not linked to professional IG account" error - not related to multi-advertiser setting)
+
+### Stripe (verification incomplete - blocked on missing keychain entry)
+
+- Trial / Monthly / Annual payment links: all return HTTP 200 (verified)
+- **No Stripe API key found in keychain.** Could not query failed payment from today.
+- TODO when you wake up: paste your Stripe restricted API key into keychain so I can investigate the failed payment:
+  ```
+  security add-generic-password -s stripe-api-key -a konteks -U -w 'rk_live_...'
+  ```
+  Then I'll pull the failed PaymentIntent, identify reason (card declined / 3DS / insufficient funds / risk block), and check whether dunning/retry is configured on the subscription.
 
 ---
 
-## WHAT'S BROKEN / INCOMPLETE
+## DONE THIS SESSION
 
-### Broken
-- **Gamblegrift remote** may be behind after Cowork pushes (need periodic force-push sync)
-- **Foreplay API** returns 401 (key may be expired)
-- **Remaining placeholders:** STRIPE_DISCOUNT_LINK_HERE, STRIPE_PORTAL_URL_HERE, [UPDATE_PAYMENT_LINK], [DISCOUNT_LINK], [MANAGE_SUBSCRIPTION_LINK]
-
-### Incomplete
-- **AC Dunning automation** - copy written, not built (requires browser UI)
-- **AC Win-back automation** - same
-- **AC Retention automation** - same
-- **Stripe coupon** ($19/mo win-back) not created
-- **Stripe Customer Portal** not enabled
-- **Lead magnet PDF** ("5 Studio Shortcuts") not written - guide.html exists but PDF doesn't
-- **AC form IDs** not updated in guide.html and quiz.html
-- **AC nurture automation** (6 emails) not set up
-- **Skool pixel** - ID `26300556566305220` needs to be pasted into Skool Settings → Tracking
-- **Retargeting campaign** ($20/day CBO) not built
-- **Server-side Conversions API** not built
+1. Got working Meta System User token into keychain (after Dan's number/2FA debacle, switched to email-based 2FA)
+2. Opted out 52 ads from multi-advertiser placements
+3. Pulled full ad account audit (4 campaigns, 4 adsets, 57 ads, lifetime + 7d insights)
+4. Identified root cause of AC vs Meta lead discrepancy (silent fallback bug)
+5. Wrote retry-with-error fix for index-lead.html, pushed to `fix/lead-form-retry` branch
+6. Paused 5 underperforming ads in live lead magnet campaign (saves ~$30/wk → can stay in budget for winners)
+7. Verified all 3 Stripe payment links resolve
 
 ---
 
-## PENDING TASKS (Priority Order)
+## NEXT STEPS (priority order, picked up next session)
 
-### Immediate (running ads)
-1. Day 4 ad review: CTR >1.5% keep, <1% kill; CPC <$2.50 keep, >$4 kill
-2. If 0 purchases with 8+ checkouts by Day 4 - the free trial is already the default, monitor conversion
-3. Kill underperforming ads
-4. Dan comment on each running ad from @studwalldan
-5. Paste pixel ID into Skool settings
+### Wake-up immediates (require Sheldon)
+1. **Merge `fix/lead-form-retry` PR** to deploy lead form fix
+2. **Add Stripe API key to keychain** so I can investigate today's failed payment
+3. **Decide on the 121 IC / 0 purchase post-mortem** - is this worth the dig? My read: yes, because it's the same audience the lead magnet is now warming, and once the email sequence converts trial signups, that pool needs to flow through a working checkout.
 
-### This week
-6. Dan film 3-4 talking-head video ads (scripts in AD-CAMPAIGN-BLUEPRINT-V3.md)
-7. Build AC Dunning/Win-back/Retention automations
-8. Create Stripe coupon ($19/mo) + Customer Portal
-9. Write lead magnet PDF content
-10. Build Retargeting campaign ($20/day CBO)
+### After merge (autonomous next session)
+4. Backfill audit: cross-reference Meta Lead events with AC contacts for last 14d, manually sync any missing
+5. Investigate IC double-fire / checkout abandonment (probably checkout.html UX or pixel firing on page load instead of click)
+6. Build AC Dunning automation (tag: payment-failed) using ID:13 lead-magnet automation as template (it uses Plus-compatible Send Email actions)
+7. Build AC Win-back automation (tag: cancelled)
 
-### Later
-11. Lead gen campaigns → /guide and /quiz
-12. ManyChat DM automation
-13. Community gamification
-14. Server-side Conversions API (Cloudflare Worker)
+### Held until paying customers exist (do not start yet)
+- AC Retention automation
+- Stripe coupon for win-back
+- Stripe Customer Portal
 
----
-
-## AGENT SYNC PROTOCOL
-
-Both OpenClaw (Jinx) and Cowork read this repo. Rules:
-1. **Git pull before starting work** with either agent
-2. **Update this file on every commit** with what changed and who did it
-3. **Don't have both agents editing simultaneously** - whoever has the repo owns it
-4. **CLAUDE.md is Cowork's context file** - keep it in sync with this STATE.md
-5. **OpenClaw handles:** mobile/async, crons, monitoring, cross-channel, sub-agents
-6. **Cowork handles:** MCPs (Stripe, AC, Chrome), hands-on coding sessions
+### Stalled / future
+- New funnels for @logd and @sheldonevansx (separate Skool/Stripe setup) - **start in a new project session, see architecture doc**
+- Burner IG/Twitter content ingestion system - **separate project session**
 
 ---
 
-## KEY CONTEXT
+## BLOCKERS
 
-- **Dan Fouche** is female. Architect educator in Dubai. @studwalldan
-- Won best thesis across engineering, science, and architecture
-- Course: 5 chapters (4 completed) + Konteks Kalendar bonus. 363 members on Skool.
-- **Archademia** is the only competitor running Meta ads (targets professionals, not students)
-- Tone: casual, anti-academic, student language ("studio" not "design studio", "crit" not "critique")
-- No em-dashes. No AI slop words. Plain text emails. Self-contained HTML files.
-- Ad creative quality ceiling: HTML text-only ads max 5-7/10. Need Canva/Figma + real photos.
+- **Stripe key missing from keychain** - can't audit failed payment or investigate the 0-purchase mystery from paused campaigns
+- **Local git main is diverged from origin** - 46 commits ahead on remote that local doesn't have, plus local working tree has untracked stuff and modifications. I deliberately did NOT touch this. You should resolve manually before next session: `git fetch && git status` then decide what to keep. My fix is safely on its own branch.
+
+---
+
+## KEY CONTEXT (carried forward)
+
+- **Dan Fouche** female, architect educator Dubai, @studwalldan, won best thesis across engineering+science+architecture
+- Course: 5 chapters (4 completed) + Konteks Kalendar bonus, 363+ members on Skool
+- $29/mo, $249/yr, 7-day free trial, 30-day money-back
+- Tone: casual, anti-academic, student language. No em-dashes. No AI slop. Plain text emails.
+- [MANUAL] creatives consistently outperform [AI] creatives in this account (5/5 worst performers were [AI] format)
+- Lead magnet funnel works ($1.49 CPL is healthy). Direct-to-sale funnel does NOT work yet (0 purchases on $416 spend lifetime). Funnel must go: Lead → Email Nurture → Trial → Paid.
+
+---
+
+## AGENT SYNC PROTOCOL (updated for single-machine workflow)
+
+This file is the source of truth between sessions. Read it first, update it last.
+
+1. **Start of session:** Read STATE.md before doing anything else
+2. **End of session:** Update "DONE THIS SESSION" + "NEXT STEPS" + "BLOCKERS"
+3. **Commit STATE.md** at end of every session even if nothing else changed
+4. **CLAUDE.md** = invariant project facts (URLs, IDs, design system). Don't write current state there.
+5. **STATE.md** = mutable session state. Read/write often.
+6. **~/.claude/projects/.../memory/MEMORY.md** = long-term persistent memory across all projects
